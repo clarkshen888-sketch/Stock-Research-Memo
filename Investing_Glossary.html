@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>投资研报概念速查</title>
+  <style>
+    :root {
+      --bg: #f5f7fa;
+      --panel: #ffffff;
+      --ink: #1f2933;
+      --muted: #637083;
+      --line: #d8dee8;
+      --blue: #2563eb;
+      --green: #0f8a5f;
+      --amber: #b7791f;
+      --soft-blue: #eaf2ff;
+      --soft-green: #e9f7f1;
+      --soft-amber: #fff5df;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Arial, "Microsoft YaHei", sans-serif;
+      line-height: 1.58;
+    }
+
+    main {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 28px 18px 54px;
+    }
+
+    header, section, .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    header {
+      padding: 28px;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 32px;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 22px;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      font-size: 17px;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 8px 0 0;
+      color: var(--muted);
+    }
+
+    section {
+      padding: 22px;
+      margin-top: 14px;
+    }
+
+    .toc {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .toc a {
+      display: block;
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--ink);
+      background: #fff;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .card {
+      padding: 16px;
+    }
+
+    .formula {
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-radius: 6px;
+      background: var(--soft-blue);
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    th, td {
+      padding: 12px 10px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--muted);
+      background: #fafbfc;
+      font-size: 13px;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .tag {
+      display: inline-flex;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .tag.blue {
+      color: var(--blue);
+      background: var(--soft-blue);
+    }
+
+    .tag.green {
+      color: var(--green);
+      background: var(--soft-green);
+    }
+
+    .tag.amber {
+      color: var(--amber);
+      background: var(--soft-amber);
+    }
+
+    .note {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .example {
+      margin-top: 10px;
+      padding: 12px;
+      border-left: 4px solid var(--green);
+      background: var(--soft-green);
+      color: #234236;
+      border-radius: 6px;
+    }
+
+    @media (max-width: 860px) {
+      .toc, .grid {
+        grid-template-columns: 1fr;
+      }
+
+      header, section {
+        padding: 18px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>投资研报概念速查</h1>
+      <p>用于阅读股票研报、财报和估值模型时快速查阅。后续可以继续添加新的指标、估值方法和行业专用概念。</p>
+      <p>更新日期：2026-06-22</p>
+    </header>
+
+    <section>
+      <h2>目录</h2>
+      <div class="toc">
+        <a href="#financial">财报基础</a>
+        <a href="#growth">增长口径</a>
+        <a href="#valuation">估值口径</a>
+        <a href="#pe">PE 的几种算法</a>
+      </div>
+    </section>
+
+    <section id="financial">
+      <h2>财报基础概念</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>总营收</h3>
+          <p>公司在一个期间内卖产品或服务获得的总收入，也叫 Revenue 或 Sales。</p>
+          <div class="example">看公司规模和成长速度时，先看总营收。</div>
+        </div>
+        <div class="card">
+          <h3>GAAP</h3>
+          <p>美国通用会计准则。它是公司正式财报里的标准口径，更严肃、可比性更强。</p>
+          <div class="example">GAAP 数据适合用来做保守判断。</div>
+        </div>
+        <div class="card">
+          <h3>毛利率 GAAP</h3>
+          <p>按 GAAP 计算的毛利润率，用来衡量产品本身的赚钱能力。</p>
+          <div class="formula">毛利率 = (营收 - 销售成本) / 营收</div>
+        </div>
+        <div class="card">
+          <h3>营业利润 GAAP</h3>
+          <p>按 GAAP 计算的主营经营利润。毛利润扣掉研发、销售、管理等运营费用后，得到营业利润。</p>
+          <div class="example">它比净利润更适合观察主营业务质量。</div>
+        </div>
+        <div class="card">
+          <h3>净利润 GAAP</h3>
+          <p>按 GAAP 计算的最终利润。营业利润再加减税、利息、投资损益等项目后，得到净利润。</p>
+          <div class="example">它是股东最终最关心的利润口径之一。</div>
+        </div>
+        <div class="card">
+          <h3>Non-GAAP 净利润</h3>
+          <p>公司调整后的净利润，通常会剔除股权激励、并购摊销、一次性费用等项目。</p>
+          <div class="example">它能看核心经营表现，但也要和 GAAP 一起看，避免过度乐观。</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="growth">
+      <h2>增长口径</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>概念</th>
+            <th>英文</th>
+            <th>含义</th>
+            <th>使用场景</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="tag blue">YoY</span></td>
+            <td>Year over Year</td>
+            <td>同比，和去年同一时期相比。</td>
+            <td>判断公司是否比去年明显变好或变差。</td>
+          </tr>
+          <tr>
+            <td><span class="tag green">QoQ</span></td>
+            <td>Quarter over Quarter</td>
+            <td>环比，和上一个季度相比。</td>
+            <td>判断最近一个季度的趋势有没有加速或放缓。</td>
+          </tr>
+          <tr>
+            <td><span class="tag amber">TTM</span></td>
+            <td>Trailing Twelve Months</td>
+            <td>过去 12 个月，通常用最近四个季度加总。</td>
+            <td>比单季度稳定，比上一年年报更及时。</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="valuation">
+      <h2>估值基础</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>市值</h3>
+          <p>市场给整家公司定的价格。</p>
+          <div class="formula">市值 = 股价 x 总股本</div>
+        </div>
+        <div class="card">
+          <h3>EPS</h3>
+          <p>每股收益，也就是每一股对应多少利润。</p>
+          <div class="formula">EPS = 净利润 / 股数</div>
+        </div>
+        <div class="card">
+          <h3>PE</h3>
+          <p>市盈率，表示投资者愿意为公司每 1 元利润支付多少价格。</p>
+          <div class="formula">PE = 市值 / 净利润 = 股价 / EPS</div>
+        </div>
+        <div class="card">
+          <h3>SOTP</h3>
+          <p>分部加总估值。把公司不同业务拆开估值，再加总得到公司整体合理价值。</p>
+          <div class="example">适合微软、英伟达、亚马逊这类业务阶段差异很大的公司。</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pe">
+      <h2>PE 的几种算法</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>类型</th>
+            <th>用的利润</th>
+            <th>公式</th>
+            <th>特点</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>静态 PE</td>
+            <td>上一个完整财年的净利润</td>
+            <td>当前市值 / 去年净利润</td>
+            <td>最保守，但容易滞后。</td>
+          </tr>
+          <tr>
+            <td>TTM PE</td>
+            <td>最近 12 个月净利润</td>
+            <td>当前市值 / 最近四个季度净利润</td>
+            <td>最常用，兼顾真实和及时。</td>
+          </tr>
+          <tr>
+            <td>动态 PE / Forward PE</td>
+            <td>未来一年预测净利润</td>
+            <td>当前市值 / 未来一年预测净利润</td>
+            <td>更看未来，但依赖预测。</td>
+          </tr>
+          <tr>
+            <td>滚动 Forward PE</td>
+            <td>未来四个季度预测利润</td>
+            <td>当前市值 / 未来四季预测利润</td>
+            <td>贴近市场预期，但不确定性更高。</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="note">一句话记忆：静态 PE 看过去，TTM PE 看现在，动态/Forward PE 看未来。</div>
+    </section>
+
+    <section>
+      <h2>后续可扩展分类</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>分类</th>
+            <th>未来可加入的概念</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>现金流</td>
+            <td>自由现金流、经营现金流、资本开支、FCF Margin</td>
+          </tr>
+          <tr>
+            <td>资产负债</td>
+            <td>净现金、净债务、流动比率、商誉、库存</td>
+          </tr>
+          <tr>
+            <td>估值方法</td>
+            <td>PS、PB、EV/EBITDA、DCF、PEG</td>
+          </tr>
+          <tr>
+            <td>行业指标</td>
+            <td>云计算 ARR、芯片毛利率、银行 ROE、SaaS NRR</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>
