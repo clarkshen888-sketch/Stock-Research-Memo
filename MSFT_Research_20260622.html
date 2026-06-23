@@ -1,514 +1,179 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>微软 SOTP 估值报告</title>
+  <title>MSFT Research 20260622</title>
   <style>
-    :root {
-      --bg: #f6f7f9;
-      --panel: #ffffff;
-      --ink: #1d252d;
-      --muted: #5c6670;
-      --line: #d9dee5;
-      --blue: #2563eb;
-      --green: #0f8a5f;
-      --amber: #b7791f;
-      --red: #c24135;
-      --soft-blue: #e9f1ff;
-      --soft-green: #e9f7f1;
-      --soft-amber: #fff4df;
-      --soft-red: #fff0ed;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--ink);
-      font-family: Arial, "Microsoft YaHei", sans-serif;
-      line-height: 1.55;
-    }
-
-    main {
-      max-width: 1160px;
-      margin: 0 auto;
-      padding: 28px 20px 56px;
-    }
-
-    header {
-      display: grid;
-      grid-template-columns: 1.35fr 0.65fr;
-      gap: 18px;
-      align-items: stretch;
-      margin-bottom: 18px;
-    }
-
-    section, .hero, .metric-card {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 8px;
-    }
-
-    .hero {
-      padding: 28px;
-    }
-
-    .hero h1 {
-      margin: 0 0 10px;
-      font-size: 32px;
-      line-height: 1.2;
-      letter-spacing: 0;
-    }
-
-    .hero p {
-      margin: 8px 0 0;
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .price-card {
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 12px;
-    }
-
-    .label {
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .big-number {
-      font-size: 42px;
-      line-height: 1;
-      font-weight: 700;
-    }
-
-    .upside {
-      display: inline-flex;
-      width: fit-content;
-      padding: 6px 10px;
-      border-radius: 6px;
-      color: var(--green);
-      background: var(--soft-green);
-      font-weight: 700;
-      font-size: 14px;
-    }
-
-    .grid {
-      display: grid;
-      gap: 14px;
-      margin: 14px 0;
-    }
-
-    .grid.four {
-      grid-template-columns: repeat(4, 1fr);
-    }
-
-    .metric-card {
-      padding: 18px;
-    }
-
-    .metric-card strong {
-      display: block;
-      margin-top: 6px;
-      font-size: 24px;
-    }
-
-    section {
-      padding: 22px;
-      margin-top: 14px;
-    }
-
-    h2 {
-      margin: 0 0 14px;
-      font-size: 21px;
-      letter-spacing: 0;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      overflow: hidden;
-      font-size: 14px;
-    }
-
-    th, td {
-      padding: 12px 10px;
-      border-bottom: 1px solid var(--line);
-      text-align: right;
-      vertical-align: middle;
-    }
-
-    th:first-child, td:first-child {
-      text-align: left;
-    }
-
-    th {
-      color: var(--muted);
-      font-size: 13px;
-      font-weight: 700;
-      background: #fafbfc;
-    }
-
-    tr:last-child td {
-      border-bottom: 0;
-    }
-
-    .total-row td {
-      font-weight: 700;
-      background: #fafbfc;
-    }
-
-    .tag {
-      display: inline-flex;
-      padding: 4px 8px;
-      border-radius: 6px;
-      font-weight: 700;
-      font-size: 12px;
-      white-space: nowrap;
-    }
-
-    .tag.blue { color: var(--blue); background: var(--soft-blue); }
-    .tag.green { color: var(--green); background: var(--soft-green); }
-    .tag.amber { color: var(--amber); background: var(--soft-amber); }
-    .tag.red { color: var(--red); background: var(--soft-red); }
-
-    .bands {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 10px;
-    }
-
-    .band {
-      padding: 14px 12px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: #fff;
-      min-height: 110px;
-    }
-
-    .band strong {
-      display: block;
-      margin-bottom: 6px;
-      font-size: 18px;
-    }
-
-    .band span {
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .risk-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-    }
-
-    .risk {
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      padding: 15px;
-      background: #fff;
-    }
-
-    .risk h3 {
-      margin: 0 0 8px;
-      font-size: 16px;
-    }
-
-    .risk p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .note {
-      color: var(--muted);
-      font-size: 13px;
-      margin-top: 12px;
-    }
-
-    a {
-      color: var(--blue);
-      text-decoration: none;
-    }
-
-    @media (max-width: 900px) {
-      header, .grid.four, .risk-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .bands {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .table-wrap {
-        overflow-x: auto;
-      }
-    }
-
-    @media (max-width: 560px) {
-      main {
-        padding: 18px 12px 36px;
-      }
-
-      .hero, .price-card, section {
-        padding: 18px;
-      }
-
-      .hero h1 {
-        font-size: 25px;
-      }
-
-      .big-number {
-        font-size: 36px;
-      }
-
-      .bands {
-        grid-template-columns: 1fr;
-      }
-    }
+    :root { --bg:#f6f7f9; --panel:#fff; --ink:#1d252d; --muted:#5c6670; --line:#d9dee5; --blue:#2563eb; --green:#0f8a5f; --amber:#b7791f; --red:#c24135; --soft-blue:#e9f1ff; --soft-green:#e9f7f1; --soft-amber:#fff4df; --soft-red:#fff0ed; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font-family:Arial,"Microsoft YaHei",sans-serif; line-height:1.55; }
+    main { max-width:1180px; margin:0 auto; padding:28px 20px 56px; }
+    header { display:grid; grid-template-columns:1.35fr .65fr; gap:18px; margin-bottom:18px; }
+    section,.hero,.metric { background:var(--panel); border:1px solid var(--line); border-radius:8px; }
+    .hero,.metric,section { padding:22px; }
+    .hero h1 { margin:0 0 10px; font-size:32px; line-height:1.2; letter-spacing:0; }
+    h2 { margin:0 0 14px; font-size:21px; letter-spacing:0; }
+    h3 { margin:0 0 8px; font-size:16px; letter-spacing:0; }
+    p { margin:8px 0 0; color:var(--muted); }
+    section { margin-top:14px; }
+    .big { font-size:42px; line-height:1; font-weight:700; }
+    .label,.note { color:var(--muted); font-size:13px; }
+    .badge { display:inline-flex; width:fit-content; padding:6px 10px; border-radius:6px; font-weight:700; font-size:14px; }
+    .green { color:var(--green); background:var(--soft-green); } .amber { color:var(--amber); background:var(--soft-amber); } .red { color:var(--red); background:var(--soft-red); } .blue { color:var(--blue); background:var(--soft-blue); }
+    .grid4 { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin:14px 0; }
+    .grid2 { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+    .metric strong { display:block; margin-top:6px; font-size:24px; }
+    .card { border:1px solid var(--line); border-radius:8px; padding:15px; background:#fff; }
+    .card p { font-size:14px; }
+    table { width:100%; border-collapse:collapse; font-size:14px; }
+    th,td { padding:12px 10px; border-bottom:1px solid var(--line); text-align:right; vertical-align:middle; }
+    th:first-child,td:first-child { text-align:left; }
+    th { color:var(--muted); background:#fafbfc; font-size:13px; }
+    tr:last-child td { border-bottom:0; }
+    .total td { font-weight:700; background:#fafbfc; }
+    .bands { display:grid; grid-template-columns:repeat(5,1fr); gap:10px; }
+    .band { border:1px solid var(--line); border-radius:8px; padding:14px 12px; background:#fff; min-height:104px; }
+    .band strong { display:block; margin-bottom:6px; font-size:18px; }
+    .band span { color:var(--muted); font-size:13px; }
+    a { color:var(--blue); text-decoration:none; font-weight:700; }
+    @media(max-width:900px){ header,.grid4,.grid2{grid-template-columns:1fr}.bands{grid-template-columns:repeat(2,1fr)}.wrap{overflow-x:auto} }
+    @media(max-width:560px){ main{padding:18px 12px 36px}.hero h1{font-size:25px}.big{font-size:36px}.bands{grid-template-columns:1fr} }
   </style>
 </head>
 <body>
-  <main>
-    <header>
-      <div class="hero">
-        <h1>微软 SOTP 分部估值报告</h1>
-        <p>口径：按 TTM 分部营业利润折算净利润，再分别给予不同 PE，最后加总得到合理市值和每股价格。</p>
-        <p>当前参考价：$379.40，取 2026-06-18 可查收盘价；美国 2026-06-19 休市。报告不构成投资建议。</p>
-      </div>
-      <div class="price-card metric-card">
-        <div class="label">Base Case 合理价</div>
-        <div class="big-number">$450</div>
-        <div class="upside">较 $379.40 约 +18.6%</div>
-      </div>
-    </header>
-
-    <div class="grid four">
-      <div class="metric-card">
-        <div class="label">当前市值</div>
-        <strong>$2.82T</strong>
-      </div>
-      <div class="metric-card">
-        <div class="label">TTM 分部营业利润</div>
-        <strong>$149.0B</strong>
-      </div>
-      <div class="metric-card">
-        <div class="label">折算 TTM 净利润</div>
-        <strong>$125.2B</strong>
-      </div>
-      <div class="metric-card">
-        <div class="label">当前隐含 PE</div>
-        <strong>22.6x</strong>
-      </div>
+<main>
+  <header>
+    <div class="hero">
+      <h1>Microsoft 投资研究报告</h1>
+      <p>升级版框架：业务拆分 + TTM SOTP + Forward 估值 + 现金流/资产负债 + 风险触发指标 + 催化剂。</p>
+      <p>股价参考：$379.40，使用 2026-06-18 可查收盘口径；财报口径：FY2026 Q3，季度截至 2026-03-31。</p>
     </div>
+    <div class="metric">
+      <div class="label">Base 合理价区间</div>
+      <div class="big">$450</div>
+      <div class="badge green">当前小幅低估，安全边际一般</div>
+    </div>
+  </header>
 
-    <section>
-      <h2>分部估值</h2>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>板块</th>
-              <th>TTM营业利润</th>
-              <th>折算净利润</th>
-              <th>合理PE</th>
-              <th>合理市值</th>
-              <th>每股价值</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Productivity / Office / LinkedIn</td>
-              <td>$81.0B</td>
-              <td>$68.1B</td>
-              <td>24x</td>
-              <td>$1.63T</td>
-              <td>$220</td>
-            </tr>
-            <tr>
-              <td>Intelligent Cloud / Azure</td>
-              <td>$53.2B</td>
-              <td>$44.7B</td>
-              <td>35x</td>
-              <td>$1.56T</td>
-              <td>$210</td>
-            </tr>
-            <tr>
-              <td>More Personal Computing</td>
-              <td>$14.8B</td>
-              <td>$12.5B</td>
-              <td>12x</td>
-              <td>$0.15T</td>
-              <td>$20</td>
-            </tr>
-            <tr class="total-row">
-              <td>合计</td>
-              <td>$149.0B</td>
-              <td>$125.2B</td>
-              <td>-</td>
-              <td>$3.35T</td>
-              <td>$450</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="note">关键假设：稀释股本约 7.44B 股；营业利润按约 84% 折算为净利润，用于统一三个分部的税后口径。</div>
-    </section>
+  <div class="grid4">
+    <div class="metric"><div class="label">当前参考市值</div><strong>$2.82T</strong></div>
+    <div class="metric"><div class="label">TTM 分部营业利润</div><strong>$149.0B</strong></div>
+    <div class="metric"><div class="label">TTM 估算净利润</div><strong>$125.2B</strong></div>
+    <div class="metric"><div class="label">TTM 隐含 PE</div><strong>22.6x</strong></div>
+  </div>
 
-    <section>
-      <h2>不同 Case</h2>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>情景</th>
-              <th>Office PE</th>
-              <th>Azure PE</th>
-              <th>PC PE</th>
-              <th>合理市值</th>
-              <th>合理股价</th>
-              <th>相对当前</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><span class="tag amber">Bear</span></td>
-              <td>20x</td>
-              <td>28x</td>
-              <td>10x</td>
-              <td>$2.74T</td>
-              <td>$368</td>
-              <td>-3.0%</td>
-            </tr>
-            <tr>
-              <td><span class="tag green">Base</span></td>
-              <td>24x</td>
-              <td>35x</td>
-              <td>12x</td>
-              <td>$3.35T</td>
-              <td>$450</td>
-              <td>+18.6%</td>
-            </tr>
-            <tr>
-              <td><span class="tag blue">Bull</span></td>
-              <td>28x</td>
-              <td>42x</td>
-              <td>15x</td>
-              <td>$3.97T</td>
-              <td>$534</td>
-              <td>+40.8%</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
+  <section>
+    <h2>一句话结论</h2>
+    <div class="grid2">
+      <div class="card"><h3>投资判断</h3><p>微软仍是高质量 AI + 云 + 软件复合资产，但 AI 数据中心资本开支正在压低自由现金流能见度。当前价低于 Base SOTP，但还不是厚安全边际。</p></div>
+      <div class="card"><h3>操作结论</h3><p>$350 以下明显低估，$320 以下安全边际较厚。若 Azure 增速维持 35%+ 且 FCF 重新改善，估值可向 Bull Case 靠拢。</p></div>
+    </div>
+  </section>
 
-    <section>
-      <h2>价格区间</h2>
-      <div class="bands">
-        <div class="band">
-          <strong>$500+</strong>
-          <span>偏贵，需要 Azure 和 AI 继续超预期。</span>
-        </div>
-        <div class="band">
-          <strong>$430-470</strong>
-          <span>合理区，接近 Base Case。</span>
-        </div>
-        <div class="band">
-          <strong>$380 附近</strong>
-          <span>小幅低估，可轻仓观察。</span>
-        </div>
-        <div class="band">
-          <strong>$350 以下</strong>
-          <span>明显低估，适合分批买。</span>
-        </div>
-        <div class="band">
-          <strong>$320 以下</strong>
-          <span>很适合抄底，安全边际厚。</span>
-        </div>
-        <div class="band">
-          <strong>$300 以下</strong>
-          <span>极端便宜，除非基本面明显恶化。</span>
-        </div>
-      </div>
-    </section>
+  <section>
+    <h2>最新财务与业务数据</h2>
+    <div class="wrap"><table><thead><tr><th>项目</th><th>FY26 Q3</th><th>同比/趋势</th><th>解读</th></tr></thead><tbody>
+      <tr><td>总营收</td><td>$82.9B</td><td>+18%</td><td>云和 AI 拉动，仍保持大体量高增长。</td></tr>
+      <tr><td>营业利润</td><td>$38.4B</td><td>+20%</td><td>经营杠杆仍强，AI Capex 尚未明显压垮利润表。</td></tr>
+      <tr><td>净利润</td><td>$31.8B</td><td>+23%</td><td>盈利质量强，但需结合现金流看。</td></tr>
+      <tr><td>Microsoft Cloud</td><td>$54.5B</td><td>+29%</td><td>核心增长底盘。</td></tr>
+      <tr><td>Azure</td><td>未披露绝对值</td><td>+40%</td><td>AI 算力需求强，但也对应更高 Capex。</td></tr>
+      <tr><td>Q4 收入指引</td><td>约 $87.25B</td><td>约 +14%</td><td>增长仍稳，但市场关注点转向 AI 投入回报。</td></tr>
+    </tbody></table></div>
+  </section>
 
-    <section>
-      <h2>主要风险点</h2>
-      <div class="risk-grid">
-        <div class="risk">
-          <h3>1. AI 资本开支回报不确定</h3>
-          <p>微软为 AI 数据中心、GPU、网络和电力投入巨大。如果 Copilot、Azure AI 和企业 AI 应用的收入释放慢于折旧和运营成本，短期自由现金流和利润率会承压，Azure 的高 PE 也会被市场下修。</p>
-        </div>
-        <div class="risk">
-          <h3>2. Azure 增速放缓</h3>
-          <p>估值中 Azure 给了最高 PE，核心前提是云和 AI 云继续高增长。如果企业云支出收缩、价格竞争加剧，或 AI 训练需求阶段性降温，Azure 从高增长资产变成成熟云资产，合理 PE 可能从 35x 降到 25-28x。</p>
-        </div>
-        <div class="risk">
-          <h3>3. AI 商业化低于预期</h3>
-          <p>Copilot 的席位渗透率、续费率和真实提效仍需验证。若客户认为 AI 功能“有用但不够值钱”，微软很难把 AI 成本完全转嫁成高毛利订阅收入，Office 板块 PE 会受影响。</p>
-        </div>
-        <div class="risk">
-          <h3>4. OpenAI 与模型生态依赖</h3>
-          <p>微软受益于 OpenAI，但也承担合作结构、算力供给、模型路线、监管和竞争变化的不确定性。若核心模型优势被追平，或合作利益分配变化，市场会降低微软 AI 溢价。</p>
-        </div>
-        <div class="risk">
-          <h3>5. 监管与反垄断</h3>
-          <p>云、Office 捆绑、Teams、AI 数据、游戏平台都可能面临欧美监管审查。监管通常不一定破坏基本面，但会拖慢产品整合、提高合规成本，并压低大型科技公司的估值倍数。</p>
-        </div>
-        <div class="risk">
-          <h3>6. PC / Windows 周期性</h3>
-          <p>More Personal Computing 本身估值应低，因为它受 PC 换机、游戏硬件、广告和消费需求影响更大。若 Windows 更新周期或游戏业务不及预期，这一块利润弹性可能转负。</p>
-        </div>
-        <div class="risk">
-          <h3>7. 汇率与全球企业 IT 预算</h3>
-          <p>微软海外收入占比高，美元强势会压制报表收入。若全球企业削减软件、云和安全预算，Office 与 Azure 都会受到续费、扩容和新签合同放缓的影响。</p>
-        </div>
-        <div class="risk">
-          <h3>8. 估值基准利率风险</h3>
-          <p>微软是高质量资产，但高 PE 仍受利率影响。若长端利率上行或市场风险偏好下降，哪怕业绩不差，合理 PE 也可能整体下移，股价先跌估值再等盈利追上。</p>
-        </div>
-      </div>
-    </section>
+  <section>
+    <h2>业务拆分与趋势</h2>
+    <div class="wrap"><table><thead><tr><th>板块</th><th>FY26 Q3 营收</th><th>FY26 Q3 营业利润</th><th>增速/趋势</th><th>业务描述</th></tr></thead><tbody>
+      <tr><td>Productivity & Business Processes</td><td>$35.0B</td><td>$21.0B</td><td>收入 +17%，营业利润 +21%</td><td>Office、Microsoft 365、LinkedIn、Dynamics。订阅属性强，是利润稳定器。</td></tr>
+      <tr><td>Intelligent Cloud</td><td>$34.7B</td><td>$13.8B</td><td>收入 +30%，Azure +40%</td><td>Azure、服务器产品、GitHub、企业服务。AI 算力中心的主要承载板块。</td></tr>
+      <tr><td>More Personal Computing</td><td>$13.2B</td><td>$3.7B</td><td>收入 -1%，利润小幅增长</td><td>Windows、设备、Xbox、搜索广告。成熟且周期性更强，估值应较低。</td></tr>
+    </tbody></table></div>
+  </section>
 
-    <section>
-      <h2>结论</h2>
-      <div class="table-wrap">
-        <table>
-          <tbody>
-            <tr>
-              <td>当前判断</td>
-              <td>当前 $379 附近属于小幅低估，但不是“闭眼抄底”。</td>
-            </tr>
-            <tr>
-              <td>合理价</td>
-              <td>Base Case 约 $450/股。</td>
-            </tr>
-            <tr>
-              <td>明显低估</td>
-              <td>$350 以下。</td>
-            </tr>
-            <tr>
-              <td>厚安全边际</td>
-              <td>$320 以下。</td>
-            </tr>
-            <tr>
-              <td>最重要跟踪指标</td>
-              <td>Azure 增速、AI Capex / FCF、Copilot 付费渗透率、云毛利率。</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="note">数据来源：Microsoft FY26 Q3 财报、公开市场报价页面。由于网页报告为静态文件，后续股价变动不会自动刷新。</div>
-    </section>
-  </main>
+  <section>
+    <h2>TTM SOTP 估值</h2>
+    <div class="wrap"><table><thead><tr><th>板块</th><th>TTM营业利润</th><th>折算净利润</th><th>合理PE</th><th>合理市值</th><th>每股价值</th></tr></thead><tbody>
+      <tr><td>Productivity / Office / LinkedIn</td><td>$81.0B</td><td>$68.1B</td><td>24x</td><td>$1.63T</td><td>$220</td></tr>
+      <tr><td>Intelligent Cloud / Azure</td><td>$53.2B</td><td>$44.7B</td><td>35x</td><td>$1.56T</td><td>$210</td></tr>
+      <tr><td>More Personal Computing</td><td>$14.8B</td><td>$12.5B</td><td>12x</td><td>$0.15T</td><td>$20</td></tr>
+      <tr class="total"><td>合计</td><td>$149.0B</td><td>$125.2B</td><td>-</td><td>$3.35T</td><td>$450</td></tr>
+    </tbody></table></div>
+    <p class="note">营业利润统一按约 84% 折算净利润；稀释股本约 7.44B 股。</p>
+  </section>
+
+  <section>
+    <h2>Forward 估值</h2>
+    <div class="wrap"><table><thead><tr><th>情景</th><th>未来12个月净利润</th><th>合理PE</th><th>合理市值</th><th>合理股价</th><th>含义</th></tr></thead><tbody>
+      <tr><td><span class="badge amber">Bear</span></td><td>$130B</td><td>24x</td><td>$3.12T</td><td>$419</td><td>AI 回报被质疑，估值只给高质量成熟软件公司水平。</td></tr>
+      <tr><td><span class="badge green">Base</span></td><td>$140B</td><td>27x</td><td>$3.78T</td><td>$508</td><td>Azure 与 Office AI 稳定兑现，利润继续增长。</td></tr>
+      <tr><td><span class="badge blue">Bull</span></td><td>$152B</td><td>30x</td><td>$4.56T</td><td>$613</td><td>Copilot/Azure AI 商业化加速，市场重新上调长期增速。</td></tr>
+    </tbody></table></div>
+    <p class="note">Forward PE 用于观察未来利润兑现后的弹性；更乐观，但依赖预测，不作为单一买入依据。</p>
+  </section>
+
+  <section>
+    <h2>现金流与资产负债表</h2>
+    <div class="wrap"><table><thead><tr><th>指标</th><th>最新数据</th><th>判断</th></tr></thead><tbody>
+      <tr><td>现金 + 短投</td><td>$78.3B</td><td>财务安全性强。</td></tr>
+      <tr><td>长期债务</td><td>$31.4B</td><td>净现金状态，债务压力低。</td></tr>
+      <tr><td>Q3 经营现金流</td><td>$46.7B</td><td>主业现金创造能力强。</td></tr>
+      <tr><td>Q3 Capex</td><td>$30.9B</td><td>AI 数据中心投入非常重，是最需要跟踪的变量。</td></tr>
+      <tr><td>Q3 估算 FCF</td><td>$15.8B</td><td>利润强但 FCF 被 Capex 吞噬，短期估值弹性受限。</td></tr>
+      <tr><td>九个月回购/分红</td><td>回购 $17.7B，分红 $19.7B</td><td>股东回报稳定，但 AI 投资优先级更高。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>Case 汇总</h2>
+    <div class="wrap"><table><thead><tr><th>Case</th><th>SOTP 股价</th><th>Forward 股价</th><th>综合判断</th></tr></thead><tbody>
+      <tr><td>Bear</td><td>$368</td><td>$419</td><td>基本面稳但估值收缩，合理区间 $370-420。</td></tr>
+      <tr><td>Base</td><td>$450</td><td>$508</td><td>综合合理区间 $450-510。</td></tr>
+      <tr><td>Bull</td><td>$534</td><td>$613</td><td>需要 AI 收入和 FCF 同时改善。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>风险与跟踪指标</h2>
+    <div class="wrap"><table><thead><tr><th>风险</th><th>观察指标</th><th>危险信号</th></tr></thead><tbody>
+      <tr><td>AI Capex 回报不确定</td><td>Capex、FCF、Azure 利用率</td><td>Capex 继续大增但 FCF margin 不恢复。</td></tr>
+      <tr><td>Azure 增速放缓</td><td>Azure YoY、云订单、RPO</td><td>Azure 跌破 30% 且连续下修指引。</td></tr>
+      <tr><td>Copilot 商业化不足</td><td>付费席位、ARPU、续费率</td><td>用户增长停滞，客户认为 AI 加价不值。</td></tr>
+      <tr><td>OpenAI 合作变化</td><td>独家权、收入分成、算力承诺</td><td>OpenAI 大规模转向其他云或自建算力。</td></tr>
+      <tr><td>监管与反垄断</td><td>欧美监管、Office/Teams/Azure 捆绑</td><td>限制产品整合或强制改变商业模式。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>催化剂</h2>
+    <div class="grid2">
+      <div class="card"><h3>正向催化剂</h3><p>Azure 增速超预期、Copilot 付费渗透率提升、AI Capex 增速放缓但收入继续增长、OpenAI/企业云订单扩大、回购加强。</p></div>
+      <div class="card"><h3>负向催化剂</h3><p>AI 投入继续抬升但 FCF 下滑、Office AI 加价失败、云价格战、监管限制、OpenAI 合作不确定性扩大。</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>买入区间</h2>
+    <div class="bands">
+      <div class="band"><strong>$500+</strong><span>偏贵，需 AI 和 Azure 继续超预期。</span></div>
+      <div class="band"><strong>$430-470</strong><span>SOTP 合理区。</span></div>
+      <div class="band"><strong>$380 附近</strong><span>小幅低估，可观察/轻仓。</span></div>
+      <div class="band"><strong>$350 以下</strong><span>明显低估，适合分批。</span></div>
+      <div class="band"><strong>$320 以下</strong><span>厚安全边际，但需复核基本面。</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>结论</h2>
+    <div class="wrap"><table><tbody>
+      <tr><td>合理价</td><td>TTM SOTP 约 $450；Forward 合理区可到 $500 左右。</td></tr>
+      <tr><td>当前动作</td><td>$379 附近可视作小幅低估，但不是重仓级别。</td></tr>
+      <tr><td>抄底价</td><td>$350 以下开始明显有吸引力，$320 以下安全垫较厚。</td></tr>
+      <tr><td>下一步关注</td><td>FY26 Q4 财报、Azure 增速、AI Capex、FCF、Copilot 商业化。</td></tr>
+    </tbody></table></div>
+    <p class="note">主要来源：Microsoft FY2026 Q3 财报。网页为静态研究备忘录，不构成投资建议。</p>
+  </section>
+</main>
 </body>
 </html>
