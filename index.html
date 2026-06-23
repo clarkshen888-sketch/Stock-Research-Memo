@@ -78,7 +78,7 @@
       padding: 18px;
       color: var(--ink);
       text-decoration: none;
-      min-height: 142px;
+      min-height: 118px;
     }
 
     .card:hover { border-color: var(--blue); }
@@ -128,6 +128,8 @@
       text-decoration: none;
     }
 
+    .table-wrap { overflow-x: auto; }
+
     @media (max-width: 760px) {
       .grid { grid-template-columns: 1fr; }
       header, section { padding: 18px; }
@@ -142,53 +144,54 @@
       <p>股票研究报告与投资概念知识库。报告文件按 SYMBOL_Research_YYYYMMDD.html 命名，方便长期归档和分享。</p>
     </header>
 
+    <section id="reports">
+      <h2>投资报告目录</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>日期</th>
+              <th>公司</th>
+              <th>Symbol</th>
+              <th>类型</th>
+              <th>链接</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2026-06-23</td>
+              <td>NVIDIA</td>
+              <td>NVDA</td>
+              <td>SOTP 估值</td>
+              <td><a href="NVDA_Research_20260623.html">打开报告</a></td>
+            </tr>
+            <tr>
+              <td>2026-06-22</td>
+              <td>Microsoft</td>
+              <td>MSFT</td>
+              <td>SOTP 估值</td>
+              <td><a href="MSFT_Research_20260622.html">打开报告</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
     <section>
-      <h2>常用入口</h2>
+      <h2>常用工具</h2>
       <div class="grid">
-        <a class="card" href="#reports">
-          <strong>投资报告目录</strong>
-          <p>所有股票研究报告集中放在这里，后续新增公司和日期都会追加到同一张表。</p>
-          <span class="tag blue">Research Reports</span>
-        </a>
         <a class="card" href="Investing_Glossary.html">
           <strong>投资研报概念速查</strong>
           <p>财报、估值、增长口径和常见指标的解释。未来新增概念会继续更新到同一个链接。</p>
           <span class="tag green">Knowledge Base</span>
         </a>
+        <a class="card" href="https://github.com/clarkshen888-sketch/Stock-Research-Memo">
+          <strong>GitHub 仓库</strong>
+          <p>查看网页源文件、提交历史和 GitHub Pages 发布状态。</p>
+          <span class="tag blue">Repository</span>
+        </a>
       </div>
-    </section>
-
-    <section id="reports">
-      <h2>投资报告目录</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>日期</th>
-            <th>公司</th>
-            <th>Symbol</th>
-            <th>类型</th>
-            <th>链接</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>2026-06-23</td>
-            <td>NVIDIA</td>
-            <td>NVDA</td>
-            <td>SOTP 估值</td>
-            <td><a href="NVDA_Research_20260623.html">打开报告</a></td>
-          </tr>
-          <tr>
-            <td>2026-06-22</td>
-            <td>Microsoft</td>
-            <td>MSFT</td>
-            <td>SOTP 估值</td>
-            <td><a href="MSFT_Research_20260622.html">打开报告</a></td>
-          </tr>
-        </tbody>
-      </table>
     </section>
   </main>
 </body>
 </html>
-
