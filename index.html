@@ -5,136 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Stock Research Memo</title>
   <style>
-    :root {
-      --bg: #f5f7fa;
-      --panel: #ffffff;
-      --ink: #1f2933;
-      --muted: #647083;
-      --line: #d8dee8;
-      --blue: #2563eb;
-      --green: #0f8a5f;
-      --soft-blue: #eaf2ff;
-      --soft-green: #e9f7f1;
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--ink);
-      font-family: Arial, "Microsoft YaHei", sans-serif;
-      line-height: 1.55;
-    }
-
-    main {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 32px 18px 56px;
-    }
-
-    header, section, .card {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 8px;
-    }
-
-    header {
-      padding: 28px;
-      margin-bottom: 14px;
-    }
-
-    h1 {
-      margin: 0 0 10px;
-      font-size: 32px;
-      line-height: 1.2;
-      letter-spacing: 0;
-    }
-
-    h2 {
-      margin: 0 0 14px;
-      font-size: 22px;
-      letter-spacing: 0;
-    }
-
-    p {
-      margin: 8px 0 0;
-      color: var(--muted);
-    }
-
-    section {
-      padding: 22px;
-      margin-top: 14px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-    }
-
-    .card {
-      display: block;
-      padding: 18px;
-      color: var(--ink);
-      text-decoration: none;
-      min-height: 118px;
-    }
-
-    .card:hover { border-color: var(--blue); }
-
-    .card strong {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 20px;
-    }
-
-    .tag {
-      display: inline-flex;
-      margin-top: 14px;
-      padding: 5px 9px;
-      border-radius: 6px;
-      font-size: 12px;
-      font-weight: 700;
-    }
-
-    .tag.blue { color: var(--blue); background: var(--soft-blue); }
-    .tag.green { color: var(--green); background: var(--soft-green); }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 14px;
-    }
-
-    th, td {
-      padding: 12px 10px;
-      border-bottom: 1px solid var(--line);
-      text-align: left;
-      vertical-align: middle;
-    }
-
-    th {
-      color: var(--muted);
-      background: #fafbfc;
-      font-size: 13px;
-    }
-
-    tr:last-child td { border-bottom: 0; }
-
-    a {
-      color: var(--blue);
-      font-weight: 700;
-      text-decoration: none;
-    }
-
-    .table-wrap { overflow-x: auto; }
-
-    @media (max-width: 760px) {
-      .grid { grid-template-columns: 1fr; }
-      header, section { padding: 18px; }
-      h1 { font-size: 26px; }
-    }
+    :root { --bg:#f5f7fa; --panel:#ffffff; --ink:#1f2933; --muted:#647083; --line:#d8dee8; --blue:#2563eb; --green:#0f8a5f; --soft-blue:#eaf2ff; --soft-green:#e9f7f1; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font-family:Arial,"Microsoft YaHei",sans-serif; line-height:1.55; }
+    main { max-width:1080px; margin:0 auto; padding:32px 18px 56px; }
+    header, section, .card { background:var(--panel); border:1px solid var(--line); border-radius:8px; }
+    header { padding:28px; margin-bottom:14px; }
+    h1 { margin:0 0 10px; font-size:32px; line-height:1.2; letter-spacing:0; }
+    h2 { margin:0 0 14px; font-size:22px; letter-spacing:0; }
+    p { margin:8px 0 0; color:var(--muted); }
+    section { padding:22px; margin-top:14px; }
+    .grid { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+    .card { display:block; padding:18px; color:var(--ink); text-decoration:none; min-height:118px; }
+    .card:hover { border-color:var(--blue); }
+    .card strong { display:block; margin-bottom:8px; font-size:20px; }
+    .tag { display:inline-flex; margin-top:14px; padding:5px 9px; border-radius:6px; font-size:12px; font-weight:700; }
+    .tag.blue { color:var(--blue); background:var(--soft-blue); }
+    .tag.green { color:var(--green); background:var(--soft-green); }
+    table { width:100%; border-collapse:collapse; font-size:14px; }
+    th,td { padding:12px 10px; border-bottom:1px solid var(--line); text-align:left; vertical-align:middle; }
+    th { color:var(--muted); background:#fafbfc; font-size:13px; }
+    tr:last-child td { border-bottom:0; }
+    a { color:var(--blue); font-weight:700; text-decoration:none; }
+    .table-wrap { overflow-x:auto; }
+    @media(max-width:760px){ .grid{grid-template-columns:1fr} header,section{padding:18px} h1{font-size:26px} }
   </style>
 </head>
 <body>
@@ -142,7 +36,7 @@
     <header>
       <h1>Stock Research Memo</h1>
       <p>股票研究报告与投资概念知识库。报告文件按 SYMBOL_Research_YYYYMMDD.html 命名，方便长期归档和分享。</p>
-      <p>首页版本：2026-06-23 18:25</p>
+      <p>首页版本：2026-06-23 18:35</p>
     </header>
 
     <section id="reports">
@@ -159,6 +53,13 @@
             </tr>
           </thead>
           <tbody>
+            <tr>
+              <td>2026-06-23</td>
+              <td>Micron Technology</td>
+              <td>MU</td>
+              <td>强周期半导体</td>
+              <td><a href="MU_Research_20260623.html">打开报告</a></td>
+            </tr>
             <tr>
               <td>2026-06-23</td>
               <td>NVIDIA</td>
@@ -196,4 +97,3 @@
   </main>
 </body>
 </html>
-
