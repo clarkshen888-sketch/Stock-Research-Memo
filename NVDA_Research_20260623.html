@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NVDA Research 20260623</title>
+  <style>
+    :root {
+      --bg: #f6f7f9;
+      --panel: #ffffff;
+      --ink: #1d252d;
+      --muted: #5c6670;
+      --line: #d9dee5;
+      --blue: #2563eb;
+      --green: #0f8a5f;
+      --amber: #b7791f;
+      --red: #c24135;
+      --soft-blue: #e9f1ff;
+      --soft-green: #e9f7f1;
+      --soft-amber: #fff4df;
+      --soft-red: #fff0ed;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Arial, "Microsoft YaHei", sans-serif;
+      line-height: 1.55;
+    }
+
+    main {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 28px 20px 56px;
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: 1.35fr 0.65fr;
+      gap: 18px;
+      align-items: stretch;
+      margin-bottom: 18px;
+    }
+
+    section, .hero, .metric-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .hero { padding: 28px; }
+
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: 32px;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    .hero p {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .price-card {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .label {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .big-number {
+      font-size: 42px;
+      line-height: 1;
+      font-weight: 700;
+    }
+
+    .badge {
+      display: inline-flex;
+      width: fit-content;
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .badge.green { color: var(--green); background: var(--soft-green); }
+    .badge.amber { color: var(--amber); background: var(--soft-amber); }
+    .badge.red { color: var(--red); background: var(--soft-red); }
+
+    .grid {
+      display: grid;
+      gap: 14px;
+      margin: 14px 0;
+    }
+
+    .grid.four { grid-template-columns: repeat(4, 1fr); }
+
+    .metric-card { padding: 18px; }
+
+    .metric-card strong {
+      display: block;
+      margin-top: 6px;
+      font-size: 24px;
+    }
+
+    section {
+      padding: 22px;
+      margin-top: 14px;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 21px;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      font-size: 16px;
+      letter-spacing: 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      font-size: 14px;
+    }
+
+    th, td {
+      padding: 12px 10px;
+      border-bottom: 1px solid var(--line);
+      text-align: right;
+      vertical-align: middle;
+    }
+
+    th:first-child, td:first-child { text-align: left; }
+
+    th {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+      background: #fafbfc;
+    }
+
+    tr:last-child td { border-bottom: 0; }
+
+    .total-row td {
+      font-weight: 700;
+      background: #fafbfc;
+    }
+
+    .tag {
+      display: inline-flex;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .tag.blue { color: var(--blue); background: var(--soft-blue); }
+    .tag.green { color: var(--green); background: var(--soft-green); }
+    .tag.amber { color: var(--amber); background: var(--soft-amber); }
+    .tag.red { color: var(--red); background: var(--soft-red); }
+
+    .bands {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 10px;
+    }
+
+    .band {
+      padding: 14px 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      min-height: 112px;
+    }
+
+    .band strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 18px;
+    }
+
+    .band span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .risk-grid, .business-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .risk, .business {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 15px;
+      background: #fff;
+    }
+
+    .risk p, .business p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .note {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 12px;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    @media (max-width: 900px) {
+      header, .grid.four, .risk-grid, .business-grid { grid-template-columns: 1fr; }
+      .bands { grid-template-columns: repeat(2, 1fr); }
+      .table-wrap { overflow-x: auto; }
+    }
+
+    @media (max-width: 560px) {
+      main { padding: 18px 12px 36px; }
+      .hero, .price-card, section { padding: 18px; }
+      .hero h1 { font-size: 25px; }
+      .big-number { font-size: 36px; }
+      .bands { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="hero">
+        <h1>NVIDIA SOTP 投资报告</h1>
+        <p>口径：按 FY2027 Q1 最新财报和 TTM 数据，把 NVIDIA 拆成 Data Center Compute、Data Center Networking、Edge Computing 三个业务板块估值。</p>
+        <p>当前参考价：约 $210.07，取 2026-06-22 盘前新闻口径；最新财报为 FY2027 Q1，季度截至 2026-04-26，发布于 2026-05-20。</p>
+      </div>
+      <div class="price-card metric-card">
+        <div class="label">Base Case 合理价</div>
+        <div class="big-number">$214</div>
+        <div class="badge amber">接近当前价，安全边际不厚</div>
+      </div>
+    </header>
+
+    <div class="grid four">
+      <div class="metric-card">
+        <div class="label">当前市值</div>
+        <strong>$5.13T</strong>
+      </div>
+      <div class="metric-card">
+        <div class="label">TTM 营收</div>
+        <strong>$253.5B</strong>
+      </div>
+      <div class="metric-card">
+        <div class="label">TTM Non-GAAP 净利润</div>
+        <strong>$142.7B</strong>
+      </div>
+      <div class="metric-card">
+        <div class="label">当前隐含 PE</div>
+        <strong>36.0x</strong>
+      </div>
+    </div>
+
+    <section>
+      <h2>最新季度核心数据</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>项目</th>
+              <th>FY27 Q1</th>
+              <th>同比</th>
+              <th>环比</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>总营收</td>
+              <td>$81.6B</td>
+              <td>+85%</td>
+              <td>+20%</td>
+            </tr>
+            <tr>
+              <td>GAAP 毛利率</td>
+              <td>74.9%</td>
+              <td>+14.4 pct</td>
+              <td>-0.1 pct</td>
+            </tr>
+            <tr>
+              <td>GAAP 营业利润</td>
+              <td>$53.5B</td>
+              <td>+147%</td>
+              <td>+21%</td>
+            </tr>
+            <tr>
+              <td>GAAP 净利润</td>
+              <td>$58.3B</td>
+              <td>+211%</td>
+              <td>+36%</td>
+            </tr>
+            <tr>
+              <td>Non-GAAP 净利润</td>
+              <td>$45.5B</td>
+              <td>+139%</td>
+              <td>+17%</td>
+            </tr>
+            <tr>
+              <td>FY27 Q2 指引收入</td>
+              <td>$91.0B</td>
+              <td>约 +95%</td>
+              <td>约 +11.5%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note">NVIDIA 从 FY27 Q1 起调整披露框架，突出 Data Center 和 Edge Computing；公司未披露每个业务的营业利润，下方分部利润为估算。</div>
+    </section>
+
+    <section>
+      <h2>业务板块分析</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>板块</th>
+              <th>最新季度营收</th>
+              <th>增速</th>
+              <th>趋势</th>
+              <th>业务描述</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Data Center Compute</td>
+              <td>$60.4B</td>
+              <td>YoY +77%, QoQ +18%</td>
+              <td>核心增长引擎</td>
+              <td>AI GPU、CPU、整机 rack、训练与推理系统。</td>
+            </tr>
+            <tr>
+              <td>Data Center Networking</td>
+              <td>$14.8B</td>
+              <td>YoY +199%, QoQ +35%</td>
+              <td>增速最快</td>
+              <td>InfiniBand、Spectrum-X、NVLink、BlueField 等 AI 集群网络。</td>
+            </tr>
+            <tr>
+              <td>Edge Computing</td>
+              <td>$6.4B</td>
+              <td>YoY +29%, QoQ +10%</td>
+              <td>稳健但体量较小</td>
+              <td>Gaming PC、专业工作站、汽车、机器人、AI-RAN、边缘设备。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>业务趋势判断</h2>
+      <div class="business-grid">
+        <div class="business">
+          <h3>Data Center Compute</h3>
+          <p>Blackwell 需求仍强，是当前利润和估值的核心。训练需求还在增长，推理需求正在成为第二增长曲线。风险在于云厂商资本开支一旦放缓，收入增速会非常敏感。</p>
+        </div>
+        <div class="business">
+          <h3>Data Center Networking</h3>
+          <p>AI 集群规模越大，网络越成为瓶颈，因此网络业务增速高于整体数据中心。它能提高 NVIDIA 方案的系统级粘性，但也会面临以太网生态和客户自研网络方案竞争。</p>
+        </div>
+        <div class="business">
+          <h3>Edge Computing</h3>
+          <p>游戏、工作站和汽车业务提供第二层支撑，但当前远小于数据中心。汽车和机器人有长期想象力，短期对估值贡献仍有限。</p>
+        </div>
+        <div class="business">
+          <h3>整体趋势</h3>
+          <p>公司仍处在 AI 基建超级周期中，盈利质量很强。但当前价格已经反映了很高的增长预期，估值安全边际主要来自回调，而不是当前价格。</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>SOTP 分部估值</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>板块</th>
+              <th>估算 TTM营收</th>
+              <th>估算净利润</th>
+              <th>合理PE</th>
+              <th>合理市值</th>
+              <th>每股价值</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Data Center Compute</td>
+              <td>$184.5B</td>
+              <td>$108.9B</td>
+              <td>38x</td>
+              <td>$4.14T</td>
+              <td>$170</td>
+            </tr>
+            <tr>
+              <td>Data Center Networking</td>
+              <td>$45.3B</td>
+              <td>$25.8B</td>
+              <td>36x</td>
+              <td>$0.93T</td>
+              <td>$38</td>
+            </tr>
+            <tr>
+              <td>Edge Computing</td>
+              <td>$23.6B</td>
+              <td>$8.0B</td>
+              <td>20x</td>
+              <td>$0.16T</td>
+              <td>$7</td>
+            </tr>
+            <tr class="total-row">
+              <td>合计</td>
+              <td>$253.5B</td>
+              <td>$142.7B</td>
+              <td>-</td>
+              <td>$5.23T</td>
+              <td>$214</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note">关键假设：稀释股本约 24.4B 股；当前参考市值约 $5.13T；分部净利润按业务营收、毛利结构和公司整体 Non-GAAP 盈利能力估算。</div>
+    </section>
+
+    <section>
+      <h2>不同 Case</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>情景</th>
+              <th>Compute PE</th>
+              <th>Networking PE</th>
+              <th>Edge PE</th>
+              <th>合理市值</th>
+              <th>合理股价</th>
+              <th>含义</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="tag amber">Bear</span></td>
+              <td>30x</td>
+              <td>28x</td>
+              <td>14x</td>
+              <td>$4.10T</td>
+              <td>$168</td>
+              <td>AI 增速降温，估值回到高质量成长股区间。</td>
+            </tr>
+            <tr>
+              <td><span class="tag green">Base</span></td>
+              <td>38x</td>
+              <td>36x</td>
+              <td>20x</td>
+              <td>$5.23T</td>
+              <td>$214</td>
+              <td>AI 基建周期延续，但估值不过度扩张。</td>
+            </tr>
+            <tr>
+              <td><span class="tag blue">Bull</span></td>
+              <td>45x</td>
+              <td>42x</td>
+              <td>24x</td>
+              <td>$6.18T</td>
+              <td>$253</td>
+              <td>推理需求持续爆发，网络和系统级方案强化壁垒。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>价格区间</h2>
+      <div class="bands">
+        <div class="band">
+          <strong>$250+</strong>
+          <span>偏贵，需要 AI capex 持续超预期。</span>
+        </div>
+        <div class="band">
+          <strong>$210-220</strong>
+          <span>合理区，接近 Base Case。</span>
+        </div>
+        <div class="band">
+          <strong>$190 以下</strong>
+          <span>开始有吸引力。</span>
+        </div>
+        <div class="band">
+          <strong>$170 以下</strong>
+          <span>明显低估，接近 Bear 合理价。</span>
+        </div>
+        <div class="band">
+          <strong>$150 以下</strong>
+          <span>安全垫较厚，适合重点抄底。</span>
+        </div>
+        <div class="band">
+          <strong>$135 以下</strong>
+          <span>极端便宜，除非基本面明显恶化。</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>主要风险点</h2>
+      <div class="risk-grid">
+        <div class="risk">
+          <h3>1. AI Capex 泡沫风险</h3>
+          <p>当前收入高度依赖云厂商和大型 AI 客户的资本开支。如果 AI 应用变现慢，客户可能削减 GPU、网络和整机系统采购，收入增速会快速下修。</p>
+        </div>
+        <div class="risk">
+          <h3>2. 客户集中度</h3>
+          <p>微软、Meta、Google、Amazon 等超大客户贡献了大量需求。大客户一旦降低采购强度、延长折旧周期，或转向自研芯片，NVIDIA 的议价能力会被压缩。</p>
+        </div>
+        <div class="risk">
+          <h3>3. 毛利率回落</h3>
+          <p>当前 75% 左右毛利率非常高。若竞争加剧、产品切换成本上升、供应链价格变化或客户议价增强，毛利率每下降几个点都会明显影响利润。</p>
+        </div>
+        <div class="risk">
+          <h3>4. 出口管制</h3>
+          <p>中国数据中心芯片收入受美国出口限制影响。若限制继续升级，NVIDIA 不仅损失部分收入，还可能降低供应链规划效率。</p>
+        </div>
+        <div class="risk">
+          <h3>5. ASIC 与自研芯片竞争</h3>
+          <p>Google TPU、Amazon Trainium、Meta/微软自研 ASIC 会蚕食部分训练和推理需求。NVIDIA 的系统生态仍强，但长期利润率可能被竞争拉低。</p>
+        </div>
+        <div class="risk">
+          <h3>6. 供应链瓶颈</h3>
+          <p>公司高度依赖 TSMC、HBM、先进封装、CoWoS、光模块和电力基础设施。任何瓶颈都会影响交付节奏和收入确认。</p>
+        </div>
+        <div class="risk">
+          <h3>7. 产品周期风险</h3>
+          <p>Blackwell、Rubin 等产品若出现良率、交付、部署或功耗问题，会影响客户扩容节奏。高估值下，任何延迟都会被市场放大。</p>
+        </div>
+        <div class="risk">
+          <h3>8. 市场预期过高</h3>
+          <p>NVDA 当前业绩很强，但股价也包含了强预期。即使财报好，只要指引不够惊艳，也可能出现估值杀跌。</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>下一次财报</h2>
+      <div class="table-wrap">
+        <table>
+          <tbody>
+            <tr>
+              <td>下一次财报</td>
+              <td>FY2027 Q2</td>
+            </tr>
+            <tr>
+              <td>预计发布时间</td>
+              <td>2026-08-26 美股盘后</td>
+            </tr>
+            <tr>
+              <td>季度截止日</td>
+              <td>约 2026-07-26</td>
+            </tr>
+            <tr>
+              <td>重点关注</td>
+              <td>Q3 指引、Data Center Compute 增速、Networking 增速、毛利率、AI 订单可见度、中国收入口径。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>结论</h2>
+      <div class="table-wrap">
+        <table>
+          <tbody>
+            <tr>
+              <td>当前判断</td>
+              <td>当前 $210 附近基本接近 Base 合理价，不是厚安全边际位置。</td>
+            </tr>
+            <tr>
+              <td>合理价</td>
+              <td>Base Case 约 $214/股。</td>
+            </tr>
+            <tr>
+              <td>明显低估</td>
+              <td>$170 以下。</td>
+            </tr>
+            <tr>
+              <td>厚安全边际</td>
+              <td>$150 以下。</td>
+            </tr>
+            <tr>
+              <td>核心跟踪指标</td>
+              <td>云厂商 AI Capex、数据中心收入增速、毛利率、Blackwell/Rubin 交付、中国限制变化。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note">数据来源：NVIDIA FY2027 Q1 财报、公开市场新闻报价。由于网页报告为静态文件，后续股价变动不会自动刷新。</div>
+    </section>
+  </main>
+</body>
+</html>

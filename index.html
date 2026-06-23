@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
@@ -17,9 +17,7 @@
       --soft-green: #e9f7f1;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -83,9 +81,7 @@
       min-height: 142px;
     }
 
-    .card:hover {
-      border-color: var(--blue);
-    }
+    .card:hover { border-color: var(--blue); }
 
     .card strong {
       display: block;
@@ -102,15 +98,8 @@
       font-weight: 700;
     }
 
-    .tag.blue {
-      color: var(--blue);
-      background: var(--soft-blue);
-    }
-
-    .tag.green {
-      color: var(--green);
-      background: var(--soft-green);
-    }
+    .tag.blue { color: var(--blue); background: var(--soft-blue); }
+    .tag.green { color: var(--green); background: var(--soft-green); }
 
     table {
       width: 100%;
@@ -131,9 +120,7 @@
       font-size: 13px;
     }
 
-    tr:last-child td {
-      border-bottom: 0;
-    }
+    tr:last-child td { border-bottom: 0; }
 
     a {
       color: var(--blue);
@@ -142,17 +129,9 @@
     }
 
     @media (max-width: 760px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
-
-      header, section {
-        padding: 18px;
-      }
-
-      h1 {
-        font-size: 26px;
-      }
+      .grid { grid-template-columns: 1fr; }
+      header, section { padding: 18px; }
+      h1 { font-size: 26px; }
     }
   </style>
 </head>
@@ -170,6 +149,11 @@
           <strong>投资研报概念速查</strong>
           <p>财报、估值、增长口径和常见指标的解释。未来新增概念会继续更新到同一个链接。</p>
           <span class="tag green">Knowledge Base</span>
+        </a>
+        <a class="card" href="NVDA_Research_20260623.html">
+          <strong>NVIDIA SOTP 投资报告</strong>
+          <p>按英伟达数据中心计算、数据中心网络和边缘计算拆分业务，计算 SOTP 合理价和抄底区间。</p>
+          <span class="tag blue">NVDA</span>
         </a>
         <a class="card" href="MSFT_Research_20260622.html">
           <strong>Microsoft SOTP 估值报告</strong>
@@ -192,6 +176,13 @@
           </tr>
         </thead>
         <tbody>
+          <tr>
+            <td>2026-06-23</td>
+            <td>NVIDIA</td>
+            <td>NVDA</td>
+            <td>SOTP 估值</td>
+            <td><a href="NVDA_Research_20260623.html">打开报告</a></td>
+          </tr>
           <tr>
             <td>2026-06-22</td>
             <td>Microsoft</td>
