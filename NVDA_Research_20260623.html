@@ -37,12 +37,15 @@
     .band strong { display:block; margin-bottom:6px; font-size:18px; }
     .band span { color:var(--muted); font-size:13px; }
     a { color:var(--blue); text-decoration:none; font-weight:700; }
-    @media(max-width:900px){ header,.grid4,.grid2{grid-template-columns:1fr}.bands{grid-template-columns:repeat(2,1fr)}.wrap{overflow-x:auto} }
+    .topline { display:flex; justify-content:space-between; gap:12px; align-items:center; margin-bottom:14px; padding:12px 14px; background:#fff; border:1px solid var(--line); border-radius:8px; }
+    .topline span { color:var(--muted); font-size:13px; }
+    @media(max-width:900px){ header,.grid4,.grid2{grid-template-columns:1fr}.bands{grid-template-columns:repeat(2,1fr)}.wrap{overflow-x:auto}.topline{align-items:flex-start;flex-direction:column} }
     @media(max-width:560px){ main{padding:18px 12px 36px}.hero h1{font-size:25px}.big{font-size:36px}.bands{grid-template-columns:1fr} }
   </style>
 </head>
 <body>
 <main>
+  <div class="topline"><a href="index.html">返回首页</a><span>研报适用日期：2026-06-23 ｜ 公司：NVIDIA / NVDA ｜ 数据口径：FY2027 Q1，季度截至 2026-04-26</span></div>
   <header>
     <div class="hero">
       <h1>NVIDIA 投资研究报告</h1>
@@ -176,6 +179,8 @@
       <div class="band"><strong>$320 以上</strong><span>接近 Bull Forward 区，适合分批止盈一部分。</span></div>
     </div>
     <p class="note">NVDA 的卖出区间更依赖未来利润兑现。若未来12个月净利润明显上修，$320 以上不一定疯狂；若毛利率或 AI Capex 转弱，则应提前降低止盈线。</p>
+
+    <p class="note">抄底提醒：$150-$170 区间只有在 AI Capex、毛利率、交付和客户需求没有恶化时才成立；若基本面变坏，买入线要下调。</p>
   </section>
 
   <section>
@@ -201,6 +206,9 @@
 </main>
 </body>
 </html>
+
+
+
 
 
 
