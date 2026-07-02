@@ -16,6 +16,13 @@
     p { margin:8px 0 0; color:var(--muted); }
     section { padding:22px; margin-top:14px; }
     .grid { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+    .company-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
+    .company { border:1px solid var(--line); border-radius:8px; padding:18px; }
+    .company h3 { margin:0; font-size:20px; }
+    .company-meta { color:var(--muted); font-size:13px; margin-top:4px; }
+    .report-list { list-style:none; padding:0; margin:14px 0 0; }
+    .report-list li { display:flex; justify-content:space-between; gap:14px; padding:10px 0; border-top:1px solid var(--line); }
+    .report-list span { color:var(--muted); font-size:13px; white-space:nowrap; }
     .card { display:block; padding:18px; color:var(--ink); text-decoration:none; min-height:118px; }
     .card:hover { border-color:var(--blue); }
     .card strong { display:block; margin-bottom:8px; font-size:20px; }
@@ -28,69 +35,48 @@
     tr:last-child td { border-bottom:0; }
     a { color:var(--blue); font-weight:700; text-decoration:none; }
     .table-wrap { overflow-x:auto; }
-    @media(max-width:760px){ .grid{grid-template-columns:1fr} header,section{padding:18px} h1{font-size:26px} }
+    @media(max-width:760px){ .grid,.company-grid{grid-template-columns:1fr} header,section{padding:18px} h1{font-size:26px} .report-list li{align-items:flex-start;flex-direction:column;gap:4px} }
   </style>
 </head>
 <body>
   <main>
     <header>
       <h1>Stock Research Memo</h1>
-      <p>股票研究报告与投资概念知识库。报告文件按 SYMBOL_Research_YYYYMMDD.html 命名，方便长期归档和分享。</p>
+      <p>股票研究报告与投资概念知识库。报告按公司归档，同一公司的历次研究按日期倒序保留。</p>
       <p>首页版本：2026-07-02</p>
     </header>
 
     <section id="reports">
       <h2>投资报告目录</h2>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>日期</th>
-              <th>公司</th>
-              <th>Symbol</th>
-              <th>类型</th>
-              <th>链接</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>2026-06-24</td>
-              <td>Apple</td>
-              <td>AAPL</td>
-              <td>大型复合科技</td>
-              <td><a href="reports/AAPL_Research_20260624.html">打开报告</a></td>
-            </tr>
-            <tr>
-              <td>2026-06-24</td>
-              <td>Alphabet</td>
-              <td>GOOGL</td>
-              <td>大型复合科技 / SOTP</td>
-              <td><a href="reports/GOOGL_Research_20260624.html">打开报告</a></td>
-            </tr>
-
-            <tr>
-              <td>2026-06-23</td>
-              <td>Micron Technology</td>
-              <td>MU</td>
-              <td>强周期半导体</td>
-              <td><a href="reports/MU_Research_20260623.html">打开报告</a></td>
-            </tr>
-            <tr>
-              <td>2026-06-23</td>
-              <td>NVIDIA</td>
-              <td>NVDA</td>
-              <td>SOTP 估值</td>
-              <td><a href="reports/NVDA_Research_20260623.html">打开报告</a></td>
-            </tr>
-            <tr>
-              <td>2026-06-22</td>
-              <td>Microsoft</td>
-              <td>MSFT</td>
-              <td>SOTP 估值</td>
-              <td><a href="reports/MSFT_Research_20260622.html">打开报告</a></td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="company-grid">
+        <article class="company">
+          <h3>Micron Technology <span class="tag green">MU</span></h3>
+          <div class="company-meta">强周期半导体 · 2 份报告</div>
+          <ul class="report-list">
+            <li><a href="reports/MU_Research_20260702.html">FY2026 Q3 最新财报研究</a><span>2026-07-02</span></li>
+            <li><a href="reports/MU_Research_20260623.html">FY2026 Q2 / Q3 财报前研究</a><span>2026-06-23</span></li>
+          </ul>
+        </article>
+        <article class="company">
+          <h3>Apple <span class="tag blue">AAPL</span></h3>
+          <div class="company-meta">大型复合科技 · 1 份报告</div>
+          <ul class="report-list"><li><a href="reports/AAPL_Research_20260624.html">Apple 投资研究</a><span>2026-06-24</span></li></ul>
+        </article>
+        <article class="company">
+          <h3>Alphabet <span class="tag blue">GOOGL</span></h3>
+          <div class="company-meta">大型复合科技 · 1 份报告</div>
+          <ul class="report-list"><li><a href="reports/GOOGL_Research_20260624.html">Alphabet 投资研究</a><span>2026-06-24</span></li></ul>
+        </article>
+        <article class="company">
+          <h3>NVIDIA <span class="tag blue">NVDA</span></h3>
+          <div class="company-meta">高成长 AI / 半导体 · 1 份报告</div>
+          <ul class="report-list"><li><a href="reports/NVDA_Research_20260623.html">NVIDIA 投资研究</a><span>2026-06-23</span></li></ul>
+        </article>
+        <article class="company">
+          <h3>Microsoft <span class="tag blue">MSFT</span></h3>
+          <div class="company-meta">大型复合科技 · 1 份报告</div>
+          <ul class="report-list"><li><a href="reports/MSFT_Research_20260622.html">Microsoft 投资研究</a><span>2026-06-22</span></li></ul>
+        </article>
       </div>
     </section>
 

@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MU Research 20260702</title>
+  <style>
+    :root { --bg:#f6f7f9; --panel:#fff; --ink:#1d252d; --muted:#5c6670; --line:#d9dee5; --blue:#2563eb; --green:#0f8a5f; --amber:#b7791f; --red:#c24135; --soft-blue:#e9f1ff; --soft-green:#e9f7f1; --soft-amber:#fff4df; --soft-red:#fff0ed; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font-family:Arial,"Microsoft YaHei",sans-serif; line-height:1.55; }
+    main { max-width:1180px; margin:0 auto; padding:28px 20px 56px; }
+    header { display:grid; grid-template-columns:1.35fr .65fr; gap:18px; margin-bottom:18px; }
+    section,.hero,.metric,.topline { background:var(--panel); border:1px solid var(--line); border-radius:8px; }
+    .hero,.metric,section { padding:22px; }
+    .topline { display:flex; justify-content:space-between; gap:12px; align-items:center; margin-bottom:14px; padding:12px 14px; }
+    .topline span,.label,.note { color:var(--muted); font-size:13px; }
+    .hero h1 { margin:0 0 10px; font-size:32px; line-height:1.2; }
+    h2 { margin:0 0 14px; font-size:21px; } h3 { margin:0 0 8px; font-size:16px; }
+    p { margin:8px 0 0; color:var(--muted); }
+    section { margin-top:14px; }
+    .big { font-size:42px; line-height:1; font-weight:700; }
+    .badge { display:inline-flex; width:fit-content; padding:6px 10px; border-radius:6px; font-weight:700; font-size:14px; }
+    .green { color:var(--green); background:var(--soft-green); } .amber { color:var(--amber); background:var(--soft-amber); } .red { color:var(--red); background:var(--soft-red); } .blue { color:var(--blue); background:var(--soft-blue); }
+    .grid4 { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin:14px 0; }
+    .grid2 { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+    .metric strong { display:block; margin-top:6px; font-size:24px; }
+    .card { border:1px solid var(--line); border-radius:8px; padding:15px; background:#fff; }
+    .card p { font-size:14px; }
+    table { width:100%; border-collapse:collapse; font-size:14px; }
+    th,td { padding:12px 10px; border-bottom:1px solid var(--line); text-align:right; vertical-align:middle; }
+    th:first-child,td:first-child { text-align:left; } th { color:var(--muted); background:#fafbfc; font-size:13px; }
+    tr:last-child td { border-bottom:0; } .total td { font-weight:700; background:#fafbfc; }
+    .bands { display:grid; grid-template-columns:repeat(6,1fr); gap:10px; }
+    .band { border:1px solid var(--line); border-radius:8px; padding:14px 12px; background:#fff; min-height:112px; }
+    .band strong { display:block; margin-bottom:6px; font-size:18px; } .band span { color:var(--muted); font-size:13px; }
+    a { color:var(--blue); text-decoration:none; font-weight:700; }
+    @media(max-width:900px){ header,.grid4,.grid2{grid-template-columns:1fr}.bands{grid-template-columns:repeat(2,1fr)}.wrap{overflow-x:auto}.topline{align-items:flex-start;flex-direction:column} }
+    @media(max-width:560px){ main{padding:18px 12px 36px}.hero h1{font-size:25px}.big{font-size:36px}.bands{grid-template-columns:1fr} }
+  </style>
+</head>
+<body>
+<main>
+  <div class="topline"><a href="../index.html">返回首页</a><span>研报适用日期：2026-07-02 ｜ 公司：Micron Technology / MU ｜ 数据口径：FY2026 Q3，季度截至 2026-05-28</span></div>
+  <header>
+    <div class="hero">
+      <h1>Micron 最新财报投资研究</h1>
+      <p>公司类型：强周期半导体。核心框架为周期位置 + Forward EPS，并以 Forward PB 交叉验证；不使用单季利润简单年化，也不把多年客户协议等同于周期消失。</p>
+      <p>股价参考：$1,032.28，取 2026-07-01 美股收盘价（MarketBeat）；相较 6 月 30 日收盘价 $1,154.29 单日下跌约 10.6%。</p>
+    </div>
+    <div class="metric">
+      <div class="label">综合 Base 合理区</div>
+      <div class="big">$1,050-$1,200</div>
+      <div class="badge green">接近合理区下沿，以持有观察为主</div>
+    </div>
+  </header>
+
+  <div class="grid4">
+    <div class="metric"><div class="label">参考市值</div><strong>约 $1.16T</strong></div>
+    <div class="metric"><div class="label">FY26 Q3 营收</div><strong>$41.46B</strong></div>
+    <div class="metric"><div class="label">FY26 Q3 GAAP EPS</div><strong>$24.67</strong></div>
+    <div class="metric"><div class="label">Q4 GAAP EPS 指引</div><strong>$30.73 ± $1</strong></div>
+  </div>
+
+  <section>
+    <h2>一句话结论</h2>
+    <div class="grid2">
+      <div class="card"><h3>投资判断</h3><p>Q3 与 Q4 指引再次证明 AI 内存处于罕见的强景气阶段；多年 take-or-pay 协议确实提高利润可见度，但 84.6% 毛利率和约 11.5 倍静态 PB 已包含大量乐观预期，安全边际仍取决于 FY27 以后利润能否维持。</p></div>
+      <div class="card"><h3>操作结论</h3><p>$1,032 接近 Base 合理区下沿，但还不是厚安全边际。已有仓位可持有并跟踪合同兑现与供给扩张；新增仓位更适合在 $850 以下分批，$700 以下才有更厚的周期保护垫。</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>最新财报：事实与解读</h2>
+    <div class="wrap"><table><thead><tr><th>项目</th><th>FY26 Q3</th><th>变化</th><th>判断</th></tr></thead><tbody>
+      <tr><td>收入</td><td>$41.456B</td><td>QoQ +73.7%，YoY +345.7%</td><td>价格和出货共同推动，远超普通周期复苏。</td></tr>
+      <tr><td>GAAP 毛利率</td><td>84.6%</td><td>Q2 74.4%，去年同期 37.7%</td><td>历史极端高位；强盈利也是未来供给扩张的诱因。</td></tr>
+      <tr><td>GAAP 营业利润</td><td>$33.318B</td><td>营业利润率 80.4%</td><td>增量收入高度转化为利润。</td></tr>
+      <tr><td>GAAP 净利润 / EPS</td><td>$28.243B / $24.67</td><td>Q2 EPS $12.07</td><td>稀释股数口径 1.145B；利润增长快于股本变化。</td></tr>
+      <tr><td>经营现金流 / 调整后 FCF</td><td>$25.39B / $18.3B</td><td>Q2 OCF $11.90B</td><td>利润现金化强，但高现金流不可直接永久化。</td></tr>
+      <tr><td>Q4 指引</td><td>收入 $50B ± $1B；毛利率约 86%；GAAP EPS $30.73 ± $1</td><td>继续创新高</td><td>本轮盈利高点至少尚未在 Q3 出现。</td></tr>
+    </tbody></table></div>
+    <p class="note">事实来自 Micron FY2026 Q3 财报及 10-Q；同比、环比为按披露数字计算。对周期位置的描述属于研究判断。</p>
+  </section>
+
+  <section>
+    <h2>业务拆分与质量</h2>
+    <div class="wrap"><table><thead><tr><th>业务单元</th><th>Q3 营收</th><th>毛利率</th><th>营业利润率</th><th>核心观察</th></tr></thead><tbody>
+      <tr><td>Cloud Memory</td><td>$13.769B</td><td>83%</td><td>78%</td><td>HBM 与云端内存是结构性增长核心。</td></tr>
+      <tr><td>Core Data Center</td><td>$11.524B</td><td>87%</td><td>83%</td><td>AI 与通用服务器需求共同拉动。</td></tr>
+      <tr><td>Mobile & Client</td><td>$11.521B</td><td>87%</td><td>86%</td><td>高利润说明紧缺已外溢至全行业，周期色彩更强。</td></tr>
+      <tr><td>Auto & Embedded</td><td>$4.634B</td><td>79%</td><td>75%</td><td>需求更分散，但同样受价格周期显著抬升。</td></tr>
+    </tbody></table></div>
+    <p class="note">按技术口径，Q3 DRAM 收入 $31.328B，NAND 收入 $9.943B，其他约 $0.185B。</p>
+  </section>
+
+  <section>
+    <h2>周期位置与商业模式变化</h2>
+    <div class="grid2">
+      <div class="card"><h3>周期位置：上行后段，但高点未确认</h3><p>Q4 指引仍在加速，因此不能武断判定见顶；但 86% 毛利率、巨额资本开支与竞争者扩产激励，意味着赔率已从“复苏确认”转为“高利润能维持多久”。</p></div>
+      <div class="card"><h3>结构变化：降低振幅，不消灭周期</h3><p>已签战略客户协议包含多年约束性采购量，多数设固定价或价格上下限；公司预计已达成协议带来 $22B 现金存款及相关财务承诺，其中约 $18B 为现金存款。</p></div>
+    </div>
+    <p class="note">公司称带价格区间的协议即使在底价也可产生高于历史周期峰值的毛利率。这是管理层前瞻性判断，仍需用后续合同负债、毛利率和现金流验证。</p>
+  </section>
+
+  <section>
+    <h2>核心估值：FY27 情景 EPS × PE</h2>
+    <div class="wrap"><table><thead><tr><th>情景</th><th>FY27E EPS</th><th>合理 PE</th><th>计算</th><th>每股价值</th><th>关键假设</th></tr></thead><tbody>
+      <tr><td><span class="badge amber">Bear</span></td><td>$90</td><td>7x-8x</td><td>$90 × 7-8</td><td>$630-$720</td><td>价格在 FY27 回落，毛利率快速正常化，合同只能缓冲下行。</td></tr>
+      <tr><td><span class="badge green">Base</span></td><td>$120-$130</td><td>9x</td><td>$120-$130 × 9</td><td>$1,080-$1,170</td><td>高景气延续后温和降温，长协提升底部利润。</td></tr>
+      <tr><td><span class="badge blue">Bull</span></td><td>$150-$160</td><td>11x</td><td>$150-$160 × 11</td><td>$1,650-$1,760</td><td>HBM 与 DRAM 供给持续紧张，协议价格和订单高度兑现。</td></tr>
+    </tbody></table></div>
+    <p class="note">EPS 均为研究情景假设，不是公司指引或市场一致预期。Q1-Q3 GAAP EPS 合计约 $41.40，加上 Q4 指引中值约 $30.73，FY26 指示性 EPS 约 $72.13；FY27 假设反映全年高利润与不同程度的周期回落。</p>
+  </section>
+
+  <section>
+    <h2>交叉估值：Forward PB</h2>
+    <div class="wrap"><table><thead><tr><th>情景</th><th>FY26 年末估算 BVPS</th><th>合理 PB</th><th>计算</th><th>每股价值</th></tr></thead><tbody>
+      <tr><td>Bear</td><td>$116</td><td>6x</td><td>$116 × 6</td><td>$696</td></tr>
+      <tr><td>Base</td><td>$120</td><td>9x</td><td>$120 × 9</td><td>$1,080</td></tr>
+      <tr><td>Bull</td><td>$124</td><td>12x</td><td>$124 × 12</td><td>$1,488</td></tr>
+    </tbody></table></div>
+    <p class="note">估算方法：5 月 28 日股东权益 $100.724B ÷ 约 1.127B 期末流通股 ≈ BVPS $89.4；再加 Q4 EPS 指引中值并扣除约 $0.15 股息，得到约 $120。区间反映 EPS、股数与其他综合收益误差。当前价对应静态 PB 约 11.5x、Forward PB 约 8.6x。</p>
+  </section>
+
+  <section>
+    <h2>Bear / Base / Bull 汇总</h2>
+    <div class="wrap"><table><thead><tr><th>情景</th><th>EPS 法</th><th>PB 法</th><th>综合合理区</th><th>判断</th></tr></thead><tbody>
+      <tr><td>Bear</td><td>$630-$720</td><td>约 $696</td><td>$630-$750</td><td>周期回落时仍可能较当前价下跌约 27%-39%。</td></tr>
+      <tr><td>Base</td><td>$1,080-$1,170</td><td>约 $1,080</td><td>$1,050-$1,200</td><td>当前价接近下沿，赔率尚可但安全边际不厚。</td></tr>
+      <tr><td>Bull</td><td>$1,650-$1,760</td><td>约 $1,488</td><td>$1,450-$1,750</td><td>需要高毛利、长协与供给纪律同时兑现。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>现金流与资产负债表</h2>
+    <div class="wrap"><table><thead><tr><th>指标</th><th>最新口径</th><th>判断</th></tr></thead><tbody>
+      <tr><td>现金与可交易投资</td><td>$30.13B</td><td>流动性强，为扩产与周期波动提供缓冲。</td></tr>
+      <tr><td>债务</td><td>$5.72B</td><td>净现金约 $24.4B；前三季度偿还债务 $9.38B。</td></tr>
+      <tr><td>股东权益</td><td>$100.724B</td><td>期末估算 BVPS 约 $89.4。</td></tr>
+      <tr><td>库存</td><td>$8.567B</td><td>较 FY25 年末 $8.355B 小幅上升，暂未见失控。</td></tr>
+      <tr><td>FY26 净 Capex 计划</td><td>约 $27B</td><td>高投入支持需求，也提高未来供给与执行风险。</td></tr>
+      <tr><td>前三季度经营现金流</td><td>$45.702B</td><td>现金创造强；需继续与利润、应收款同步核对。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>风险、跟踪指标与危险信号</h2>
+    <div class="wrap"><table><thead><tr><th>风险</th><th>跟踪指标</th><th>危险信号</th></tr></thead><tbody>
+      <tr><td>周期反转</td><td>DRAM/NAND 合约价、库存、客户拉货</td><td>价格连续下跌，同时库存和应收款上升。</td></tr>
+      <tr><td>长协质量不及预期</td><td>客户存款、合同负债、价格下限、兑现收入</td><td>现金承诺延迟，或底价毛利率低于管理层描述。</td></tr>
+      <tr><td>供给扩张</td><td>三大厂 Capex、晶圆产能、良率</td><td>2027-2028 供给增速持续高于需求。</td></tr>
+      <tr><td>AI 资本开支放缓</td><td>云厂商 Capex、GPU/HBM 出货</td><td>主要客户下修数据中心采购或推迟部署。</td></tr>
+      <tr><td>地缘与政策</td><td>出口管制、关税、中国业务限制</td><td>关键市场、设备或客户受到新增实质限制。</td></tr>
+      <tr><td>估值压缩</td><td>Forward PE/PB、利率与风险偏好</td><td>基本面仍强但估值倍数持续下修。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>催化剂</h2>
+    <div class="grid2">
+      <div class="card"><h3>正向催化剂</h3><p>Q4 超过指引、FY27 指引强于预期、更多多年长协及现金存款到账、HBM4 放量、Capex 转化为高回报产能。</p></div>
+      <div class="card"><h3>负向催化剂</h3><p>毛利率见顶、客户库存重建、竞争者扩产、长协条款或兑现速度不及预期、AI 基建支出降温。</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>仓位管理区间</h2>
+    <div class="bands">
+      <div class="band"><strong>$700 以下</strong><span>厚安全边际区，但必须先确认基本面未破坏。</span></div>
+      <div class="band"><strong>$700-$850</strong><span>明显低估，可分批研究和建仓。</span></div>
+      <div class="band"><strong>$850-$1,000</strong><span>小幅低估，适合克制加仓。</span></div>
+      <div class="band"><strong>$1,000-$1,200</strong><span>Base 合理区，以持有和跟踪为主。</span></div>
+      <div class="band"><strong>$1,200-$1,450</strong><span>偏贵，停止追买并考虑再平衡。</span></div>
+      <div class="band"><strong>$1,450 以上</strong><span>进入 Bull 定价，可分批降低仓位。</span></div>
+    </div>
+    <p class="note">所有买入区间仅在 HBM/DRAM/NAND 需求、合同兑现、毛利率、库存与现金流没有发生实质恶化时成立；基本面破坏后必须下调估值，不能机械抄底。</p>
+  </section>
+
+  <section>
+    <h2>下一次财报</h2>
+    <div class="wrap"><table><tbody>
+      <tr><td>财报季度</td><td>FY2026 Q4</td></tr>
+      <tr><td>预计时间</td><td>预计 2026 年 9 月下旬；截至本报告适用日，公司尚未正式公告。</td></tr>
+      <tr><td>重点验证</td><td>FY27 收入和毛利率展望、战略客户协议现金到账、HBM4 出货、Capex、库存、应收款与 FCF。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>与 2026-06-23 旧版报告对比</h2>
+    <div class="wrap"><table><thead><tr><th>项目</th><th>旧版</th><th>新版</th><th>变化原因</th></tr></thead><tbody>
+      <tr><td>财报口径</td><td>FY26 Q2 + Q3 指引</td><td>FY26 Q3 实际 + Q4 指引</td><td>替换为最新一手数据。</td></tr>
+      <tr><td>核心框架</td><td>Run-rate SOTP + Forward EPS + PB</td><td>FY27 情景 EPS + Forward PB</td><td>业务单元利润均受同一价格周期驱动，SOTP 容易产生伪精确。</td></tr>
+      <tr><td>Base 合理区</td><td>$1,150-$1,350</td><td>$1,050-$1,200</td><td>新增长协降低周期振幅，但 Q3 极端利润与高 PB 要求更严格的正常化折价。</td></tr>
+      <tr><td>新信息</td><td>长协尚待披露</td><td>多年 take-or-pay、$22B 存款及相关承诺</td><td>商业模式可预测性实质改善。</td></tr>
+      <tr><td>旧报告</td><td colspan="3"><a href="MU_Research_20260623.html">保留并打开 2026-06-23 版本</a></td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>主要来源</h2>
+    <div class="wrap"><table><tbody>
+      <tr><td>Micron FY2026 Q3 财报</td><td><a href="https://investors.micron.com/news-releases/news-release-details/micron-technology-inc-reports-record-results-third-quarter">公司 IR 新闻稿</a></td></tr>
+      <tr><td>Micron FY2026 Q3 10-Q</td><td><a href="https://www.sec.gov/Archives/edgar/data/723125/000072312526000015/mu-20260528.htm">SEC 原始文件</a></td></tr>
+      <tr><td>Q3 财报材料</td><td><a href="https://investors.micron.com/events/event-details/microns-third-quarter-2026-financial-call">公司 IR 活动页</a></td></tr>
+      <tr><td>股价（2026-07-01 收盘）</td><td><a href="https://www.marketbeat.com/stocks/NASDAQ/MU/">MarketBeat</a></td></tr>
+    </tbody></table></div>
+    <p class="note">本报告中的公司披露数据为事实；FY27 EPS、倍数、合理区间和周期判断均为研究估算或情景假设，不构成投资建议或确定性收益承诺。</p>
+  </section>
+</main>
+</body>
+</html>
