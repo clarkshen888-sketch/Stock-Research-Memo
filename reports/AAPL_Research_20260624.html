@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AAPL Research 20260624</title>
+  <style>
+    :root { --bg:#f6f7f9; --panel:#fff; --ink:#1d252d; --muted:#5c6670; --line:#d9dee5; --blue:#2563eb; --green:#0f8a5f; --amber:#b7791f; --red:#c24135; --soft-blue:#e9f1ff; --soft-green:#e9f7f1; --soft-amber:#fff4df; --soft-red:#fff0ed; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font-family:Arial,"Microsoft YaHei",sans-serif; line-height:1.55; }
+    main { max-width:1180px; margin:0 auto; padding:28px 20px 56px; }
+    header { display:grid; grid-template-columns:1.35fr .65fr; gap:18px; margin-bottom:18px; }
+    section,.hero,.metric,.topline { background:var(--panel); border:1px solid var(--line); border-radius:8px; }
+    .hero,.metric,section { padding:22px; }
+    .topline { display:flex; justify-content:space-between; gap:12px; align-items:center; margin-bottom:14px; padding:12px 14px; }
+    .topline span { color:var(--muted); font-size:13px; }
+    .hero h1 { margin:0 0 10px; font-size:32px; line-height:1.2; letter-spacing:0; }
+    h2 { margin:0 0 14px; font-size:21px; letter-spacing:0; }
+    h3 { margin:0 0 8px; font-size:16px; letter-spacing:0; }
+    p { margin:8px 0 0; color:var(--muted); }
+    section { margin-top:14px; }
+    .big { font-size:42px; line-height:1; font-weight:700; }
+    .label,.note { color:var(--muted); font-size:13px; }
+    .badge { display:inline-flex; width:fit-content; padding:6px 10px; border-radius:6px; font-weight:700; font-size:14px; }
+    .green { color:var(--green); background:var(--soft-green); } .amber { color:var(--amber); background:var(--soft-amber); } .red { color:var(--red); background:var(--soft-red); } .blue { color:var(--blue); background:var(--soft-blue); }
+    .grid4 { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin:14px 0; }
+    .grid2 { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+    .metric strong { display:block; margin-top:6px; font-size:24px; }
+    .card { border:1px solid var(--line); border-radius:8px; padding:15px; background:#fff; }
+    .card p { font-size:14px; }
+    table { width:100%; border-collapse:collapse; font-size:14px; }
+    th,td { padding:12px 10px; border-bottom:1px solid var(--line); text-align:right; vertical-align:middle; }
+    th:first-child,td:first-child { text-align:left; }
+    th { color:var(--muted); background:#fafbfc; font-size:13px; }
+    tr:last-child td { border-bottom:0; }
+    .total td { font-weight:700; background:#fafbfc; }
+    .bands { display:grid; grid-template-columns:repeat(6,1fr); gap:10px; }
+    .band { border:1px solid var(--line); border-radius:8px; padding:14px 12px; background:#fff; min-height:112px; }
+    .band strong { display:block; margin-bottom:6px; font-size:18px; }
+    .band span { color:var(--muted); font-size:13px; }
+    a { color:var(--blue); text-decoration:none; font-weight:700; }
+    @media(max-width:900px){ header,.grid4,.grid2{grid-template-columns:1fr}.bands{grid-template-columns:repeat(2,1fr)}.wrap{overflow-x:auto}.topline{align-items:flex-start;flex-direction:column} }
+    @media(max-width:560px){ main{padding:18px 12px 36px}.hero h1{font-size:25px}.big{font-size:36px}.bands{grid-template-columns:1fr} }
+  </style>
+</head>
+<body>
+<main>
+  <div class="topline"><a href="../index.html">返回首页</a><span>研报适用日期：2026-06-24 ｜ 公司：Apple / AAPL ｜ 数据口径：FY2026 Q2，季度截至 2026-03-28</span></div>
+  <header>
+    <div class="hero">
+      <h1>Apple 投资研究报告</h1>
+      <p>公司类型：大型消费科技生态。核心看 iPhone 换机周期、Services 高毛利复利、回购、AI/Siri 能否补齐，以及供应链/中国/监管风险。</p>
+      <p>股价参考：AAPL $294.30，取 2026-06-23 收盘价；报告为静态备忘录，后续价格和财报需更新。</p>
+    </div>
+    <div class="metric">
+      <div class="label">Base 合理价区间</div>
+      <div class="big">$310-$340</div>
+      <div class="badge green">当前接近合理偏低区</div>
+    </div>
+  </header>
+
+  <div class="grid4">
+    <div class="metric"><div class="label">参考市值</div><strong>约 $4.2T</strong></div>
+    <div class="metric"><div class="label">Q2 营收</div><strong>$111.2B</strong></div>
+    <div class="metric"><div class="label">Q2 净利润</div><strong>$29.6B</strong></div>
+    <div class="metric"><div class="label">Q2 EPS</div><strong>$2.01</strong></div>
+  </div>
+
+  <section>
+    <h2>一句话结论</h2>
+    <div class="grid2">
+      <div class="card"><h3>投资判断</h3><p>Apple 仍是全球最强消费科技生态之一，Services 和回购支撑长期每股价值；但硬件增长成熟、AI 进度慢于微软/谷歌/Meta，估值不应给到高成长 AI 平台水平。</p></div>
+      <div class="card"><h3>操作结论</h3><p>$294 附近不算贵，接近合理偏低区；但厚安全边际需要 $250 以下。若 iPhone 17/18 与 AI Siri 带来新换机周期，估值可上移。</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>最新财务与业务数据</h2>
+    <div class="wrap"><table><thead><tr><th>项目</th><th>FY26 Q2</th><th>同比/趋势</th><th>解读</th></tr></thead><tbody>
+      <tr><td>总营收</td><td>$111.2B</td><td>创 March quarter 纪录</td><td>iPhone 17 周期需求强，所有主要产品线同比增长。</td></tr>
+      <tr><td>iPhone</td><td>约 $57.0B</td><td>YoY +22%</td><td>仍是公司最大收入来源，当前周期强于预期。</td></tr>
+      <tr><td>Services</td><td>约 $31.0B</td><td>再创新高</td><td>高毛利、订阅、支付、广告、iCloud 是估值核心。</td></tr>
+      <tr><td>Mac</td><td>约 $8.4B</td><td>同比增长</td><td>新品和 MacBook Neo 拉动，但受芯片/零部件供应约束。</td></tr>
+      <tr><td>iPad</td><td>约 $6.9B</td><td>同比增长</td><td>M4 iPad Air 等新品推动。</td></tr>
+      <tr><td>毛利率</td><td>约 49.3%</td><td>同比提升</td><td>Services 占比提升；但内存等成本上涨可能带来压力。</td></tr>
+      <tr><td>CEO 交接</td><td>John Ternus 将于 2026-09 接任</td><td>管理层变化</td><td>硬件执行力可能延续，但市场会关注 AI 战略变化。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>业务拆分与趋势</h2>
+    <div class="wrap"><table><thead><tr><th>板块</th><th>业务内容</th><th>趋势</th><th>估值重点</th></tr></thead><tbody>
+      <tr><td>iPhone</td><td>iPhone 17/17E/Pro 系列及相关配件</td><td>本轮需求强，但长期增速依赖换机周期和 AI 功能。</td><td>成熟现金牛，PE 不宜太高。</td></tr>
+      <tr><td>Services</td><td>App Store、iCloud、Apple Music、Apple TV、AppleCare、支付、广告</td><td>高毛利、持续创新高，是 Apple 最像软件公司的部分。</td><td>应给予最高估值倍数。</td></tr>
+      <tr><td>Mac + iPad</td><td>MacBook、iMac、iPad、iPad Pro/Air</td><td>受新品周期影响，AI PC/平板有潜力，但周期性强。</td><td>中等估值，重视毛利和换机。</td></tr>
+      <tr><td>Wearables / Home</td><td>Apple Watch、AirPods、Vision Pro、HomePod</td><td>Watch/AirPods 稳定，Vision Pro 尚未证明大众需求。</td><td>生态粘性强，但增长不稳定。</td></tr>
+      <tr><td>AI / Apple Intelligence</td><td>Siri、端侧 AI、Google Gemini 合作、潜在 AI 搜索/Agent</td><td>仍在追赶；若 Siri 重构成功，可带来新换机周期。</td><td>期权价值，不宜过早大幅资本化。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>TTM SOTP Base 估值</h2>
+    <div class="wrap"><table><thead><tr><th>板块</th><th>估算税后利润/价值基础</th><th>合理倍数</th><th>合理市值</th><th>每股价值</th></tr></thead><tbody>
+      <tr><td>iPhone</td><td>$65B</td><td>21x</td><td>$1.37T</td><td>$96</td></tr>
+      <tr><td>Services</td><td>$74B</td><td>34x</td><td>$2.52T</td><td>$176</td></tr>
+      <tr><td>Mac + iPad</td><td>$16B</td><td>18x</td><td>$0.29T</td><td>$20</td></tr>
+      <tr><td>Wearables / Home</td><td>$13B</td><td>18x</td><td>$0.23T</td><td>$16</td></tr>
+      <tr><td>AI / Vision / Option Value</td><td>期权价值</td><td>-</td><td>$0.25T</td><td>$17</td></tr>
+      <tr><td>净现金/债务调整</td><td>现金充足但不再强调净现金中性</td><td>-</td><td>$0.05T</td><td>$3</td></tr>
+      <tr class="total"><td>合计</td><td>-</td><td>-</td><td>$4.71T</td><td>$329</td></tr>
+    </tbody></table></div>
+    <p class="note">Apple 不披露各产品线营业利润，以上为基于产品收入、毛利率和 Services 高利润属性的估算。股本按约 14.3B 股估算。</p>
+  </section>
+
+  <section>
+    <h2>TTM SOTP 牛熊拆分</h2>
+    <div class="wrap"><table><thead><tr><th>Case</th><th>iPhone PE / 价值</th><th>Services PE / 价值</th><th>Mac+iPad PE / 价值</th><th>Wearables+Option</th><th>合计股价</th></tr></thead><tbody>
+      <tr><td><span class="badge amber">Bear</span></td><td>17x / $1.11T / $77</td><td>28x / $2.07T / $145</td><td>14x / $0.22T / $16</td><td>$0.28T / $20</td><td>$258</td></tr>
+      <tr><td><span class="badge green">Base</span></td><td>21x / $1.37T / $96</td><td>34x / $2.52T / $176</td><td>18x / $0.29T / $20</td><td>$0.53T / $37</td><td>$329</td></tr>
+      <tr><td><span class="badge blue">Bull</span></td><td>24x / $1.56T / $109</td><td>40x / $2.96T / $207</td><td>22x / $0.35T / $25</td><td>$0.85T / $59</td><td>$400</td></tr>
+    </tbody></table></div>
+    <p class="note">Bear/Base/Bull 主要调整 Services 与 iPhone 倍数，以及 AI/Vision 期权价值。Apple 的回购会继续抬升每股价值，但无法完全抵消估值过高风险。</p>
+  </section>
+
+  <section>
+    <h2>Forward 估值</h2>
+    <div class="wrap"><table><thead><tr><th>情景</th><th>未来12个月 EPS</th><th>合理PE</th><th>合理股价</th><th>含义</th></tr></thead><tbody>
+      <tr><td><span class="badge amber">Bear</span></td><td>$9.8</td><td>26x</td><td>$255</td><td>AI 进展慢、硬件增速回落、监管压制 App Store。</td></tr>
+      <tr><td><span class="badge green">Base</span></td><td>$11.0</td><td>30x</td><td>$330</td><td>Services 继续增长，iPhone 17/18 周期稳定。</td></tr>
+      <tr><td><span class="badge blue">Bull</span></td><td>$12.4</td><td>34x</td><td>$422</td><td>AI Siri 带来换机，Services/广告加速。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>现金流与资产负债表</h2>
+    <div class="wrap"><table><thead><tr><th>指标</th><th>最新信息</th><th>判断</th></tr></thead><tbody>
+      <tr><td>现金和有价证券</td><td>约 $130B+</td><td>财务安全性极强。</td></tr>
+      <tr><td>长期债务</td><td>约 $78B</td><td>债务可控，仍有很强回购能力。</td></tr>
+      <tr><td>净现金策略</td><td>不再正式强调净现金中性目标</td><td>可能为 AI、供应链或并购保留更大灵活性。</td></tr>
+      <tr><td>回购</td><td>Apple 长期最大股东回报来源</td><td>在成熟增长阶段，回购是 EPS 增长的重要来源。</td></tr>
+      <tr><td>Capex</td><td>远低于微软/谷歌 AI 云 Capex</td><td>轻资产优势仍在，但 AI 能力可能依赖外部模型。</td></tr>
+      <tr><td>成本压力</td><td>内存/先进芯片成本上升</td><td>可能压制硬件毛利率，尤其 Mac/iPad。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>Case 汇总</h2>
+    <div class="wrap"><table><thead><tr><th>Case</th><th>SOTP 股价</th><th>Forward 股价</th><th>综合判断</th></tr></thead><tbody>
+      <tr><td>Bear</td><td>$258</td><td>$255</td><td>AI 落后、硬件回归低增长，合理区 $250-$270。</td></tr>
+      <tr><td>Base</td><td>$329</td><td>$330</td><td>综合合理区 $310-$340。</td></tr>
+      <tr><td>Bull</td><td>$400</td><td>$422</td><td>需要 AI 换机周期和 Services 加速。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>风险与跟踪指标</h2>
+    <div class="wrap"><table><thead><tr><th>风险</th><th>观察指标</th><th>危险信号</th></tr></thead><tbody>
+      <tr><td>AI 落后</td><td>Siri、Apple Intelligence、Gemini 合作落地</td><td>AI 功能继续延期，不能拉动换机。</td></tr>
+      <tr><td>iPhone 周期见顶</td><td>iPhone 收入、渠道库存、供应限制</td><td>供应恢复后需求回落，iPhone 增速转负。</td></tr>
+      <tr><td>Services 监管</td><td>App Store 抽成、DMA、美国反垄断</td><td>强制开放支付/应用分发导致 Services margin 下滑。</td></tr>
+      <tr><td>中国和地缘风险</td><td>大中华区收入、印度转移进度、关税</td><td>中国需求下滑或关税显著抬升成本。</td></tr>
+      <tr><td>毛利率压力</td><td>产品毛利率、内存/先进制程成本</td><td>硬件毛利率连续下滑。</td></tr>
+      <tr><td>管理层交接</td><td>John Ternus 上任后产品和 AI 路线</td><td>战略摇摆或关键产品延期。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>催化剂</h2>
+    <div class="grid2">
+      <div class="card"><h3>正向催化剂</h3><p>iPhone 18 / 2nm 芯片周期、AI Siri 成功、Services 广告和订阅加速、印度和新兴市场增长、继续大规模回购。</p></div>
+      <div class="card"><h3>负向催化剂</h3><p>AI 功能再次延期、App Store 监管压缩抽成、iPhone 17 周期见顶、硬件成本上涨、Vision Pro 继续低迷。</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>买入 / 卖出区间</h2>
+    <div class="bands">
+      <div class="band"><strong>$230 以下</strong><span>厚安全边际，但需复核 iPhone 和监管。</span></div>
+      <div class="band"><strong>$250 以下</strong><span>明显低估，接近 Bear 合理价。</span></div>
+      <div class="band"><strong>$280-$300</strong><span>合理偏低，可分批。</span></div>
+      <div class="band"><strong>$310-$340</strong><span>Base 合理区，主要持有。</span></div>
+      <div class="band"><strong>$380 以上</strong><span>偏贵，可停止加仓或小幅减仓。</span></div>
+      <div class="band"><strong>$420 以上</strong><span>明显过热，可分批止盈一部分。</span></div>
+    </div>
+    <p class="note">抄底提醒：$230-$250 区间只有在 iPhone、Services、监管和 AI 路线没有明显恶化时才成立；若基本面变坏，买入线要下调。</p>
+  </section>
+
+  <section>
+    <h2>下一次财报</h2>
+    <div class="wrap"><table><tbody>
+      <tr><td>下一次财报</td><td>FY2026 Q3</td></tr>
+      <tr><td>预计时间</td><td>2026 年 7 月下旬至 8 月初，具体以 Apple Investor Relations 公告为准。</td></tr>
+      <tr><td>重点关注</td><td>iPhone 需求是否延续、Services 增速、AI/Siri 路线、毛利率、回购、供应链和中国收入。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>结论</h2>
+    <div class="wrap"><table><tbody>
+      <tr><td>合理价</td><td>SOTP Base 约 $329；Forward Base 约 $330，综合合理区 $310-$340。</td></tr>
+      <tr><td>当前动作</td><td>$294 附近合理偏低，可以分批，但不属于厚安全边际。</td></tr>
+      <tr><td>抄底价</td><td>$250 以下明显低估，$230 以下安全垫较厚。</td></tr>
+      <tr><td>卖出/减仓区</td><td>$380 以上偏贵，$420 以上可考虑分批止盈部分仓位。</td></tr>
+      <tr><td>最关键变量</td><td>iPhone 17/18 周期、Services 增速、AI Siri 能否兑现、App Store 监管、回购强度。</td></tr>
+    </tbody></table></div>
+    <p class="note">主要来源：Apple FY2026 Q2 公开财报报道、The Verge、Axios、Tom’s Guide、MarketWatch、Investopedia。网页为静态研究备忘录，不构成投资建议。</p>
+  </section>
+
+  <section>
+    <h2>参考来源</h2>
+    <div class="wrap"><table><tbody>
+      <tr><td>Apple FY2026 Q2 财报数据</td><td><a href="https://www.axios.com/2026/04/30/apple-earnings-q2-2026">Axios</a>、<a href="https://www.theverge.com/tech/921527/apple-iphone-revenue-q2-2026-earnings">The Verge</a></td></tr>
+      <tr><td>Apple FY2026 Q1 和 Services/AI</td><td><a href="https://www.theverge.com/news/870319/apple-iphone-best-revenue-ai-q1-2026">The Verge</a>、<a href="https://www.tomsguide.com/news/live/apple-q1-earnings-call-results-live-2026">Tom’s Guide</a></td></tr>
+      <tr><td>现金策略和股价参考</td><td><a href="https://www.marketwatch.com/livecoverage/apple-earnings-stock-results-iphone-ai-aapl/card/apple-reverses-course-on-a-longstanding-cash-strategy-q3vACBimHBYUwIAKBdE5">MarketWatch</a>、<a href="https://www.marketwatch.com/data-news/walt-disney-co-stock-outperforms-competitors-on-strong-trading-day-89096632-f5e2b49abbce">MarketWatch</a></td></tr>
+    </tbody></table></div>
+  </section>
+</main>
+</body>
+</html>

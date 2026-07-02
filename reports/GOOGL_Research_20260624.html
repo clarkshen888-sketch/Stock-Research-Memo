@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GOOGL Research 20260624</title>
+  <style>
+    :root { --bg:#f6f7f9; --panel:#fff; --ink:#1d252d; --muted:#5c6670; --line:#d9dee5; --blue:#2563eb; --green:#0f8a5f; --amber:#b7791f; --red:#c24135; --soft-blue:#e9f1ff; --soft-green:#e9f7f1; --soft-amber:#fff4df; --soft-red:#fff0ed; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font-family:Arial,"Microsoft YaHei",sans-serif; line-height:1.55; }
+    main { max-width:1180px; margin:0 auto; padding:28px 20px 56px; }
+    header { display:grid; grid-template-columns:1.35fr .65fr; gap:18px; margin-bottom:18px; }
+    section,.hero,.metric,.topline { background:var(--panel); border:1px solid var(--line); border-radius:8px; }
+    .hero,.metric,section { padding:22px; }
+    .topline { display:flex; justify-content:space-between; gap:12px; align-items:center; margin-bottom:14px; padding:12px 14px; }
+    .topline span { color:var(--muted); font-size:13px; }
+    .hero h1 { margin:0 0 10px; font-size:32px; line-height:1.2; letter-spacing:0; }
+    h2 { margin:0 0 14px; font-size:21px; letter-spacing:0; }
+    h3 { margin:0 0 8px; font-size:16px; letter-spacing:0; }
+    p { margin:8px 0 0; color:var(--muted); }
+    section { margin-top:14px; }
+    .big { font-size:42px; line-height:1; font-weight:700; }
+    .label,.note { color:var(--muted); font-size:13px; }
+    .badge { display:inline-flex; width:fit-content; padding:6px 10px; border-radius:6px; font-weight:700; font-size:14px; }
+    .green { color:var(--green); background:var(--soft-green); } .amber { color:var(--amber); background:var(--soft-amber); } .red { color:var(--red); background:var(--soft-red); } .blue { color:var(--blue); background:var(--soft-blue); }
+    .grid4 { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin:14px 0; }
+    .grid2 { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+    .metric strong { display:block; margin-top:6px; font-size:24px; }
+    .card { border:1px solid var(--line); border-radius:8px; padding:15px; background:#fff; }
+    .card p { font-size:14px; }
+    table { width:100%; border-collapse:collapse; font-size:14px; }
+    th,td { padding:12px 10px; border-bottom:1px solid var(--line); text-align:right; vertical-align:middle; }
+    th:first-child,td:first-child { text-align:left; }
+    th { color:var(--muted); background:#fafbfc; font-size:13px; }
+    tr:last-child td { border-bottom:0; }
+    .total td { font-weight:700; background:#fafbfc; }
+    .bands { display:grid; grid-template-columns:repeat(6,1fr); gap:10px; }
+    .band { border:1px solid var(--line); border-radius:8px; padding:14px 12px; background:#fff; min-height:112px; }
+    .band strong { display:block; margin-bottom:6px; font-size:18px; }
+    .band span { color:var(--muted); font-size:13px; }
+    a { color:var(--blue); text-decoration:none; font-weight:700; }
+    @media(max-width:900px){ header,.grid4,.grid2{grid-template-columns:1fr}.bands{grid-template-columns:repeat(2,1fr)}.wrap{overflow-x:auto}.topline{align-items:flex-start;flex-direction:column} }
+    @media(max-width:560px){ main{padding:18px 12px 36px}.hero h1{font-size:25px}.big{font-size:36px}.bands{grid-template-columns:1fr} }
+  </style>
+</head>
+<body>
+<main>
+  <div class="topline"><a href="../index.html">返回首页</a><span>研报适用日期：2026-06-24 ｜ 公司：Alphabet / GOOGL ｜ 数据口径：FY2026 Q1，季度截至 2026-03-31</span></div>
+  <header>
+    <div class="hero">
+      <h1>Alphabet / Google 投资研究报告</h1>
+      <p>公司类型：大型复合科技。核心看 Search 广告现金牛、YouTube 生态、Google Cloud 高增长、TPU/Gemini AI 投资回报，以及监管风险。</p>
+      <p>股价参考：GOOGL 约 $346.90，取 2026-06-22 可查收盘价；2026-06-23 科技股波动后，报告更重视区间而非单点价格。</p>
+    </div>
+    <div class="metric">
+      <div class="label">Base 合理价区间</div>
+      <div class="big">$390-$430</div>
+      <div class="badge green">当前小幅低估，但需观察 AI Capex 回报</div>
+    </div>
+  </header>
+
+  <div class="grid4">
+    <div class="metric"><div class="label">参考市值</div><strong>约 $4.0T</strong></div>
+    <div class="metric"><div class="label">Q1 营收</div><strong>$109.9B</strong></div>
+    <div class="metric"><div class="label">Q1 净利润</div><strong>$62.6B</strong></div>
+    <div class="metric"><div class="label">Q1 Capex</div><strong>$35.7B</strong></div>
+  </div>
+
+  <section>
+    <h2>一句话结论</h2>
+    <div class="grid2">
+      <div class="card"><h3>投资判断</h3><p>Alphabet 是“广告现金牛 + 云计算 + AI 全栈基础设施”的复合资产。Search 没有被 AI 颠覆，反而在 Q1 继续增长；Cloud 增速非常强，是估值上修的核心。</p></div>
+      <div class="card"><h3>操作结论</h3><p>$340-$350 附近低于 Base 合理区，但公司正在从轻资产互联网变成高 Capex AI 平台，不能只按传统广告 PE 来买。</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>最新财务与业务数据</h2>
+    <div class="wrap"><table><thead><tr><th>项目</th><th>FY26 Q1</th><th>同比/趋势</th><th>解读</th></tr></thead><tbody>
+      <tr><td>总营收</td><td>$109.9B</td><td>YoY +22%</td><td>AI 搜索、YouTube、Cloud 同时贡献增长。</td></tr>
+      <tr><td>Google Services</td><td>$89.6B</td><td>YoY +16%</td><td>广告和订阅仍是利润底盘。</td></tr>
+      <tr><td>Search 收入</td><td>约 $60.4B</td><td>YoY +19%</td><td>AI Overviews/AI Search 没有明显伤害商业化，反而推高查询量。</td></tr>
+      <tr><td>YouTube 广告</td><td>约 $9.88B</td><td>YoY +11%</td><td>短视频、联网电视、订阅共同支撑。</td></tr>
+      <tr><td>Google Cloud</td><td>$20.0B</td><td>YoY +63%</td><td>本季度最亮眼，AI 基建和企业 Gemini 需求强。</td></tr>
+      <tr><td>净利润</td><td>$62.6B</td><td>YoY +81%</td><td>利润大幅跳升，但需区分经营利润和投资/一次性因素。</td></tr>
+      <tr><td>Capex 指引</td><td>2026 年 $180-$190B</td><td>2027 还将显著增加</td><td>AI 投资强度极高，是最大争议点。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>业务拆分与趋势</h2>
+    <div class="wrap"><table><thead><tr><th>板块</th><th>业务内容</th><th>趋势</th><th>估值重点</th></tr></thead><tbody>
+      <tr><td>Search & Ads</td><td>Google Search、搜索广告、购物广告、部分网络广告</td><td>AI 搜索推动查询量创新高，广告商业化仍强。</td><td>高利润现金牛，但监管和 AI 颠覆风险最大。</td></tr>
+      <tr><td>YouTube</td><td>YouTube 广告、YouTube Premium、YouTube TV、Creator 生态</td><td>广告恢复，订阅增长；更像全球视频平台 + 广告平台。</td><td>可给高于传统广告业务的估值。</td></tr>
+      <tr><td>Google Cloud</td><td>GCP、Workspace、Gemini 企业服务、TPU 云算力</td><td>Q1 增长 63%， backlog 约 $460B-$462B。</td><td>核心成长资产，估值应高于广告业务。</td></tr>
+      <tr><td>Subscriptions / Devices / Play</td><td>Google One、YouTube Premium、Pixel、Play、Android 生态</td><td>付费订阅超过 350M，生态粘性强。</td><td>稳定增长，但硬件利润率较低。</td></tr>
+      <tr><td>Other Bets / Waymo</td><td>Waymo、Verily、Isomorphic、X 等</td><td>短期亏损，长期期权价值。</td><td>不宜用 PE，适合期权估值。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>TTM SOTP Base 估值</h2>
+    <div class="wrap"><table><thead><tr><th>板块</th><th>估算税后利润/价值基础</th><th>合理倍数</th><th>合理市值</th><th>每股价值</th></tr></thead><tbody>
+      <tr><td>Search & Core Ads</td><td>$112B</td><td>23x</td><td>$2.58T</td><td>$223</td></tr>
+      <tr><td>YouTube</td><td>$24B</td><td>26x</td><td>$0.62T</td><td>$54</td></tr>
+      <tr><td>Google Cloud</td><td>$24B</td><td>35x</td><td>$0.84T</td><td>$73</td></tr>
+      <tr><td>Subs / Devices / Play</td><td>$18B</td><td>20x</td><td>$0.36T</td><td>$31</td></tr>
+      <tr><td>Other Bets / Waymo</td><td>期权价值</td><td>-</td><td>$0.25T</td><td>$22</td></tr>
+      <tr><td>净现金/其他调整</td><td>高 Capex 与债务调整</td><td>-</td><td>-$0.10T</td><td>-$9</td></tr>
+      <tr class="total"><td>合计</td><td>-</td><td>-</td><td>$4.55T</td><td>$394</td></tr>
+    </tbody></table></div>
+    <p class="note">分部利润为估算值：Alphabet 未单独披露 Search、YouTube、订阅等税后利润。股本按约 11.55B 股估算。</p>
+  </section>
+
+  <section>
+    <h2>TTM SOTP 牛熊拆分</h2>
+    <div class="wrap"><table><thead><tr><th>Case</th><th>Search PE / 价值</th><th>YouTube PE / 价值</th><th>Cloud PE / 价值</th><th>Other 价值</th><th>合计股价</th></tr></thead><tbody>
+      <tr><td><span class="badge amber">Bear</span></td><td>18x / $2.02T / $175</td><td>20x / $0.48T / $42</td><td>25x / $0.60T / $52</td><td>$0.25T / $22</td><td>$300</td></tr>
+      <tr><td><span class="badge green">Base</span></td><td>23x / $2.58T / $223</td><td>26x / $0.62T / $54</td><td>35x / $0.84T / $73</td><td>$0.51T / $44</td><td>$394</td></tr>
+      <tr><td><span class="badge blue">Bull</span></td><td>27x / $3.02T / $262</td><td>32x / $0.77T / $67</td><td>45x / $1.08T / $94</td><td>$0.80T / $69</td><td>$492</td></tr>
+    </tbody></table></div>
+    <p class="note">Bear/Base/Bull 主要调整各业务估值倍数与 Other Bets 期权价值；利润基础保持不变，方便看估值敏感性。</p>
+  </section>
+
+  <section>
+    <h2>Forward 估值</h2>
+    <div class="wrap"><table><thead><tr><th>情景</th><th>未来12个月 EPS</th><th>合理PE</th><th>合理股价</th><th>含义</th></tr></thead><tbody>
+      <tr><td><span class="badge amber">Bear</span></td><td>$14.0</td><td>22x</td><td>$308</td><td>AI Capex 压低 FCF，Search 估值被监管和 AI 竞争压制。</td></tr>
+      <tr><td><span class="badge green">Base</span></td><td>$16.0</td><td>26x</td><td>$416</td><td>Cloud 增长和 Search 稳定抵消高 Capex。</td></tr>
+      <tr><td><span class="badge blue">Bull</span></td><td>$18.5</td><td>30x</td><td>$555</td><td>Gemini/TPU/Cloud 明显兑现，市场重新给 AI 平台溢价。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>现金流与资产负债表</h2>
+    <div class="wrap"><table><thead><tr><th>指标</th><th>最新数据</th><th>判断</th></tr></thead><tbody>
+      <tr><td>Q1 Capex</td><td>$35.7B</td><td>AI 基建支出极重，未来 FCF 波动会加大。</td></tr>
+      <tr><td>2026 Capex 指引</td><td>$180-$190B</td><td>投资强度接近 Microsoft，明显高于传统 Google。</td></tr>
+      <tr><td>Free Cash Flow</td><td>Q1 约 $10B</td><td>盈利很强，但 FCF 被 Capex 吞噬。</td></tr>
+      <tr><td>长期债务</td><td>约 $77.5B</td><td>债务可控，但资本结构已从纯回购转向融资扩张。</td></tr>
+      <tr><td>股东回报</td><td>Q1 无回购；近期有大规模融资</td><td>短期对估值不友好，但若 AI 回报高，长期可接受。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>Case 汇总</h2>
+    <div class="wrap"><table><thead><tr><th>Case</th><th>SOTP 股价</th><th>Forward 股价</th><th>综合判断</th></tr></thead><tbody>
+      <tr><td>Bear</td><td>$300</td><td>$308</td><td>监管、AI 人才流失、高 Capex 同时压估值。</td></tr>
+      <tr><td>Base</td><td>$394</td><td>$416</td><td>合理区间约 $390-$430。</td></tr>
+      <tr><td>Bull</td><td>$492</td><td>$555</td><td>需要 Cloud/Gemini/TPU 继续超预期。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>风险与跟踪指标</h2>
+    <div class="wrap"><table><thead><tr><th>风险</th><th>观察指标</th><th>危险信号</th></tr></thead><tbody>
+      <tr><td>AI 搜索颠覆</td><td>Search 收入、查询量、广告点击率</td><td>AI 使用增长但广告 monetization 下滑。</td></tr>
+      <tr><td>高 Capex 回报不足</td><td>Capex、FCF、Cloud backlog、Cloud margin</td><td>Capex 继续上修但 Cloud 增速/利润率放缓。</td></tr>
+      <tr><td>AI 人才与模型竞争</td><td>DeepMind 人才流失、Gemini 排名、开发者使用量</td><td>核心研究员连续离职，模型能力落后。</td></tr>
+      <tr><td>监管/反垄断</td><td>Search、Ads、Chrome、Play 案件</td><td>强制拆分、限制默认搜索协议、广告业务结构性受损。</td></tr>
+      <tr><td>YouTube 竞争</td><td>广告增速、订阅、TikTok/短视频份额</td><td>广告恢复弱于平台平均。</td></tr>
+      <tr><td>融资稀释</td><td>新增发股、债务、回购暂停</td><td>持续融资但投资回报不清晰。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>催化剂</h2>
+    <div class="grid2">
+      <div class="card"><h3>正向催化剂</h3><p>Cloud 增速继续超预期、Gemini 用户/企业 API 使用增长、TPU 外售打开新收入、AI Search 广告变现稳定、Dow 纳入带来关注度提升。</p></div>
+      <div class="card"><h3>负向催化剂</h3><p>AI 人才流失继续发酵、Capex 继续上修但 FCF 下滑、监管处罚加重、Search 商业化被 AI 答案侵蚀。</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>买入 / 卖出区间</h2>
+    <div class="bands">
+      <div class="band"><strong>$280 以下</strong><span>厚安全边际，但必须复核监管和 AI 基本面。</span></div>
+      <div class="band"><strong>$310 以下</strong><span>明显低估，接近 Bear 合理区。</span></div>
+      <div class="band"><strong>$340-$360</strong><span>小幅低估，可分批。</span></div>
+      <div class="band"><strong>$390-$430</strong><span>Base 合理区，主要持有。</span></div>
+      <div class="band"><strong>$480 以上</strong><span>偏贵，可停止加仓或小幅减仓。</span></div>
+      <div class="band"><strong>$550 以上</strong><span>明显过热，可分批止盈一部分。</span></div>
+    </div>
+    <p class="note">抄底提醒：$280-$310 区间只有在 Search、Cloud、监管、AI 人才和 FCF 没有明显恶化时才成立；若基本面变坏，买入线要下调。</p>
+  </section>
+
+  <section>
+    <h2>下一次财报</h2>
+    <div class="wrap"><table><tbody>
+      <tr><td>下一次财报</td><td>FY2026 Q2</td></tr>
+      <tr><td>预计时间</td><td>2026 年 7 月下旬，具体以 Alphabet Investor Relations 公告为准。</td></tr>
+      <tr><td>重点关注</td><td>Search 增速、Cloud 增速与 margin、Capex/FCF、Gemini 用户、TPU 外售、监管进展。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>结论</h2>
+    <div class="wrap"><table><tbody>
+      <tr><td>合理价</td><td>SOTP Base 约 $394；Forward Base 约 $416，综合合理区 $390-$430。</td></tr>
+      <tr><td>当前动作</td><td>$340-$350 附近小幅低估，可分批观察，但不属于厚安全边际。</td></tr>
+      <tr><td>抄底价</td><td>$310 以下明显低估，$280 以下安全垫较厚。</td></tr>
+      <tr><td>卖出/减仓区</td><td>$480 以上偏贵，$550 以上可考虑分批止盈部分仓位。</td></tr>
+      <tr><td>最关键变量</td><td>Search 是否被 AI 侵蚀、Cloud 是否继续 50%+ 高增长、Capex 是否转化为 FCF、监管是否加重。</td></tr>
+    </tbody></table></div>
+    <p class="note">主要来源：Alphabet FY2026 Q1 公开财报报道、MarketWatch、Barron’s、WSJ、The Verge。网页为静态研究备忘录，不构成投资建议。</p>
+  </section>
+
+  <section>
+    <h2>参考来源</h2>
+    <div class="wrap"><table><tbody>
+      <tr><td>Alphabet Q1 2026 业绩概览</td><td><a href="https://www.theverge.com/tech/920815/google-alphabet-q1-2026-earnings-sundar-pichai">The Verge</a>、<a href="https://www.androidcentral.com/phones/google-pixel/alphabet-earnings-q2-2026">Android Central</a></td></tr>
+      <tr><td>Cloud / Capex / FCF / Debt</td><td><a href="https://www.barrons.com/articles/alphabet-earnings-stock-price-c55b88e7">Barron’s</a>、<a href="https://www.marketwatch.com/livecoverage/alphabet-earnings-google-stock-results-cloud-ai/card/alphabet-raises-ai-spending-plans-for-2026-and-2027-YemWtwomb9wm6FcozjEc">MarketWatch</a></td></tr>
+      <tr><td>Search / AI / TPU / Dow</td><td><a href="https://www.wsj.com/tech/alphabet-earnings-q1-2026-googl-stock-283553bc">WSJ</a>、<a href="https://www.marketwatch.com/story/alphabets-stock-is-set-to-join-the-dow-heres-which-company-is-getting-the-boot-73453ca7">MarketWatch</a></td></tr>
+    </tbody></table></div>
+  </section>
+</main>
+</body>
+</html>
