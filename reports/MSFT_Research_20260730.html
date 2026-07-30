@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MSFT Research 20260730</title>
+  <style>
+    :root { --bg:#f6f7f9; --panel:#fff; --ink:#1d252d; --muted:#5c6670; --line:#d9dee5; --blue:#2563eb; --green:#0f8a5f; --amber:#b7791f; --red:#c24135; --soft-blue:#e9f1ff; --soft-green:#e9f7f1; --soft-amber:#fff4df; --soft-red:#fff0ed; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font-family:Arial,"Microsoft YaHei",sans-serif; line-height:1.55; }
+    main { max-width:1180px; margin:0 auto; padding:28px 20px 56px; }
+    header { display:grid; grid-template-columns:1.35fr .65fr; gap:18px; margin-bottom:18px; }
+    section,.hero,.metric,.topline { background:var(--panel); border:1px solid var(--line); border-radius:8px; }
+    .hero,.metric,section { padding:22px; }
+    .topline { display:flex; justify-content:space-between; gap:12px; align-items:center; margin-bottom:14px; padding:12px 14px; }
+    .topline span { color:var(--muted); font-size:13px; }
+    .hero h1 { margin:0 0 10px; font-size:32px; line-height:1.2; }
+    h2 { margin:0 0 14px; font-size:21px; }
+    h3 { margin:0 0 8px; font-size:16px; }
+    p { margin:8px 0 0; color:var(--muted); }
+    section { margin-top:14px; }
+    .big { font-size:42px; line-height:1; font-weight:700; }
+    .label,.note { color:var(--muted); font-size:13px; }
+    .badge { display:inline-flex; width:fit-content; padding:6px 10px; border-radius:6px; font-weight:700; font-size:14px; }
+    .green { color:var(--green); background:var(--soft-green); } .amber { color:var(--amber); background:var(--soft-amber); } .red { color:var(--red); background:var(--soft-red); } .blue { color:var(--blue); background:var(--soft-blue); }
+    .grid4 { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin:14px 0; }
+    .grid2 { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+    .metric strong { display:block; margin-top:6px; font-size:24px; }
+    .card { border:1px solid var(--line); border-radius:8px; padding:15px; background:#fff; }
+    .card p { font-size:14px; }
+    .attention { margin-top:16px; padding:18px; border:1px solid #e7c98a; border-left:5px solid var(--amber); border-radius:8px; background:var(--soft-amber); }
+    .attention h3 { color:#865b17; }
+    .attention p { color:#60491f; }
+    table { width:100%; border-collapse:collapse; font-size:14px; }
+    th,td { padding:12px 10px; border-bottom:1px solid var(--line); text-align:right; vertical-align:middle; }
+    th:first-child,td:first-child { text-align:left; }
+    th { color:var(--muted); background:#fafbfc; font-size:13px; }
+    tr:last-child td { border-bottom:0; }
+    .total td { font-weight:700; background:#fafbfc; }
+    .bands { display:grid; grid-template-columns:repeat(6,1fr); gap:10px; }
+    .band { border:1px solid var(--line); border-radius:8px; padding:14px 12px; background:#fff; min-height:112px; }
+    .band strong { display:block; margin-bottom:6px; font-size:18px; }
+    .band span { color:var(--muted); font-size:13px; }
+    a { color:var(--blue); text-decoration:none; font-weight:700; }
+    @media(max-width:900px){ header,.grid4,.grid2{grid-template-columns:1fr}.bands{grid-template-columns:repeat(2,1fr)}.wrap{overflow-x:auto}.topline{align-items:flex-start;flex-direction:column} }
+    @media(max-width:560px){ main{padding:18px 12px 36px}.hero h1{font-size:25px}.big{font-size:36px}.bands{grid-template-columns:1fr} }
+  </style>
+</head>
+<body>
+<main>
+  <div class="topline"><a href="../index.html">返回首页</a><span>研报适用日期：2026-07-30 ｜ 公司：Microsoft / MSFT ｜ 数据口径：FY2026 Q4及全年，季度截至 2026-06-30</span></div>
+  <header>
+    <div class="hero">
+      <h1>Microsoft FY2026 Q4 财报研究</h1>
+      <p>公司类型：大型复合科技。估值采用分部加总（SOTP），并以剔除 OpenAI 投资影响后的正常化 EPS、自由现金流作交叉验证。</p>
+      <p>股价参考：2026-07-29 盘后约 $426.03；7 月 30 日盘中曾上涨约 15.7%，因此短期价格波动较大，报告以区间而非单点判断。</p>
+    </div>
+    <div class="metric">
+      <div class="label">Base 合理价区间</div>
+      <div class="big">$455-$500</div>
+      <div class="badge green">业绩验证 AI 回报，但上涨后安全边际收窄</div>
+    </div>
+  </header>
+
+  <div class="grid4">
+    <div class="metric"><div class="label">Q4 营收</div><strong>$90.0B</strong><span class="note">YoY +18%</span></div>
+    <div class="metric"><div class="label">Q4 营业利润</div><strong>$40.6B</strong><span class="note">YoY +18%</span></div>
+    <div class="metric"><div class="label">Azure 增长</div><strong>+43%</strong><span class="note">Q1 FY27 指引约 +45%</span></div>
+    <div class="metric"><div class="label">FY26 自由现金流</div><strong>$67.0B</strong><span class="note">OCF - 现金 Capex</span></div>
+  </div>
+
+  <section>
+    <h2>一句话结论</h2>
+    <div class="grid2">
+      <div class="card"><h3>基本面判断</h3><p>这是一次高质量验证：Azure 增速由 Q3 的 40% 加速至 43%，下一季指引约 45%；Copilot 付费席位超过 3000 万，商业 RPO 达 $678B。AI 已同时推动基础设施和应用层收入，而不是只有 Capex。</p></div>
+      <div class="card"><h3>投资判断</h3><p>$426 盘后价仍低于 Base 合理区，但若按 7 月 30 日盘中大涨后的价格计算，估值已接近合理区。公司质量极强，赔率取决于买入价格；财报后不宜因情绪追高。</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>利润口径：不要把投资收益当作主营增长</h2>
+    <div class="wrap"><table><thead><tr><th>项目</th><th>GAAP</th><th>调整后</th><th>解读</th></tr></thead><tbody>
+      <tr><td>Q4 净利润</td><td>$35.77B</td><td>$35.29B</td><td>调整后剔除 OpenAI 投资影响；Q4差异较小。</td></tr>
+      <tr><td>Q4 稀释 EPS</td><td>$4.81</td><td>$4.74</td><td>更适合观察持续经营盈利。</td></tr>
+      <tr><td>FY26 净利润</td><td>$133.75B</td><td>$128.79B</td><td>GAAP 包含投资公允价值与损益影响。</td></tr>
+      <tr><td>FY26 稀释 EPS</td><td>$17.95</td><td>$17.28</td><td>本报告 PE 估值主要采用 $17.28。</td></tr>
+    </tbody></table></div>
+    <p class="note">微软官方 Non-GAAP 口径只调整 OpenAI 投资影响；Q4电话会另披露 $3.2B Anthropic 投资收益等离散项目，估值时不应将其资本化为主营利润。</p>
+  </section>
+
+  <section>
+    <h2>最新财务与业务数据</h2>
+    <div class="wrap"><table><thead><tr><th>项目</th><th>FY26 Q4</th><th>同比/趋势</th><th>解读</th></tr></thead><tbody>
+      <tr><td>总营收</td><td>$90.01B</td><td>+18%</td><td>高于此前 $86.7-$87.8B 指引。</td></tr>
+      <tr><td>营业利润</td><td>$40.60B</td><td>+18%</td><td>营业利润率 45.1%，重资产投入下仍保持稳定。</td></tr>
+      <tr><td>Microsoft Cloud</td><td>$59.3B</td><td>+27%</td><td>云业务继续成为整体增长底盘。</td></tr>
+      <tr><td>Azure</td><td>未披露绝对值</td><td>+43%</td><td>需求仍超过供给，新增容量迅速转化为收入。</td></tr>
+      <tr><td>商业 RPO</td><td>$678B</td><td>+84%</td><td>订单能见度强，但包含大额 OpenAI 合同，需关注集中度。</td></tr>
+      <tr><td>M365 Copilot</td><td>超过 30M 付费席位</td><td>净新增环比超过翻倍</td><td>应用层 AI 商业化开始形成规模。</td></tr>
+      <tr><td>Q4 股东回报</td><td>$10.2B</td><td>回购 + 分红</td><td>Capex 高企下仍能稳定返还现金。</td></tr>
+      <tr><td>稀释股本</td><td>7.443B</td><td>同比 -0.2%</td><td>回购基本抵消股权激励，未出现明显稀释。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>分部表现与业务质量</h2>
+    <div class="wrap"><table><thead><tr><th>分部</th><th>Q4 营收</th><th>Q4 营业利润</th><th>FY26 营业利润</th><th>判断</th></tr></thead><tbody>
+      <tr><td>Productivity & Business Processes</td><td>$37.85B</td><td>$21.90B</td><td>$83.88B</td><td>利润率约 58%；M365、Copilot、LinkedIn 和 Dynamics 构成高粘性利润底盘。</td></tr>
+      <tr><td>Intelligent Cloud</td><td>$39.31B</td><td>$15.96B</td><td>$56.97B</td><td>Azure 加速至 43%，AI 供给约束意味着增长尚未充分释放。</td></tr>
+      <tr><td>More Personal Computing</td><td>$12.85B</td><td>$2.75B</td><td>$14.39B</td><td>收入 -4%，Xbox -10%；Windows 与游戏仍是组合中较弱部分。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>Base SOTP：输入、公式与结果</h2>
+    <div class="wrap"><table><thead><tr><th>估值项</th><th>FY26 营业利润</th><th>税后利润估算</th><th>Base 倍数</th><th>价值</th><th>每股</th></tr></thead><tbody>
+      <tr><td>Productivity / M365 / LinkedIn</td><td>$83.88B</td><td>$67.10B</td><td>25x</td><td>$1.68T</td><td>$225</td></tr>
+      <tr><td>Intelligent Cloud / Azure</td><td>$56.97B</td><td>$45.58B</td><td>34x</td><td>$1.55T</td><td>$208</td></tr>
+      <tr><td>More Personal Computing</td><td>$14.39B</td><td>$11.51B</td><td>14x</td><td>$0.16T</td><td>$22</td></tr>
+      <tr><td>净金融资产</td><td>现金短投 $76.84B - 总债务 $40.29B + 股权及其他投资 $36.35B</td><td>-</td><td>账面近似</td><td>$0.07T</td><td>$10</td></tr>
+      <tr class="total"><td>合计</td><td>$155.24B</td><td>$124.19B</td><td>-</td><td>$3.46T</td><td>约 $465</td></tr>
+    </tbody></table></div>
+    <p class="note">分部未披露税后利润，统一按 80% 将营业利润折算为税后利润；这是估算而非公司数据。每股价值按 Q4 稀释股本 7.443B 计算。股权投资收益未进入分部利润，只在资产项按账面近似计入，避免重复估值。</p>
+  </section>
+
+  <section>
+    <h2>Bear / Base / Bull 情景</h2>
+    <div class="wrap"><table><thead><tr><th>情景</th><th>Productivity</th><th>Cloud</th><th>MPC</th><th>净金融资产</th><th>合计价值</th><th>每股</th></tr></thead><tbody>
+      <tr><td><span class="badge red">Bear</span></td><td>21x / $1.41T</td><td>28x / $1.28T</td><td>10x / $0.12T</td><td>$0.05T</td><td>$2.85T</td><td>约 $383</td></tr>
+      <tr><td><span class="badge green">Base</span></td><td>25x / $1.68T</td><td>34x / $1.55T</td><td>14x / $0.16T</td><td>$0.07T</td><td>$3.46T</td><td>约 $465</td></tr>
+      <tr><td><span class="badge blue">Bull</span></td><td>29x / $1.95T</td><td>40x / $1.82T</td><td>16x / $0.18T</td><td>$0.09T</td><td>$4.04T</td><td>约 $543</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>FY27 正常化 Forward PE 交叉验证</h2>
+    <div class="wrap"><table><thead><tr><th>情景</th><th>FY27 正常化 EPS</th><th>合理 PE</th><th>合理股价</th><th>成立条件</th></tr></thead><tbody>
+      <tr><td><span class="badge red">Bear</span></td><td>$18.5</td><td>22x</td><td>$407</td><td>Azure 降速、AI 毛利率承压、Copilot 渗透放缓。</td></tr>
+      <tr><td><span class="badge green">Base</span></td><td>$20.0</td><td>25x</td><td>$500</td><td>收入与营业利润双位数增长，利润率仅小幅下降。</td></tr>
+      <tr><td><span class="badge blue">Bull</span></td><td>$22.5</td><td>28x</td><td>$630</td><td>Azure 40%+ 增长延续，Copilot 和 GitHub 消费加速。</td></tr>
+    </tbody></table></div>
+    <p class="note">FY27 EPS 是本报告情景假设，不是微软指引。公司只指引 FY27 收入和营业利润继续双位数增长、营业利润率下降少于 1pct、有效税率约 20%。</p>
+  </section>
+
+  <section>
+    <h2>现金流、Capex 与资本结构</h2>
+    <div class="wrap"><table><thead><tr><th>指标</th><th>Q4 / FY26</th><th>判断</th></tr></thead><tbody>
+      <tr><td>经营现金流</td><td>$55.44B / $182.94B</td><td>FY26 同比增长约 34%，现金创造力强。</td></tr>
+      <tr><td>现金口径 Capex</td><td>$35.80B / $115.95B</td><td>FY26 同比增长约 80%，主要用于云和 AI 基础设施。</td></tr>
+      <tr><td>自由现金流</td><td>$19.64B / $66.99B</td><td>仍为正且规模可观，但增速明显落后于利润。</td></tr>
+      <tr><td>Q4 总 Capex</td><td>约 $41B</td><td>包含融资租赁；同比约 +70%。</td></tr>
+      <tr><td>FY27 Capex</td><td>预计同比增长；Q1 超过 $50B</td><td>投资强度仍在上升；日历年 2026 指引从约 $190B 变为 $175B，主要是租赁分类变化，不是实际削减。</td></tr>
+      <tr><td>现金及短投 / 总债务</td><td>$76.84B / $40.29B</td><td>仍为净现金，资产负债表安全。</td></tr>
+      <tr><td>FY26 股东回报</td><td>回购 $22.27B + 分红 $26.45B</td><td>合计约 $48.72B，资本回报稳定。</td></tr>
+    </tbody></table></div>
+    <div class="attention">
+      <h3>额外注意：$190B 降至 $175B 是口径变化，不是资本投入下降</h3>
+      <p><strong>事实：</strong>从 FY27 开始，微软把数据中心及办公建筑的预计使用寿命由 15 年延长至 25 年。该调整针对建筑物，不是再次延长 GPU、CPU 或服务器的折旧年限。使用寿命变长后，更多未来数据中心租赁将从融资租赁转为经营租赁：融资租赁计入微软披露的总 Capex，经营租赁不计入。因此约 $15B 从日历年 2026 Capex 指引中移出，但管理层明确表示，剔除这一会计影响后，原有投资计划没有改变。</p>
+      <p><strong>利润影响：</strong>更长的建筑折旧年限会降低未来折旧费用，但微软预计对 FY27 营业利润的正面影响很小，不能把它视为显著的 EPS 美化。</p>
+      <p><strong>现金流影响：</strong>经营租赁付款将逐期进入经营现金流；融资租赁本金通常进入融资现金流。分类变化会降低表面 Capex，却不会消除租赁负债和真实现金义务，也会削弱不同年度 Capex、经营现金流及自由现金流的直接可比性。</p>
+      <p><strong>投资判断：</strong>FY27 Capex 仍预计同比增长，Q1 单季指引超过 $50B。真实信号不是微软开始收缩 AI 投资，而是高投入周期仍在强化。今后应同时跟踪现金购买固定资产、新增经营与融资租赁义务、租赁现金付款和 Cloud 毛利率，不能只看 headline Capex。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>FY27 Q1 指引：下一季验证点</h2>
+    <div class="wrap"><table><thead><tr><th>项目</th><th>公司指引</th><th>本报告解读</th></tr></thead><tbody>
+      <tr><td>总营收</td><td>$89.85-$90.95B，+16%-17%</td><td>增长延续，商业业务抵消 PC 疲弱。</td></tr>
+      <tr><td>Productivity</td><td>$36.7-$37.0B，+11%-12%</td><td>M365 Copilot 与高端 SKU 继续推升 ARPU。</td></tr>
+      <tr><td>Intelligent Cloud</td><td>$40.95-$41.25B，+33%-34%</td><td>Azure 是最主要增量。</td></tr>
+      <tr><td>Azure</td><td>固定汇率约 +45%</td><td>较 Q4 继续加速；若兑现，证明供给释放可立即变现。</td></tr>
+      <tr><td>Q1 Capex</td><td>超过 $50B</td><td>已包含租赁分类变化后的影响；即使统计口径变轻，投资强度仍显著上升。</td></tr>
+      <tr><td>营业利润率</td><td>同比大致持平</td><td>高 Capex 与折旧暂未破坏经营杠杆。</td></tr>
+      <tr><td>FY27 全年</td><td>收入和营业利润双位数增长；利润率下降少于 1pct；FCF 为正</td><td>基本面稳健，但自由现金流增长仍取决于 Capex 节奏。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>与 2026-06-22 旧研报相比</h2>
+    <div class="wrap"><table><thead><tr><th>变量</th><th>旧研报</th><th>最新结果</th><th>影响</th></tr></thead><tbody>
+      <tr><td>Azure 增长</td><td>Q3 +40%</td><td>Q4 +43%；Q1 指引约 +45%</td><td>基本面强于旧版假设。</td></tr>
+      <tr><td>Cloud / AI 订单</td><td>高增长但能见度有限</td><td>RPO $678B，+84%</td><td>收入可见度显著增强，但需关注 OpenAI 集中度。</td></tr>
+      <tr><td>Copilot 商业化</td><td>主要看渗透率</td><td>超过 30M 付费席位</td><td>应用层 AI 已从概念进入规模收入阶段。</td></tr>
+      <tr><td>FY26 FCF</td><td>担忧 Capex 挤压</td><td>$67.0B，仍保持正现金流</td><td>风险存在，但尚未破坏财务韧性。</td></tr>
+      <tr><td>Base 估值</td><td>SOTP $450</td><td>SOTP 约 $465；综合 $455-$500</td><td>旧版方向基本正确，最新业绩支持小幅上调。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>风险、跟踪指标与危险信号</h2>
+    <div class="wrap"><table><thead><tr><th>风险</th><th>每季跟踪</th><th>危险信号</th></tr></thead><tbody>
+      <tr><td>AI Capex 回报不足</td><td>Azure 增速、Cloud 毛利率、现金 PP&amp;E、新增经营/融资租赁义务、租赁付款、FCF</td><td>经济资本投入连续增长，但 Azure 跌破 30%、Cloud 毛利率恶化且 FCF 收缩。</td></tr>
+      <tr><td>Capex 口径失真</td><td>经营租赁与融资租赁的新增额、付款及剩余承诺</td><td>披露 Capex 增速放缓，但经营租赁承诺和经营现金流压力继续快速上升。</td></tr>
+      <tr><td>OpenAI 客户与投资集中</td><td>剔除 OpenAI 的 RPO、Azure 订单、合作条款</td><td>OpenAI 转向其他云或合同收缩，核心 RPO 同时放缓。</td></tr>
+      <tr><td>Copilot 商业化质量</td><td>付费席位、ARPU、使用量、毛利率</td><td>席位增长但使用不足，推理成本侵蚀软件毛利率。</td></tr>
+      <tr><td>云竞争</td><td>Azure 相对 AWS/GCP 增速、企业迁移</td><td>份额下降、价格竞争加剧或供给持续制约交付。</td></tr>
+      <tr><td>消费者业务疲弱</td><td>Windows OEM、Xbox、PC出货</td><td>MPC 连续明显下滑并拖累整体利润。</td></tr>
+      <tr><td>监管与安全</td><td>反垄断、云许可、重大安全事件</td><td>产品捆绑被限制或云安全事故损害企业信任。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>催化剂</h2>
+    <div class="grid2">
+      <div class="card"><h3>正向催化剂</h3><p>Azure Q1 增长兑现 45%；Copilot 付费席位和使用量持续加速；GitHub Copilot 按量计费提升变现；AI效率改善抵消折旧；供给约束缓解带来收入释放。</p></div>
+      <div class="card"><h3>负向催化剂</h3><p>FY27 Capex 再大幅上修；Cloud 毛利率持续下降；OpenAI 合同集中度引发担忧；M365 AI 加价无法转化为使用与续费；Xbox/Windows 进一步恶化。</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>仓位管理区间</h2>
+    <div class="bands">
+      <div class="band"><strong>$380 以下</strong><span>接近 Bear 估值，基本面未破坏时安全边际较厚。</span></div>
+      <div class="band"><strong>$410 以下</strong><span>明显低估，适合分批提高仓位。</span></div>
+      <div class="band"><strong>$420-$450</strong><span>小幅低估，可分批但不追求一次买满。</span></div>
+      <div class="band"><strong>$455-$500</strong><span>Base 合理区，以持有和等待兑现为主。</span></div>
+      <div class="band"><strong>$530-$570</strong><span>偏贵，需要 Azure 与 Copilot 持续超预期。</span></div>
+      <div class="band"><strong>$600 以上</strong><span>明显透支 Bull 预期，可停止加仓或分批减仓。</span></div>
+    </div>
+    <p class="note">以上区间仅在 Azure 增长、Copilot 商业化、OpenAI 合作与自由现金流未发生实质恶化时有效。基本面破坏时必须下调买入线，不能机械抄底。</p>
+  </section>
+
+  <section>
+    <h2>下一次财报</h2>
+    <div class="wrap"><table><tbody>
+      <tr><td>下一次财报</td><td>FY2027 Q1</td></tr>
+      <tr><td>预计时间</td><td>2026 年 10 月下旬；截至 2026-07-30，微软尚未正式公布日期。</td></tr>
+      <tr><td>重点关注</td><td>Azure 是否兑现约 45% 增长、Cloud 毛利率、FY27 经济 Capex、现金 PP&amp;E、新增经营/融资租赁义务、租赁付款、FCF、Copilot 席位与使用量、剔除 OpenAI 后的 RPO。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>最终判断</h2>
+    <div class="wrap"><table><tbody>
+      <tr><td>合理价</td><td>SOTP Base 约 $465；FY27 Forward PE Base 约 $500；综合合理区 $455-$500。</td></tr>
+      <tr><td>当前动作</td><td>$426 盘后价仍有小幅折价；若股价已随 7 月 30 日盘中大涨进入 $450 上方，则更接近持有区而非追买区。</td></tr>
+      <tr><td>更优买点</td><td>$420-$450 可小仓分批；$410 以下明显低估；$380 以下才具备较厚安全边际。</td></tr>
+      <tr><td>减仓区</td><td>$530-$570 偏贵；$600 以上明显透支 Bull 情景。</td></tr>
+      <tr><td>最关键变量</td><td>Azure 与 Copilot 增长能否长期快于折旧、推理成本和包含经营租赁在内的真实资本投入，从而恢复每股自由现金流增速。</td></tr>
+    </tbody></table></div>
+    <p class="note">事实数据来自微软官方 FY2026 Q4 财报与电话会；估值倍数、税后分部利润、Forward EPS 和仓位区间均为本报告估算或情景假设，不构成投资建议。</p>
+  </section>
+
+  <section>
+    <h2>参考来源</h2>
+    <div class="wrap"><table><tbody>
+      <tr><td>FY2026 Q4及全年财务数据</td><td><a href="https://www.microsoft.com/en-us/investor/earnings/fy-2026-q4/press-release-webcast">Microsoft Investor Relations 官方财报</a></td></tr>
+      <tr><td>FY27 指引、Capex 与业务进展</td><td><a href="https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4">Microsoft FY2026 Q4 电话会</a></td></tr>
+      <tr><td>财报后股价与市场反应</td><td><a href="https://apnews.com/article/f7dff4fb9d51a2bdec56a13e5da1053d">Associated Press</a></td></tr>
+    </tbody></table></div>
+  </section>
+</main>
+</body>
+</html>
