@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AAPL Research 20260731</title>
+  <style>
+    :root { --bg:#f6f7f9; --panel:#fff; --ink:#1d252d; --muted:#5c6670; --line:#d9dee5; --blue:#2563eb; --green:#0f8a5f; --amber:#b7791f; --red:#c24135; --soft-blue:#e9f1ff; --soft-green:#e9f7f1; --soft-amber:#fff4df; --soft-red:#fff0ed; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font-family:Arial,"Microsoft YaHei",sans-serif; line-height:1.55; }
+    main { max-width:1180px; margin:0 auto; padding:28px 20px 56px; }
+    header { display:grid; grid-template-columns:1.35fr .65fr; gap:18px; margin-bottom:18px; }
+    section,.hero,.metric,.topline { background:var(--panel); border:1px solid var(--line); border-radius:8px; }
+    .hero,.metric,section { padding:22px; }
+    .topline { display:flex; justify-content:space-between; gap:12px; align-items:center; margin-bottom:14px; padding:12px 14px; }
+    .topline span { color:var(--muted); font-size:13px; }
+    .hero h1 { margin:0 0 10px; font-size:32px; line-height:1.2; }
+    h2 { margin:0 0 14px; font-size:21px; }
+    h3 { margin:0 0 8px; font-size:16px; }
+    p { margin:8px 0 0; color:var(--muted); }
+    section { margin-top:14px; }
+    .big { font-size:42px; line-height:1; font-weight:700; }
+    .label,.note { color:var(--muted); font-size:13px; }
+    .badge { display:inline-flex; width:fit-content; padding:6px 10px; border-radius:6px; font-weight:700; font-size:14px; }
+    .green { color:var(--green); background:var(--soft-green); } .amber { color:var(--amber); background:var(--soft-amber); } .red { color:var(--red); background:var(--soft-red); } .blue { color:var(--blue); background:var(--soft-blue); }
+    .grid4 { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin:14px 0; }
+    .grid2 { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+    .metric strong { display:block; margin-top:6px; font-size:24px; }
+    .card { border:1px solid var(--line); border-radius:8px; padding:15px; background:#fff; }
+    .card p { font-size:14px; }
+    .attention { margin-top:14px; padding:18px; border:1px solid #e7c98a; border-left:5px solid var(--amber); border-radius:8px; background:var(--soft-amber); }
+    .attention h3 { color:#865b17; }
+    .attention p { color:#60491f; }
+    table { width:100%; border-collapse:collapse; font-size:14px; }
+    th,td { padding:12px 10px; border-bottom:1px solid var(--line); text-align:right; vertical-align:middle; }
+    th:first-child,td:first-child { text-align:left; }
+    th { color:var(--muted); background:#fafbfc; font-size:13px; }
+    tr:last-child td { border-bottom:0; }
+    .total td { font-weight:700; background:#fafbfc; }
+    .bands { display:grid; grid-template-columns:repeat(6,1fr); gap:10px; }
+    .band { border:1px solid var(--line); border-radius:8px; padding:14px 12px; background:#fff; min-height:112px; }
+    .band strong { display:block; margin-bottom:6px; font-size:18px; }
+    .band span { color:var(--muted); font-size:13px; }
+    a { color:var(--blue); text-decoration:none; font-weight:700; }
+    @media(max-width:900px){ header,.grid4,.grid2{grid-template-columns:1fr}.bands{grid-template-columns:repeat(2,1fr)}.wrap{overflow-x:auto}.topline{align-items:flex-start;flex-direction:column} }
+    @media(max-width:560px){ main{padding:18px 12px 36px}.hero h1{font-size:25px}.big{font-size:36px}.bands{grid-template-columns:1fr} }
+  </style>
+</head>
+<body>
+<main>
+  <div class="topline"><a href="../index.html">返回首页</a><span>研报适用日期：2026-08-01 ｜ 公司：Apple / AAPL ｜ 数据口径：FY2026 Q3（截至 2026-06-27），补充财报后市场反应</span></div>
+  <header>
+    <div class="hero">
+      <h1>Apple FY2026 Q3 财报研究</h1>
+      <p>公司类型：大型复合消费科技生态。核心估值采用分部估值（SOTP）与 FY2027 Forward PE，并用自由现金流和反向收益门槛交叉验证。</p>
+      <p>股价参考：2026-07-30 常规交易收盘 $333.43；2026-07-31 美国时间上午一度下跌约9.2%，隐含约$303。该价格为盘中参考，实际操作前应重新核对最新报价。</p>
+    </div>
+    <div class="metric">
+      <div class="label">Base 合理价区间</div>
+      <div class="big">$300-$340</div>
+      <div class="badge amber">大跌后回到合理区下沿，尚非明显低估</div>
+    </div>
+  </header>
+
+  <div class="grid4">
+    <div class="metric"><div class="label">Q3 营收</div><strong>$109.42B</strong><span class="note">YoY +16.4%</span></div>
+    <div class="metric"><div class="label">Q3 稀释 EPS</div><strong>$2.02</strong><span class="note">YoY +28.7%；含退款 $0.11</span></div>
+    <div class="metric"><div class="label">正常化毛利率</div><strong>约 48.1%</strong><span class="note">剔除约 2pct 关税退款</span></div>
+    <div class="metric"><div class="label">TTM 自由现金流</div><strong>$136.68B</strong><span class="note">本报告重建值</span></div>
+  </div>
+
+  <section>
+    <h2>一句话结论</h2>
+    <div class="grid2">
+      <div class="card"><h3>基本面判断</h3><p>这是一次质量高于标题数字的财报：即使剔除一次性关税退款，正常化 EPS 仍约增长22%，iPhone、Mac、服务和大中华区同步增长，证明换机周期、生态变现和地域修复正在共振。</p></div>
+      <div class="card"><h3>投资判断</h3><p>苹果重新进入双位数收入增长，但财报后约$326仍对应约38倍正常化TTM利润、约35倍TTM自由现金流。当前更像“优秀公司接近合理上沿”，适合持有与等待盈利兑现，而不是追涨。</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>最新财务数据</h2>
+    <div class="wrap"><table><thead><tr><th>项目</th><th>FY26 Q3</th><th>同比</th><th>解读</th></tr></thead><tbody>
+      <tr><td>总营收</td><td>$109.417B</td><td>+16.4%</td><td>创六月季度纪录，增长覆盖所有地域。</td></tr>
+      <tr><td>产品收入</td><td>$78.678B</td><td>+18.1%</td><td>iPhone与Mac是主要驱动力。</td></tr>
+      <tr><td>服务收入</td><td>$30.739B</td><td>+12.1%</td><td>约占收入28%，但贡献约42%的季度毛利润。</td></tr>
+      <tr><td>毛利润</td><td>$54.770B</td><td>+25.3%</td><td>GAAP毛利率50.1%，其中约2个百分点来自关税退款。</td></tr>
+      <tr><td>研发费用</td><td>$11.729B</td><td>+32.3%</td><td>显著快于收入增长，反映AI与产品研发投入加速。</td></tr>
+      <tr><td>营业利润</td><td>$35.695B</td><td>+26.6%</td><td>GAAP营业利润率32.6%，含退款收益。</td></tr>
+      <tr><td>净利润</td><td>$29.789B</td><td>+27.1%</td><td>绝对盈利能力仍为全球最高水平之一。</td></tr>
+      <tr><td>稀释 EPS</td><td>$2.02</td><td>+28.7%</td><td>关税退款贡献$0.11；股本收缩亦提供约1.6个百分点助力。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>额外注意：关税退款把标题利润“抬高”了多少</h2>
+    <div class="wrap"><table><thead><tr><th>指标</th><th>GAAP报告值</th><th>剔除退款后</th><th>同比基准</th><th>判断</th></tr></thead><tbody>
+      <tr><td>毛利率</td><td>50.1%</td><td>约48.1%</td><td>FY25 Q3为46.5%</td><td>约2pct是一次性收益，但核心毛利率仍提升约1.6pct。</td></tr>
+      <tr><td>稀释 EPS</td><td>$2.02</td><td>约$1.91</td><td>FY25 Q3为$1.57</td><td>标题增速28.7%，正常化后仍增长约21.7%。</td></tr>
+      <tr><td>净利润影响</td><td>$29.789B</td><td>约$28.17B</td><td>本报告估算</td><td>$0.11 × 14.715B稀释股 ≈ $1.62B税后收益。</td></tr>
+      <tr><td>下一季可持续性</td><td>不可直接外推</td><td>需回到经营毛利</td><td>管理层指引47%-48%</td><td>存储器成本上升将抵消部分产品组合和定价改善。</td></tr>
+    </tbody></table></div>
+    <div class="attention"><h3>需要额外注意</h3><p>退款不是客户需求，也不是永久降本，不应给予持续性估值倍数。更合理的观察方式是：本季正常化毛利率约48.1%、正常化EPS约$1.91；它们依然优秀，但下一季毛利率指引回落，说明成本压力并未消失。</p></div>
+  </section>
+
+  <section>
+    <h2>业务拆分：iPhone重新成为增长主引擎</h2>
+    <div class="wrap"><table><thead><tr><th>业务</th><th>Q3收入</th><th>同比</th><th>收入占比</th><th>判断</th></tr></thead><tbody>
+      <tr><td>iPhone</td><td>$54.252B</td><td>+21.7%</td><td>49.6%</td><td>换机需求和产品周期强劲，是本季最大增量来源。</td></tr>
+      <tr><td>Mac</td><td>$10.352B</td><td>+28.7%</td><td>9.5%</td><td>增长亮眼，但高存储器成本与涨价后的需求弹性需继续观察。</td></tr>
+      <tr><td>iPad</td><td>$6.191B</td><td>-5.9%</td><td>5.7%</td><td>唯一同比下滑品类，产品节奏和基数影响明显。</td></tr>
+      <tr><td>可穿戴/家居/配件</td><td>$7.883B</td><td>+6.5%</td><td>7.2%</td><td>恢复增长，但仍不是主要利润增量。</td></tr>
+      <tr><td>服务</td><td>$30.739B</td><td>+12.1%</td><td>28.1%</td><td>季度毛利率75.6%，仍是估值质量与利润稳定性的核心。</td></tr>
+    </tbody></table></div>
+    <p class="note">季度产品毛利率 = ($78.678B-$47.153B) ÷ $78.678B = 40.1%；服务毛利率 = ($30.739B-$7.494B) ÷ $30.739B = 75.6%。服务只占28.1%收入，却贡献42.4%毛利润。</p>
+  </section>
+
+  <section>
+    <h2>地域结构：大中华区出现实质性修复</h2>
+    <div class="wrap"><table><thead><tr><th>地区</th><th>Q3收入</th><th>同比</th><th>投资含义</th></tr></thead><tbody>
+      <tr><td>美洲</td><td>$45.781B</td><td>+11.1%</td><td>最大市场保持双位数增长。</td></tr>
+      <tr><td>欧洲</td><td>$29.395B</td><td>+22.4%</td><td>产品周期与汇率共同支持增长。</td></tr>
+      <tr><td>大中华区</td><td>$18.816B</td><td>+22.4%</td><td>从FY25全年下滑转为强劲反弹，是本季最重要的边际变化之一。</td></tr>
+      <tr><td>日本</td><td>$6.554B</td><td>+13.4%</td><td>延续健康增长。</td></tr>
+      <tr><td>亚太其他地区</td><td>$8.871B</td><td>+15.6%</td><td>新兴市场继续增加生态渗透率。</td></tr>
+    </tbody></table></div>
+    <p class="note">大中华区单季反弹不能自动等同于竞争格局永久逆转。后续应结合本地品牌份额、渠道库存、促销强度和服务变现继续验证。</p>
+  </section>
+
+  <section>
+    <h2>下一季指引：增长放缓，成本压力更值得关注</h2>
+    <div class="wrap"><table><thead><tr><th>项目</th><th>FY2026 Q4管理层指引</th><th>隐含结果</th><th>解读</th></tr></thead><tbody>
+      <tr><td>收入增长</td><td>同比 +9% 至 +11%</td><td>约$111.7B-$113.8B</td><td>仍是健康增长，但较Q3的16.4%自然降速。</td></tr>
+      <tr><td>公司毛利率</td><td>47%-48%</td><td>较Q3 GAAP 50.1%回落</td><td>需剔除退款基数，并关注更高存储器成本与产品组合。</td></tr>
+      <tr><td>供应约束</td><td>iPhone、Mac、iPad受限</td><td>可能压制收入上限</td><td>需求和供给需分开解读，缺货不等于永久需求。</td></tr>
+      <tr><td>汇率</td><td>不利因素</td><td>拖累报告增速</td><td>观察恒定汇率与报告口径差异。</td></tr>
+    </tbody></table></div>
+    <p class="note">收入区间按FY2025 Q4收入$102.466B × 1.09-1.11计算。指引来自FY2026 Q3电话会公开信息，苹果新闻稿本身不列完整下一季指引。</p>
+  </section>
+
+  <section>
+    <h2>财报后股价为何大跌：不是财报差，而是预期与估值重定价</h2>
+    <div class="wrap"><table><thead><tr><th>因素</th><th>可验证事实</th><th>市场如何解读</th><th>本报告判断</th></tr></thead><tbody>
+      <tr><td>跌幅具有公司特异性</td><td>7月31日美国时间上午，苹果一度下跌约9.2%；同期标普500约上涨0.2%、纳指约上涨0.4%。</td><td>不是单纯的大盘风险释放，苹果自身指引和估值是主因。</td><td>大跌的核心是盈利预期与估值倍数同时下修。</td></tr>
+      <tr><td>财报前预期过高</td><td>财报前股价刚创历史新高，年内涨幅显著领先标普500，估值约35-40倍盈利。</td><td>市场要求收入、利润、指引与毛利率全部“零瑕疵”。</td><td>好财报不足以继续推升股价，必须是超预期且继续上调。</td></tr>
+      <tr><td>EPS超预期质量有限</td><td>GAAP EPS为$2.02，其中关税退款贡献$0.11；市场预期约$1.89。</td><td>若机械剔除退款，正常化EPS约$1.91，只略高于市场预期。</td><td>退款不应获得持续性估值；但该比较仅为敏感性分析，市场预期是否已计入退款并非完全同口径。</td></tr>
+      <tr><td>增长指引降速</td><td>Q3收入增长16.4%，Q4指引为增长9%-11%。</td><td>即使绝对增长仍健康，市场需要下调对短期增长斜率的假设。</td><td>对高估值股票，增速方向通常比当季是否小幅超预期更重要。</td></tr>
+      <tr><td>毛利率与存储器压力</td><td>Q4毛利率指引47%-48%，低于Q3 GAAP 50.1%；管理层预计9月季度存储器成本进一步上升。</td><td>苹果需在自行吸收成本与提价伤害需求之间做取舍。</td><td>这是最需要基本面验证的风险，不应简单归为短期情绪。</td></tr>
+      <tr><td>服务未提供额外上修</td><td>Q3服务收入增长12.1%，低于Q2约16%的同比增速。</td><td>增长结构更偏硬件周期，高毛利经常性收入没有同步加速。</td><td>服务仍然强，但不足以抵消市场对产品毛利率的担忧。</td></tr>
+      <tr><td>宏观放大器</td><td>当日布伦特油价上涨、美国10年期国债收益率升至约4.73%。</td><td>更高无风险利率压缩高估值长期资产的估值倍数。</td><td>这是跌幅放大器而非主因；同期大盘没有同幅下跌。</td></tr>
+    </tbody></table></div>
+    <div class="attention"><h3>归因判断：约70%是估值与预期回吐，约30%是基本面预期调整</h3><p>该比例是本报告的分析估计，不是市场披露数据。苹果的竞争优势、现金流和生态没有在一天内被破坏；但Q4增速、正常化毛利率和存储器成本确实要求下调短期盈利乐观度。因此，这次下跌不是纯粹的“错杀”，也不是长期逻辑失效，而是高估值重新回到需要基本面兑现的位置。</p></div>
+  </section>
+
+  <section>
+    <h2>TTM利润与现金流重建</h2>
+    <div class="wrap"><table><thead><tr><th>指标</th><th>公式</th><th>TTM结果</th><th>判断</th></tr></thead><tbody>
+      <tr><td>收入</td><td>FY25 $416.161B - FY25前9月 $313.695B + FY26前9月 $364.357B</td><td>$466.823B</td><td>较FY25全年规模提升12.2%。</td></tr>
+      <tr><td>营业利润</td><td>$133.050B - $100.623B + $122.432B</td><td>$154.859B</td><td>TTM营业利润率约33.2%。</td></tr>
+      <tr><td>净利润</td><td>$112.010B - $84.544B + $101.464B</td><td>$128.930B</td><td>包含Q3约$1.62B税后退款收益。</td></tr>
+      <tr><td>稀释 EPS</td><td>FY25 $7.46 - FY25前9月 $5.62 + FY26前9月 $6.88</td><td>$8.72</td><td>正常化TTM EPS约$8.61。</td></tr>
+      <tr><td>经营现金流</td><td>$111.482B - $81.754B + $116.996B</td><td>$146.724B</td><td>受营运资金与纳税时点影响，不能线性外推。</td></tr>
+      <tr><td>资本开支</td><td>$12.715B - $9.473B + $6.799B</td><td>$10.041B</td><td>仍远低于云基础设施型科技公司的资本密度。</td></tr>
+      <tr class="total"><td>自由现金流</td><td>经营现金流 - 资本开支</td><td>$136.683B</td><td>按期末股本约$9.36/股。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>资产负债表与资本配置</h2>
+    <div class="wrap"><table><thead><tr><th>项目</th><th>2026-06-27</th><th>判断</th></tr></thead><tbody>
+      <tr><td>现金及有价证券</td><td>$146.517B</td><td>包括现金$39.544B、短期证券$22.855B、长期证券$84.118B。</td></tr>
+      <tr><td>总债务</td><td>$84.344B</td><td>商业票据、流动及长期定期债务合计。</td></tr>
+      <tr><td>净现金</td><td>$62.173B</td><td>为回购、供应链和战略投资提供充足缓冲。</td></tr>
+      <tr><td>期末流通股本</td><td>14.609B股</td><td>较FY25年末减少约1.1%，回购持续提高每股价值。</td></tr>
+      <tr><td>前9月回购</td><td>$62.094B</td><td>力度仍大，但高估值下每美元回购创造的价值下降。</td></tr>
+      <tr><td>前9月股息</td><td>$11.778B</td><td>季度股息已提高至$0.27/股，收益率仍低。</td></tr>
+      <tr><td>库存</td><td>$11.092B</td><td>较FY25年末接近翻倍，需结合新品备货与供应约束观察。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>核心估值一：FY2027 Forward PE</h2>
+    <div class="wrap"><table><thead><tr><th>情景</th><th>FY27 EPS假设</th><th>合理PE</th><th>合理股价</th><th>成立条件</th></tr></thead><tbody>
+      <tr><td><span class="badge red">Bear</span></td><td>$9.20</td><td>28x</td><td>$258</td><td>iPhone周期降速、存储器成本压缩毛利、AI差异化有限，估值回归。</td></tr>
+      <tr><td><span class="badge green">Base</span></td><td>$10.20</td><td>32x</td><td>$326</td><td>收入高个位数至低双位数增长，服务保持双位数，回购提供温和增益。</td></tr>
+      <tr><td><span class="badge blue">Bull</span></td><td>$11.50</td><td>36x</td><td>$414</td><td>AI功能带动强换机，服务加速，成本通过定价与产品组合被完全吸收。</td></tr>
+    </tbody></table></div>
+    <p class="note">FY27 EPS与PE均为本报告情景假设。Base计算：$10.20 × 32 = $326。当前盘后价格几乎正好位于Base，不具备明显安全边际。</p>
+  </section>
+
+  <section>
+    <h2>核心估值二：SOTP分部估值</h2>
+    <div class="wrap"><table><thead><tr><th>分部</th><th>TTM毛利润</th><th>费用分配</th><th>估算税后经营利润</th><th>Base倍数</th><th>Base价值</th></tr></thead><tbody>
+      <tr><td>产品生态</td><td>$135.516B</td><td>$43.13B</td><td>$76.4B</td><td>28x</td><td>$2.14T</td></tr>
+      <tr><td>服务生态</td><td>$91.607B</td><td>$29.13B</td><td>$51.7B</td><td>46x</td><td>$2.38T</td></tr>
+      <tr><td>净现金</td><td>—</td><td>—</td><td>—</td><td>1x</td><td>$0.06T</td></tr>
+      <tr class="total"><td>合计</td><td>$227.123B</td><td>$72.264B</td><td>$128.1B</td><td>—</td><td>$4.58T / 每股约$313</td></tr>
+    </tbody></table></div>
+    <p class="note">苹果不披露品类营业利润。本报告先由收入减销售成本得到产品与服务毛利润，再按毛利润占比分配TTM经营费用，并按TTM约17.3%有效税率税后化；这是估算而非公司披露，分部费用与协同误差较大。</p>
+    <div class="wrap" style="margin-top:12px"><table><thead><tr><th>SOTP情景</th><th>产品倍数</th><th>服务倍数</th><th>含净现金股权价值</th><th>每股价值</th></tr></thead><tbody>
+      <tr><td>Bear</td><td>22x</td><td>34x</td><td>约$3.50T</td><td>约$240</td></tr>
+      <tr><td>Base</td><td>28x</td><td>46x</td><td>约$4.58T</td><td>约$313</td></tr>
+      <tr><td>Bull</td><td>32x</td><td>52x</td><td>约$5.20T</td><td>约$356</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>自由现金流与反向收益门槛</h2>
+    <div class="wrap"><table><thead><tr><th>方法</th><th>输入与公式</th><th>结果</th><th>解读</th></tr></thead><tbody>
+      <tr><td>正常化TTM PE</td><td>约$303 ÷ ($8.72-$0.11)</td><td>约35.2x</td><td>较财报前明显下降，但仍高于成熟消费科技公司的常规估值。</td></tr>
+      <tr><td>TTM P/FCF</td><td>约$303 ÷ ($136.683B ÷ 14.609B股)</td><td>约32.4x</td><td>FCF收益率约3.1%，安全边际有所改善但仍不厚。</td></tr>
+      <tr><td>五年反向门槛</td><td>$303 × 1.08^5 ÷ 30x</td><td>FY31 FCF/股约$14.84</td><td>若五年后估值回落至30倍，要获得8%年化，FCF/股需从$9.36复合增长约9.6%。</td></tr>
+    </tbody></table></div>
+    <div class="attention"><h3>估值结论</h3><p>Forward PE给出的Base约$326，SOTP Base约$313；按7月31日盘中约$303计算，市场价格已回到Base合理区下沿，未来五年所需每股现金流复合增长门槛降至约9.6%。赔率明显好于财报前，但尚未进入厚安全边际区。</p></div>
+  </section>
+
+  <section>
+    <h2>风险、跟踪指标与危险信号</h2>
+    <div class="wrap"><table><thead><tr><th>风险</th><th>重点跟踪</th><th>危险信号</th></tr></thead><tbody>
+      <tr><td>硬件周期与估值错配</td><td>iPhone增速、换机周期、ASP、Forward PE</td><td>收入回落至低个位数增长，同时PE仍高于35倍。</td></tr>
+      <tr><td>存储器与供应链成本</td><td>产品毛利率、Mac/iPad定价、库存</td><td>正常化毛利率跌破46%，提价后销量明显走弱。</td></tr>
+      <tr><td>AI执行落后</td><td>Siri AI使用率、开发者接入、AI功能对换机贡献</td><td>研发费用高速增长，但设备激活、换机与服务收入没有相应改善。</td></tr>
+      <tr><td>中国竞争与政策</td><td>大中华区收入、本地份额、促销与渠道库存</td><td>本季反弹仅由促销/低基数驱动，随后重新转负。</td></tr>
+      <tr><td>服务监管</td><td>App Store规则、抽成率、搜索分发协议</td><td>高毛利服务收入或毛利率因监管连续受压。</td></tr>
+      <tr><td>管理层交接</td><td>John Ternus上任后的资本配置、产品节奏与组织稳定</td><td>核心人才流失、战略摇摆或执行节奏显著放慢。</td></tr>
+      <tr><td>高价回购</td><td>回购金额、回购均价、股本下降速度</td><td>估值高位大量回购，但每股FCF增长未能覆盖机会成本。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>催化剂</h2>
+    <div class="grid2">
+      <div class="card"><h3>正向催化剂</h3><p>新一代iPhone与Siri AI形成更强换机周期；服务重新加速至中双位数；大中华区连续多个季度恢复；存储器成本缓和；供应约束解除；回购继续推动每股利润快于总利润。</p></div>
+      <div class="card"><h3>负向催化剂</h3><p>Q4毛利率低于47%；提价伤害Mac/iPad或iPhone需求；AI研发投入增加但商业化不足；中国反弹不可持续；监管削弱App Store经济；领导层交接带来执行波动。</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>仓位管理区间</h2>
+    <div class="bands">
+      <div class="band"><strong>$240以下</strong><span>接近SOTP Bear；基本面未破坏时具备厚安全边际。</span></div>
+      <div class="band"><strong>$240-$270</strong><span>明显低估，适合分批提高仓位。</span></div>
+      <div class="band"><strong>$270-$300</strong><span>开始具备吸引力，可耐心分批建立仓位。</span></div>
+      <div class="band"><strong>$300-$340</strong><span>Base合理区，以持有和等待兑现为主。</span></div>
+      <div class="band"><strong>$340-$380</strong><span>偏贵，停止追价并等待盈利追上估值。</span></div>
+      <div class="band"><strong>$400以上</strong><span>进入Bull透支区，可考虑再平衡或分批减仓。</span></div>
+    </div>
+    <p class="note">所有区间仅在iPhone换机周期、服务增长、正常化毛利率、中国区修复和AI执行没有实质恶化时有效；若基本面破坏，必须同步下调估值与买入线。</p>
+  </section>
+
+  <section>
+    <h2>下一次财报</h2>
+    <div class="wrap"><table><tbody>
+      <tr><td>下一次财报</td><td>FY2026 Q4及全年业绩；截至本报告日期尚未正式公告。</td></tr>
+      <tr><td>预计时间</td><td>2026年10月下旬，美国收盘后；北京时间通常为次日凌晨。</td></tr>
+      <tr><td>重点关注</td><td>收入是否达到+9%-11%指引、毛利率47%-48%、iPhone供给、存储器成本、服务增速、大中华区、库存与FY2027展望。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>最终判断</h2>
+    <div class="wrap"><table><tbody>
+      <tr><td>公司质量</td><td>全球硬件入口、操作系统、服务和开发者生态形成罕见的现金流与定价护城河。</td></tr>
+      <tr><td>财报质量</td><td>强，但必须剔除关税退款；正常化EPS仍约增长22%，并非仅靠一次性收益。</td></tr>
+      <tr><td>Base合理价</td><td>Forward PE约$326，SOTP约$313；综合合理区间$300-$340。</td></tr>
+      <tr><td>当前动作</td><td>7月31日盘中约$303已接近Base合理区下沿，长期持仓无需因单日下跌恐慌；新增仓位可小额分批，但不应把9%的跌幅自动等同于便宜。</td></tr>
+      <tr><td>更优买点</td><td>$270-$300开始有吸引力；$240-$270明显低估；$240以下才具备厚安全边际。</td></tr>
+      <tr><td>最关键变量</td><td>AI与产品周期能否让每股FCF维持约10%的中期复合增长，并在存储器涨价环境下守住正常化毛利率。</td></tr>
+    </tbody></table></div>
+    <p class="note">事实数据来自Apple官方IR财务报表；正常化数据、TTM重建、SOTP费用分配、FY27 EPS、合理倍数、价格区间均为本报告估算或情景假设，不构成投资建议。</p>
+  </section>
+
+  <section>
+    <h2>参考来源</h2>
+    <div class="wrap"><table><tbody>
+      <tr><td>FY2026 Q3业绩、关税退款与股息</td><td><a href="https://www.apple.com/newsroom/2026/07/apple-reports-third-quarter-results/">Apple官方新闻稿</a></td></tr>
+      <tr><td>FY2026 Q3利润表、分品类、地域、资产负债表与现金流</td><td><a href="https://www.apple.com/newsroom/pdfs/fy2026q3/FY26_Q3_Consolidated_Financial_Statements.pdf">Apple官方财务报表</a></td></tr>
+      <tr><td>下一季指引与管理层讨论</td><td><a href="https://www.apple.com/investor/earnings-call/">Apple FY2026 Q3官方电话会</a></td></tr>
+      <tr><td>FY2025全年及TTM重建基准</td><td><a href="https://www.apple.com/newsroom/pdfs/fy2025-q4/FY25_Q4_Consolidated_Financial_Statements.pdf">Apple FY2025官方财务报表</a></td></tr>
+      <tr><td>财报后价格、退款影响与管理层交接信息</td><td><a href="https://apnews.com/article/apple-earnings-revenue-iphone-ai-94102918cb3592ebc1d2a38c4d7d819a">Associated Press财报报道</a></td></tr>
+      <tr><td>收入指引补充核验</td><td><a href="https://www.axios.com/2026/07/30/apple-earnings-beat-estimates-boosted-by-tariff-refunds">Axios财报报道</a></td></tr>
+      <tr><td>7月31日盘中跌幅、市场对比与利率环境</td><td><a href="https://apnews.com/article/stock-markets-rates-korea-ai-oil-e31b3a442bcb957a53f1823ef21e73e8">Associated Press市场报道</a></td></tr>
+    </tbody></table></div>
+  </section>
+</main>
+</body>
+</html>
