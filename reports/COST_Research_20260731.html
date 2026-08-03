@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>COST Research 20260731</title>
+  <style>
+    :root { --bg:#f6f7f9; --panel:#fff; --ink:#1d252d; --muted:#5c6670; --line:#d9dee5; --blue:#2563eb; --green:#0f8a5f; --amber:#b7791f; --red:#c24135; --soft-blue:#e9f1ff; --soft-green:#e9f7f1; --soft-amber:#fff4df; --soft-red:#fff0ed; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font-family:Arial,"Microsoft YaHei",sans-serif; line-height:1.55; }
+    main { max-width:1180px; margin:0 auto; padding:28px 20px 56px; }
+    header { display:grid; grid-template-columns:1.35fr .65fr; gap:18px; margin-bottom:18px; }
+    section,.hero,.metric,.topline { background:var(--panel); border:1px solid var(--line); border-radius:8px; }
+    .hero,.metric,section { padding:22px; }
+    .topline { display:flex; justify-content:space-between; gap:12px; align-items:center; margin-bottom:14px; padding:12px 14px; }
+    .topline span { color:var(--muted); font-size:13px; }
+    .hero h1 { margin:0 0 10px; font-size:32px; line-height:1.2; }
+    h2 { margin:0 0 14px; font-size:21px; }
+    h3 { margin:0 0 8px; font-size:16px; }
+    p { margin:8px 0 0; color:var(--muted); }
+    section { margin-top:14px; }
+    .big { font-size:42px; line-height:1; font-weight:700; }
+    .label,.note { color:var(--muted); font-size:13px; }
+    .badge { display:inline-flex; width:fit-content; padding:6px 10px; border-radius:6px; font-weight:700; font-size:14px; }
+    .green { color:var(--green); background:var(--soft-green); } .amber { color:var(--amber); background:var(--soft-amber); } .red { color:var(--red); background:var(--soft-red); } .blue { color:var(--blue); background:var(--soft-blue); }
+    .grid4 { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin:14px 0; }
+    .grid2 { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+    .metric strong { display:block; margin-top:6px; font-size:24px; }
+    .card { border:1px solid var(--line); border-radius:8px; padding:15px; background:#fff; }
+    .card p { font-size:14px; }
+    .attention { margin-top:14px; padding:18px; border:1px solid #e7c98a; border-left:5px solid var(--amber); border-radius:8px; background:var(--soft-amber); }
+    .attention h3 { color:#865b17; }
+    .attention p { color:#60491f; }
+    table { width:100%; border-collapse:collapse; font-size:14px; }
+    th,td { padding:12px 10px; border-bottom:1px solid var(--line); text-align:right; vertical-align:middle; }
+    th:first-child,td:first-child { text-align:left; }
+    th { color:var(--muted); background:#fafbfc; font-size:13px; }
+    tr:last-child td { border-bottom:0; }
+    .total td { font-weight:700; background:#fafbfc; }
+    .bands { display:grid; grid-template-columns:repeat(6,1fr); gap:10px; }
+    .band { border:1px solid var(--line); border-radius:8px; padding:14px 12px; background:#fff; min-height:112px; }
+    .band strong { display:block; margin-bottom:6px; font-size:18px; }
+    .band span { color:var(--muted); font-size:13px; }
+    a { color:var(--blue); text-decoration:none; font-weight:700; }
+    @media(max-width:900px){ header,.grid4,.grid2{grid-template-columns:1fr}.bands{grid-template-columns:repeat(2,1fr)}.wrap{overflow-x:auto}.topline{align-items:flex-start;flex-direction:column} }
+    @media(max-width:560px){ main{padding:18px 12px 36px}.hero h1{font-size:25px}.big{font-size:36px}.bands{grid-template-columns:1fr} }
+  </style>
+</head>
+<body>
+<main>
+  <div class="topline"><a href="../index.html">返回首页</a><span>研报适用日期：2026-07-31 ｜ 公司：Costco / COST ｜ 数据口径：FY2026 Q3，补充截至 2026-07-05 的月度销售</span></div>
+  <header>
+    <div class="hero">
+      <h1>Costco FY2026 Q3 财报研究</h1>
+      <p>公司类型：成熟会员制零售平台。核心估值采用正常化 Forward PE，并用自由现金流与反向收益门槛交叉验证。</p>
+      <p>股价参考：2026-07-27 收盘约 $951.58。价格来自公开市场历史数据，实际操作前应重新核对最新报价。</p>
+    </div>
+    <div class="metric">
+      <div class="label">Base 合理价区间</div>
+      <div class="big">$850-$920</div>
+      <div class="badge amber">经营质量优秀，但当前安全边际偏薄</div>
+    </div>
+  </header>
+
+  <div class="grid4">
+    <div class="metric"><div class="label">Q3 净销售额</div><strong>$69.15B</strong><span class="note">YoY +11.6%</span></div>
+    <div class="metric"><div class="label">调整后同店销售</div><strong>+6.6%</strong><span class="note">剔除油价与汇率</span></div>
+    <div class="metric"><div class="label">Q3 稀释 EPS</div><strong>$4.93</strong><span class="note">YoY +15.2%</span></div>
+    <div class="metric"><div class="label">全球续费率</div><strong>89.7%</strong><span class="note">美加 92.2%</span></div>
+  </div>
+
+  <section>
+    <h2>一句话结论</h2>
+    <div class="grid2">
+      <div class="card"><h3>基本面判断</h3><p>会员费、客流、数字渠道和扩店共同驱动增长：Q3净销售额增长11.6%，调整后同店销售增长6.6%，会员费增长10.7%，6月调整后同店销售仍增长7.0%。这不是依赖一次性提价的脆弱增长。</p></div>
+      <div class="card"><h3>投资判断</h3><p>Costco是少数值得长期给予溢价的零售商，但约$952对应近48倍TTM利润和自由现金流。当前价格已经预付多年高质量增长，适合持有或等待，而不是为了“好公司”忽视买入价格。</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>最新财务与经营数据</h2>
+    <div class="wrap"><table><thead><tr><th>项目</th><th>FY26 Q3</th><th>同比/趋势</th><th>解读</th></tr></thead><tbody>
+      <tr><td>净销售额</td><td>$69.154B</td><td>+11.6%</td><td>同店增长与新仓共同贡献。</td></tr>
+      <tr><td>会员费收入</td><td>$1.373B</td><td>+10.7%</td><td>新会员、2024年费率上调和Executive升级共同推动。</td></tr>
+      <tr><td>总收入</td><td>$70.527B</td><td>+11.6%</td><td>零售规模继续稳健扩大。</td></tr>
+      <tr><td>营业利润</td><td>$2.815B</td><td>+11.3%</td><td>营业利润率约4.0%，薄利高周转模式稳定。</td></tr>
+      <tr><td>净利润</td><td>$2.192B</td><td>+15.4%</td><td>利润增长快于收入。</td></tr>
+      <tr><td>稀释 EPS</td><td>$4.93</td><td>+15.2%</td><td>股本基本稳定，增长主要来自经营。</td></tr>
+      <tr><td>调整后同店销售</td><td>+6.6%</td><td>美加与国际均为正</td><td>剔除油价和汇率后仍有健康内生增长。</td></tr>
+      <tr><td>数字化销售</td><td>+20.8%</td><td>显著快于门店</td><td>线上能力正在增加便利性，而非替代会员制优势。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>会员飞轮：真正的护城河</h2>
+    <div class="wrap"><table><thead><tr><th>指标</th><th>最新数据</th><th>同比/变化</th><th>投资含义</th></tr></thead><tbody>
+      <tr><td>付费会员</td><td>82.9M</td><td>约 +4.1%</td><td>稳定扩大高复购用户基数。</td></tr>
+      <tr><td>持卡人</td><td>148.5M</td><td>约 +4.0%</td><td>家庭渗透与共享使用保持增长。</td></tr>
+      <tr><td>Executive会员</td><td>约 41.2M</td><td>约 +9.6%</td><td>高价值会员增长快于总体，有利于ARPU和粘性。</td></tr>
+      <tr><td>美加续费率</td><td>92.2%</td><td>仍处高位</td><td>说明价格信任和会员价值主张没有破坏。</td></tr>
+      <tr><td>全球续费率</td><td>89.7%</td><td>线上促销会员拉低均值</td><td>需观察低成本获客能否在下一周期转化为高续费。</td></tr>
+      <tr><td>TTM会员费收入</td><td>约 $5.78B</td><td>本报告估算</td><td>接近高毛利、经常性利润底盘，但必须依托低价零售生态，不能独立SOTP。</td></tr>
+    </tbody></table></div>
+    <p class="note">TTM会员费 = FY25 $5.323B - FY25前36周 $3.599B + FY26前36周 $4.057B。Executive会员数据来自Q3电话会公开记录；其余会员数据来自10-Q。</p>
+  </section>
+
+  <section>
+    <h2>财报后的验证：6月销售没有明显降速</h2>
+    <div class="wrap"><table><thead><tr><th>指标</th><th>截至 2026-07-05 的5周</th><th>前44周</th><th>解读</th></tr></thead><tbody>
+      <tr><td>净销售额</td><td>$29.24B，+10.6%</td><td>$250.43B，+10.1%</td><td>Q3后的收入动能延续。</td></tr>
+      <tr><td>调整后同店销售</td><td>+7.0%</td><td>+6.7%</td><td>核心客流与客单仍稳健。</td></tr>
+      <tr><td>美国</td><td>+7.6%</td><td>+6.7%</td><td>最大市场保持强势。</td></tr>
+      <tr><td>数字化销售</td><td>+21.5%</td><td>+21.1%</td><td>数字渠道持续快于整体。</td></tr>
+      <tr><td>仓库数量</td><td>933家</td><td>FY25末为914家</td><td>净增门店提供可见的结构性增长。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>TTM利润与现金流重建</h2>
+    <div class="wrap"><table><thead><tr><th>指标</th><th>公式</th><th>TTM结果</th><th>判断</th></tr></thead><tbody>
+      <tr><td>总收入</td><td>FY25 $275.235B - FY25前36周 $189.079B + FY26前36周 $207.431B</td><td>$293.59B</td><td>规模增长约9%-10%。</td></tr>
+      <tr><td>营业利润</td><td>$10.383B - $7.042B + $7.884B</td><td>$11.23B</td><td>经营杠杆温和改善。</td></tr>
+      <tr><td>净利润</td><td>$8.099B - $5.489B + $6.228B</td><td>$8.84B</td><td>对应TTM EPS约$19.88。</td></tr>
+      <tr><td>经营现金流</td><td>$13.335B - $9.468B + $11.133B</td><td>$15.00B</td><td>包含营运资金改善，不能全部视为可持续增量。</td></tr>
+      <tr><td>资本开支</td><td>$5.498B - $3.532B + $4.228B</td><td>$6.19B</td><td>扩店、改造和数字化投入增加。</td></tr>
+      <tr class="total"><td>自由现金流</td><td>经营现金流 - 资本开支</td><td>$8.81B</td><td>每股约$19.85，FCF收益率约2.1%。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>资产负债表与资本配置</h2>
+    <div class="wrap"><table><thead><tr><th>项目</th><th>2026-05-10</th><th>判断</th></tr></thead><tbody>
+      <tr><td>现金及短期投资</td><td>$20.00B</td><td>现金储备充足。</td></tr>
+      <tr><td>长期债务</td><td>$5.68B</td><td>净现金约$14.31B，财务风险很低。</td></tr>
+      <tr><td>稀释/流通股本</td><td>约443.5M股</td><td>回购规模小，股本长期基本稳定。</td></tr>
+      <tr><td>前36周Capex</td><td>$4.23B，+19.7%</td><td>扩张投入上升，但完全可由经营现金流覆盖。</td></tr>
+      <tr><td>季度股息</td><td>$1.47/股</td><td>年化普通股息率仅约0.6%；特殊股息不能纳入基本假设。</td></tr>
+      <tr><td>前36周回购</td><td>$603M，均价$945.46</td><td>更多用于抵消稀释，不是主要回报方式。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>核心估值：FY27正常化Forward PE</h2>
+    <div class="wrap"><table><thead><tr><th>情景</th><th>FY27 EPS假设</th><th>合理PE</th><th>合理股价</th><th>成立条件</th></tr></thead><tbody>
+      <tr><td><span class="badge red">Bear</span></td><td>$21.5</td><td>32x</td><td>$688</td><td>同店销售降至3%-4%，续费率下滑，工资与关税压缩利润。</td></tr>
+      <tr><td><span class="badge green">Base</span></td><td>$23.0</td><td>38x</td><td>$874</td><td>同店销售约5%-6%，会员费高个位数至低双位数增长，利润稳定扩张。</td></tr>
+      <tr><td><span class="badge blue">Bull</span></td><td>$25.0</td><td>44x</td><td>$1,100</td><td>扩店、Executive升级和数字业务共同推动EPS持续低双位数以上增长。</td></tr>
+    </tbody></table></div>
+    <p class="note">FY27 EPS和估值倍数均为本报告情景假设。Base价格 = $23.0 × 38 = $874；当前约$952相当于41.4倍Base FY27 EPS，已位于Base与Bull之间。</p>
+  </section>
+
+  <section>
+    <h2>FCF与反向收益门槛交叉验证</h2>
+    <div class="wrap"><table><thead><tr><th>方法</th><th>输入与公式</th><th>结果</th><th>解读</th></tr></thead><tbody>
+      <tr><td>TTM P/FCF</td><td>约$422B市值 ÷ $8.81B FCF</td><td>约47.9x</td><td>和TTM PE接近，当前估值并非被会计利润低估。</td></tr>
+      <tr><td>FY27 FCF情景</td><td>$9.5B-$10.2B ÷ 443.5M股 × 38-40x</td><td>约$814-$920</td><td>支持Base合理区间上限约$920。</td></tr>
+      <tr><td>五年反向门槛</td><td>$952 × 1.08^5 ÷ 38x</td><td>FY31 EPS约$36.8</td><td>若五年后回落至38倍，获得8%年化回报需要EPS从TTM约$19.9增长至$36.8，年复合约13%。</td></tr>
+    </tbody></table></div>
+    <div class="attention"><h3>关键判断：好公司不自动等于好价格</h3><p>Costco可以长期保持高于普通零售商的估值，但当前价格要求未来五年EPS维持约13%的复合增长，且估值仍不能明显回落。会员飞轮让这个目标并非不可能，却留下很小的执行和估值容错率。</p></div>
+  </section>
+
+  <section>
+    <h2>风险、跟踪指标与危险信号</h2>
+    <div class="wrap"><table><thead><tr><th>风险</th><th>每月/每季跟踪</th><th>危险信号</th></tr></thead><tbody>
+      <tr><td>估值压缩</td><td>Forward PE、FCF收益率、长期利率</td><td>EPS继续增长但PE从45倍附近回落至30-35倍，股价仍可能长期不涨。</td></tr>
+      <tr><td>会员飞轮变弱</td><td>付费会员、Executive占比、续费率、会员费收入</td><td>美加续费率跌破90%，会员费增长连续低于5%。</td></tr>
+      <tr><td>消费与同店销售降速</td><td>月度调整后同店销售、客流、客单价</td><td>调整后同店销售连续三个月低于3%。</td></tr>
+      <tr><td>关税与采购成本</td><td>核心商品毛利率、价格投资、进口结构</td><td>为维持低价而持续牺牲毛利，营业利润增长明显落后于销售。</td></tr>
+      <tr><td>扩店回报下降</td><td>新增仓库、单店销售、Capex、资产周转</td><td>Capex快速增长，但新店数量、会员增长和单位资产收益同步下降。</td></tr>
+      <tr><td>数字竞争</td><td>数字销售增速、配送体验、会员参与度</td><td>数字增速跌至个位数，同时Walmart/Amazon显著抢占高频消费。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>催化剂</h2>
+    <div class="grid2">
+      <div class="card"><h3>正向催化剂</h3><p>7月及8月销售继续保持6%+调整后同店增长；Executive会员升级加速；国际扩店提高长期渗透率；数字业务维持20%+；关税压力缓和或采购效率抵消成本。</p></div>
+      <div class="card"><h3>负向催化剂</h3><p>Q4同店销售或续费率低于预期；工资、关税和价格投资挤压营业利润；扩店项目继续延迟；市场重新给零售股更低估值倍数。</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>仓位管理区间</h2>
+    <div class="bands">
+      <div class="band"><strong>$700以下</strong><span>接近Bear估值；基本面未破坏时安全边际较厚。</span></div>
+      <div class="band"><strong>$700-$780</strong><span>明显低估，适合分批提高仓位。</span></div>
+      <div class="band"><strong>$780-$850</strong><span>具备吸引力，可耐心分批建立仓位。</span></div>
+      <div class="band"><strong>$850-$920</strong><span>Base合理区，以持有和等待兑现为主。</span></div>
+      <div class="band"><strong>$920-$1,050</strong><span>偏贵，停止追价并等待盈利追上估值。</span></div>
+      <div class="band"><strong>$1,100以上</strong><span>进入Bull透支区，可考虑再平衡或分批减仓。</span></div>
+    </div>
+    <p class="note">所有操作区间仅在续费率、同店销售、会员费增长和扩店回报没有实质恶化时有效；若基本面破坏，必须同步下调估值与买入线。</p>
+  </section>
+
+  <section>
+    <h2>下一次财报</h2>
+    <div class="wrap"><table><tbody>
+      <tr><td>下一次财报</td><td>FY2026 Q4及全年业绩，已正式公告。</td></tr>
+      <tr><td>美国时间</td><td>2026-09-24；电话会为美西时间14:00。</td></tr>
+      <tr><td>北京时间</td><td>2026-09-25约04:15发布结果，05:00召开电话会。</td></tr>
+      <tr><td>财报前数据点</td><td>2026-08-05发布7月销售；之后仍有月度销售更新。</td></tr>
+      <tr><td>重点关注</td><td>调整后同店销售、客流与客单价、续费率、Executive会员、会员费、核心毛利率、全年Capex和新增仓库计划。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>最终判断</h2>
+    <div class="wrap"><table><tbody>
+      <tr><td>公司质量</td><td>会员飞轮、低价信誉、高周转和规模采购构成极强且耐久的零售护城河。</td></tr>
+      <tr><td>Base合理价</td><td>FY27 EPS $23 × 38倍 = 约$874；结合FCF，合理区间约$850-$920。</td></tr>
+      <tr><td>当前动作</td><td>约$952已进入偏贵区，更适合持有或等待，不适合因品牌质量追高。</td></tr>
+      <tr><td>更优买点</td><td>$780-$850开始具备吸引力；$700-$780明显低估；$700以下才有较厚安全边际。</td></tr>
+      <tr><td>最关键变量</td><td>会员费和同店销售能否持续推动EPS低双位数增长，从而消化约40倍以上的Forward PE。</td></tr>
+    </tbody></table></div>
+    <p class="note">事实数据来自Costco官方IR与SEC文件；TTM重建、FY27 EPS、估值倍数、合理价和仓位区间均为本报告估算或情景假设，不构成投资建议。</p>
+  </section>
+
+  <section>
+    <h2>参考来源</h2>
+    <div class="wrap"><table><tbody>
+      <tr><td>FY2026 Q3财务与经营数据</td><td><a href="https://investor.costco.com/news/news-details/2026/Costco-Wholesale-Corporation-Reports-Third-Quarter-and-Year-To-Date-Operating-Results-For-Fiscal-2026/default.aspx">Costco Investor Relations官方财报</a></td></tr>
+      <tr><td>Executive会员与管理层经营信息</td><td><a href="https://investor.costco.com/events-and-presentations/events/event-details/2026/Q3-2026-Earnings-Results-2026-2TUZRPTsc9/default.aspx">Costco FY2026 Q3官方电话会</a></td></tr>
+      <tr><td>会员、现金流、资产负债表与风险</td><td><a href="https://www.sec.gov/Archives/edgar/data/909832/000090983226000051/cost-20260510.htm">Costco FY2026 Q3 Form 10-Q</a></td></tr>
+      <tr><td>FY2025全年与TTM基准</td><td><a href="https://investor.costco.com/news/news-details/2025/Costco-Wholesale-Corporation-Reports-Fourth-Quarter-and-Fiscal-Year-2025-Operating-Results/default.aspx">Costco FY2025官方业绩</a></td></tr>
+      <tr><td>2026年6月销售更新</td><td><a href="https://s201.q4cdn.com/287523651/files/doc_news/Costco-Wholesale-Corporation-Reports-June-Sales-Results-and-Announces-Quarterly-Cash-Dividend-2026.pdf">Costco官方月度销售公告</a></td></tr>
+      <tr><td>下一次财报日期</td><td><a href="https://investor.costco.com/events-and-presentations/events/event-details/2026/Q4-2026-Earnings-Call/default.aspx">Costco Q4 FY2026 Earnings Call</a></td></tr>
+      <tr><td>价格参考</td><td><a href="https://www.financecharts.com/stocks/COST/summary/price">FinanceCharts公开历史价格</a></td></tr>
+    </tbody></table></div>
+  </section>
+</main>
+</body>
+</html>
