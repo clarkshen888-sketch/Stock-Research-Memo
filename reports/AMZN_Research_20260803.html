@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AMZN Research 20260803</title>
+  <style>
+    :root { --bg:#f6f7f9; --panel:#fff; --ink:#1d252d; --muted:#5c6670; --line:#d9dee5; --blue:#2563eb; --green:#0f8a5f; --amber:#b7791f; --red:#c24135; --soft-blue:#e9f1ff; --soft-green:#e9f7f1; --soft-amber:#fff4df; --soft-red:#fff0ed; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font-family:Arial,"Microsoft YaHei",sans-serif; line-height:1.55; }
+    main { max-width:1180px; margin:0 auto; padding:28px 20px 56px; }
+    header { display:grid; grid-template-columns:1.35fr .65fr; gap:18px; margin-bottom:18px; }
+    section,.hero,.metric,.topline { background:var(--panel); border:1px solid var(--line); border-radius:8px; }
+    .hero,.metric,section { padding:22px; }
+    .topline { display:flex; justify-content:space-between; gap:12px; align-items:center; margin-bottom:14px; padding:12px 14px; }
+    .topline span { color:var(--muted); font-size:13px; }
+    .hero h1 { margin:0 0 10px; font-size:32px; line-height:1.2; }
+    h2 { margin:0 0 14px; font-size:21px; }
+    h3 { margin:0 0 8px; font-size:16px; }
+    p { margin:8px 0 0; color:var(--muted); }
+    section { margin-top:14px; }
+    .big { font-size:42px; line-height:1; font-weight:700; }
+    .label,.note { color:var(--muted); font-size:13px; }
+    .badge { display:inline-flex; width:fit-content; padding:6px 10px; border-radius:6px; font-weight:700; font-size:14px; }
+    .green { color:var(--green); background:var(--soft-green); } .amber { color:var(--amber); background:var(--soft-amber); } .red { color:var(--red); background:var(--soft-red); } .blue { color:var(--blue); background:var(--soft-blue); }
+    .grid4 { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin:14px 0; }
+    .grid2 { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+    .metric strong { display:block; margin-top:6px; font-size:24px; }
+    .card { border:1px solid var(--line); border-radius:8px; padding:15px; background:#fff; }
+    .card p { font-size:14px; }
+    .alert { border-left:5px solid var(--red); background:var(--soft-red); padding:16px; border-radius:6px; }
+    .alert strong { color:var(--red); }
+    table { width:100%; border-collapse:collapse; font-size:14px; }
+    th,td { padding:12px 10px; border-bottom:1px solid var(--line); text-align:right; vertical-align:middle; }
+    th:first-child,td:first-child { text-align:left; }
+    th { color:var(--muted); background:#fafbfc; font-size:13px; }
+    tr:last-child td { border-bottom:0; }
+    .total td { font-weight:700; background:#fafbfc; }
+    .bands { display:grid; grid-template-columns:repeat(6,1fr); gap:10px; }
+    .band { border:1px solid var(--line); border-radius:8px; padding:14px 12px; background:#fff; min-height:112px; }
+    .band strong { display:block; margin-bottom:6px; font-size:18px; }
+    .band span { color:var(--muted); font-size:13px; }
+    a { color:var(--blue); text-decoration:none; font-weight:700; }
+    @media(max-width:900px){ header,.grid4,.grid2{grid-template-columns:1fr}.bands{grid-template-columns:repeat(2,1fr)}.wrap{overflow-x:auto}.topline{align-items:flex-start;flex-direction:column} }
+    @media(max-width:560px){ main{padding:18px 12px 36px}.hero h1{font-size:25px}.big{font-size:36px}.bands{grid-template-columns:1fr} }
+  </style>
+</head>
+<body>
+<main>
+  <div class="topline"><a href="../index.html">返回首页</a><span>研报适用日期：2026-08-03 ｜ 公司：Amazon / AMZN ｜ 数据口径：FY2026 Q2，季度截至 2026-06-30</span></div>
+  <header>
+    <div class="hero">
+      <h1>Amazon FY2026 Q2 财报研究</h1>
+      <p>公司类型：大型复合科技。AWS 是利润与估值核心，零售、第三方卖家和广告提供现金流底盘，AI 基础设施则决定下一阶段资本回报。</p>
+      <p>股价参考：2026-07-30 收盘 $231.39；7 月 31 日财报后上涨 15.3%，据此推算收盘约 $266.8。按 Q2 末 10.783B 流通股估算，市值约 $2.88T。</p>
+    </div>
+    <div class="metric">
+      <div class="label">综合合理价值区间</div>
+      <div class="big">$250-$285</div>
+      <div class="badge amber">财报优秀，但大涨后安全边际有限</div>
+    </div>
+  </header>
+
+  <div class="grid4">
+    <div class="metric"><div class="label">Q2 营收</div><strong>$200.6B</strong><span class="note">YoY +20%，首次突破 $200B</span></div>
+    <div class="metric"><div class="label">Q2 营业利润</div><strong>$27.5B</strong><span class="note">YoY +43%，利润率 13.7%</span></div>
+    <div class="metric"><div class="label">AWS 营收</div><strong>$42.2B</strong><span class="note">YoY +37%，18 季度最快</span></div>
+    <div class="metric"><div class="label">TTM 自由现金流</div><strong>-$7.6B</strong><span class="note">净资本开支 $169.0B</span></div>
+  </div>
+
+  <section>
+    <h2>一句话结论</h2>
+    <div class="grid2">
+      <div class="card"><h3>基本面判断</h3><p>这是一份质量很高、但不能只看 EPS 的财报。AWS 增速从 Q1 的 28% 跃升至 37%，利润率升至 39.4%；北美、国际、广告也同步增长，证明 AI 投资已开始转化为收入与营业利润。</p></div>
+      <div class="card"><h3>投资判断</h3><p>市场上涨逻辑成立：此前担心的巨额 Capex 被更快的 AWS 增长和更强的盈利验证。但约 $266.8 已进入 Base 合理区中部，投资者正在预付持续高增长；此时应关注资本回报兑现，而不是追逐单日情绪。</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>为什么财报后股价大涨 15.3%</h2>
+    <div class="wrap"><table><thead><tr><th>驱动因素</th><th>财报证据</th><th>市场为何重估</th><th>性质</th></tr></thead><tbody>
+      <tr><td>AWS 明显再加速</td><td>营收 $42.23B，YoY +36.7%；Q1 为 +28%</td><td>在巨大收入基数上加速，且是 18 个季度最快增速，直接上修云业务长期增长预期。</td><td>核心事实</td></tr>
+      <tr><td>AI 收入转化为高质量利润</td><td>AWS 营业利润 $16.62B，+64%；利润率 39.4%</td><td>利润增速显著快于收入，反驳“AI 只有投入、没有回报”的担忧。</td><td>核心事实</td></tr>
+      <tr><td>需求强到受制于产能</td><td>AI 与芯片业务各自超过 $25B 年化收入；Trainium 获得多年度、多吉瓦承诺</td><td>管理层将 $220B Capex 定义为满足已存在的需求，而不是押注尚未出现的需求。</td><td>事实 + 推理</td></tr>
+      <tr><td>增长不是单一引擎</td><td>北美 +16%、国际 +15%、广告 +26%；国际业务继续盈利</td><td>零售、广告和云同时扩张，降低只依赖 AWS 的脆弱性。</td><td>核心事实</td></tr>
+      <tr><td>整体经营杠杆强</td><td>营收 +20%，营业利润 +43%</td><td>收入增速与利润率同时上升，市场愿意给予更高质量倍数。</td><td>核心事实</td></tr>
+      <tr><td>预期与仓位差</td><td>财报前收于 $231.39，明显低于 7 月高位</td><td>Capex、折旧和 Q3 指引压力已被部分计价；强 AWS 数据触发空头回补与估值修复。</td><td>市场推理</td></tr>
+    </tbody></table></div>
+    <p class="note">关键判断：市场不是因为 $5.75 的 GAAP EPS 而上涨，真正的重估来自 AWS 增速、AWS 利润率和可见的 AI 需求。Q3 营收指引表面低于市场预期，仍未阻止上涨，也反向证明 AWS 质量才是本次定价核心。</p>
+  </section>
+
+  <section>
+    <h2>额外注意：GAAP EPS 被 Anthropic 账面收益严重放大</h2>
+    <div class="alert"><strong>不能将 Q2 GAAP EPS $5.75 年化后直接套 PE。</strong> Amazon 本季“其他收入”高达 $53.42B，主要来自 Anthropic 投资的非现金公允价值收益。这不是 AWS 或零售经营利润，也不具备稳定可重复性。</div>
+    <div class="wrap" style="margin-top:12px"><table><thead><tr><th>项目</th><th>报告值</th><th>调整方法</th><th>投资含义</th></tr></thead><tbody>
+      <tr><td>GAAP 净利润 / 稀释 EPS</td><td>$62.65B / $5.75</td><td>包含 $53.42B 税前其他收入</td><td>账面利润不等于当季持续经营能力。</td></tr>
+      <tr><td>正常化税前利润</td><td>约 $27.44B</td><td>$80.86B GAAP 税前利润 - $53.42B 其他收入</td><td>与 $27.46B 营业利润基本一致。</td></tr>
+      <tr><td>正常化净利润 / EPS</td><td>约 $21.3B / $1.95</td><td>对正常化税前利润应用本季约 22.5% 有效税率，再除以 10.903B 稀释股数</td><td>更接近主营盈利，但仍是估算，不是公司 Non-GAAP 指标。</td></tr>
+      <tr><td>TTM GAAP EPS</td><td>$12.44</td><td>同样包含巨额投资重估收益</td><td>按当前股价计算的约 21x GAAP PE 具有误导性。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>最新财务与业务数据</h2>
+    <div class="wrap"><table><thead><tr><th>项目</th><th>FY26 Q2</th><th>同比/趋势</th><th>解读</th></tr></thead><tbody>
+      <tr><td>总营收</td><td>$200.61B</td><td>+20%</td><td>首次单季超过 $200B，服务收入占比继续提升。</td></tr>
+      <tr><td>营业利润</td><td>$27.46B</td><td>+43%</td><td>营业利润率由 11.4% 升至 13.7%。</td></tr>
+      <tr><td>北美营收 / 利润</td><td>$116.18B / $9.12B</td><td>收入 +16%；利润 +21%</td><td>利润率 7.9%，零售底盘稳定。</td></tr>
+      <tr><td>国际营收 / 利润</td><td>$42.20B / $1.72B</td><td>收入 +15%；利润 +15%</td><td>利润率 4.1%，已从拖累项转为增量利润来源。</td></tr>
+      <tr><td>AWS 营收 / 利润</td><td>$42.23B / $16.62B</td><td>收入 +37%；利润 +64%</td><td>AWS 贡献全公司约 61% 营业利润。</td></tr>
+      <tr><td>广告收入</td><td>$19.81B</td><td>+26%</td><td>高增速、高增量利润潜力，但公司未单独披露利润。</td></tr>
+      <tr><td>第三方卖家服务</td><td>$46.78B</td><td>+16%</td><td>卖家单位占比 61%，平台化变现继续增强。</td></tr>
+      <tr><td>员工数</td><td>1.595M</td><td>+3%</td><td>员工增速远低于营收，体现组织杠杆。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>资本开支、现金流与资产负债表</h2>
+    <div class="wrap"><table><thead><tr><th>指标</th><th>最新数据</th><th>判断</th></tr></thead><tbody>
+      <tr><td>TTM 经营现金流</td><td>$161.40B，+33%</td><td>核心经营现金流依然强劲。</td></tr>
+      <tr><td>TTM 净资本开支</td><td>$169.01B</td><td>同比增加约 $66.1B，增量主要来自 AI 基础设施。</td></tr>
+      <tr><td>TTM 自由现金流</td><td>-$7.60B</td><td>传统 FCF 暂时为负，资本回报要靠未来 AWS 收入和利润验证。</td></tr>
+      <tr><td>2026 Capex 计划</td><td>由约 $200B 上调至约 $220B</td><td>需求和内存成本共同推高预算；上调是增长信号，也是执行风险。</td></tr>
+      <tr><td>现金 + 可交易证券</td><td>$122.99B</td><td>流动性充足，但不再明显超过长期债务。</td></tr>
+      <tr><td>长期债务</td><td>$128.89B</td><td>较 2025 年末 $65.65B 大幅增加，需跟踪融资与资本回报。</td></tr>
+      <tr><td>净 PP&amp;E</td><td>$446.05B</td><td>半年内显著增加，未来折旧压力仍会上升。</td></tr>
+    </tbody></table></div>
+    <p class="note">增长性 Capex 与维持性 Capex 未被公司拆分。以 TTM 折旧摊销约 $75.2B 作为维持性投入的粗略代理，经营现金流减该代理约为 $86.2B，对当前市值的收益率约 3.0%；这只是敏感性分析，不是公司披露的自由现金流。</p>
+  </section>
+
+  <section>
+    <h2>Q3 2026 指引：为何偏弱仍未压制股价</h2>
+    <div class="wrap"><table><thead><tr><th>项目</th><th>公司指引</th><th>同比</th><th>解读</th></tr></thead><tbody>
+      <tr><td>净销售额</td><td>$197B-$202B</td><td>+9% 至 +12%</td><td>表面低于市场约 $203.9B 预期；剔除 Prime Day 时间差后，增长率约高 4 个百分点。</td></tr>
+      <tr><td>汇率影响</td><td>约 -80bp</td><td>逆风</td><td>报告增速会被汇率压低。</td></tr>
+      <tr><td>营业利润</td><td>$22.5B-$26.5B</td><td>上年 $17.4B</td><td>中点约 $24.5B，同比约 +41%，盈利趋势仍强。</td></tr>
+    </tbody></table></div>
+    <p class="note">市场选择忽略收入指引的表面缺口，是因为 Prime Day 时间错位可以解释大部分增速下降，而 AWS 的当季加速和利润率更能决定长期价值。</p>
+  </section>
+
+  <section>
+    <h2>Base SOTP：输入、公式与结果</h2>
+    <div class="wrap"><table><thead><tr><th>估值项</th><th>TTM 营业利润</th><th>Bear</th><th>Base</th><th>Bull</th></tr></thead><tbody>
+      <tr><td>AWS</td><td>$54.68B</td><td>26x = $1.422T</td><td>36x = $1.968T</td><td>42x = $2.297T</td></tr>
+      <tr><td>北美</td><td>$33.65B</td><td>16x = $0.538T</td><td>22x = $0.740T</td><td>26x = $0.875T</td></tr>
+      <tr><td>国际</td><td>$5.38B</td><td>12x = $0.065T</td><td>20x = $0.108T</td><td>24x = $0.129T</td></tr>
+      <tr><td>净金融负债</td><td>长期债务 - 现金及证券</td><td>-$5.9B</td><td>-$5.9B</td><td>-$5.9B</td></tr>
+      <tr class="total"><td>股权价值 / 每股</td><td>流通股 10.783B</td><td>$2.018T / $187</td><td>$2.810T / $261</td><td>$3.295T / $306</td></tr>
+    </tbody></table></div>
+    <p class="note">公式：各分部 TTM 营业利润 × 情景倍数，合计后减去长期债务与现金、可交易证券的差额，再除以 Q2 末流通股。广告利润包含在北美和国际分部，未重复加值；Anthropic 账面价值与其收益波动未单独计入 Base，以保持保守。</p>
+  </section>
+
+  <section>
+    <h2>Forward PE 交叉验证</h2>
+    <div class="wrap"><table><thead><tr><th>情景</th><th>FY2027 正常化 EPS</th><th>合理 PE</th><th>合理股价</th><th>成立条件</th></tr></thead><tbody>
+      <tr><td><span class="badge red">Bear</span></td><td>$8.0</td><td>24x</td><td>$192</td><td>AWS 降至 20% 左右，折旧明显侵蚀利润率。</td></tr>
+      <tr><td><span class="badge amber">Base</span></td><td>$9.5</td><td>29x</td><td>$276</td><td>AWS 保持 25%+，零售稳定，营业利润约 $125B-$130B。</td></tr>
+      <tr><td><span class="badge blue">Bull</span></td><td>$11.0</td><td>33x</td><td>$363</td><td>AI 算力持续供不应求，AWS 与广告同时超预期。</td></tr>
+    </tbody></table></div>
+    <p class="note">FY2027 正常化 EPS 是本报告情景估算，不是公司指引。Base 近似过程：约 $128B 营业利润，按约 21% 税率并考虑净利息后，对约 10.7B 股计算，得到约 $9.5。</p>
+  </section>
+
+  <section>
+    <h2>风险、催化剂与验证指标</h2>
+    <div class="wrap"><table><thead><tr><th>核心风险</th><th>跟踪指标</th><th>危险信号</th></tr></thead><tbody>
+      <tr><td>AI Capex 回报不足</td><td>AWS 增速、营业利润率、Capex、折旧、FCF</td><td>Capex 维持 $200B+，但 AWS 增速连续跌破 25%、利润率跌破 32%。</td></tr>
+      <tr><td>资本结构变重</td><td>债务、利息支出、净金融资产</td><td>债务继续快速增长，而经营现金流增速放缓。</td></tr>
+      <tr><td>云竞争与客户集中</td><td>Azure/GCP 相对增速、大客户承诺兑现</td><td>巨额客户承诺延期，或 AWS 份额持续下降。</td></tr>
+      <tr><td>零售利润率回落</td><td>北美利润率、配送成本、广告增速</td><td>收入增长但北美利润率连续跌破 6%。</td></tr>
+      <tr><td>Anthropic 估值波动</td><td>其他收入、投资账面价值</td><td>账面收益反转，GAAP EPS 与净资产大幅波动。</td></tr>
+      <tr><td>估值风险</td><td>正常化 PE、核心 owner earnings 收益率</td><td>股价继续上涨，但 AWS 增速和 FCF 改善没有跟上。</td></tr>
+    </tbody></table></div>
+    <div class="grid2" style="margin-top:12px">
+      <div class="card"><h3>正向催化剂</h3><p>AWS 连续保持 30% 左右增长；Trainium 和 Bedrock 收入兑现；广告维持 20%+；2027 年 Capex 增速放缓、FCF 转正。</p></div>
+      <div class="card"><h3>负向催化剂</h3><p>新增折旧压低 AWS 利润率；$220B Capex 再上调；Q3 收入低于区间；AI 大客户延期；债务继续快速上升。</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>仓位管理区间</h2>
+    <div class="bands">
+      <div class="band"><strong>$190 以下</strong><span>接近 Bear 估值；基本面未破坏时安全边际较厚。</span></div>
+      <div class="band"><strong>$190-$220</strong><span>明显低估，可分批提高仓位。</span></div>
+      <div class="band"><strong>$220-$250</strong><span>小幅低估，适合逐步建立或补充仓位。</span></div>
+      <div class="band"><strong>$250-$285</strong><span>Base 合理区，以持有和验证 Capex 回报为主。</span></div>
+      <div class="band"><strong>$285-$320</strong><span>偏贵，需要 AWS 持续高增长来消化估值。</span></div>
+      <div class="band"><strong>$340 以上</strong><span>明显透支 Bull 情景，停止追价并考虑降低风险。</span></div>
+    </div>
+    <p class="note">这些区间不是机械交易信号。只有在 AWS 增长、利润率、资本结构和 AI 需求未被破坏时才有效；若核心假设改变，应先重估而不是“抄底”。</p>
+  </section>
+
+  <section>
+    <h2>下一次财报</h2>
+    <div class="wrap"><table><tbody>
+      <tr><td>下一次财报</td><td>FY2026 Q3</td></tr>
+      <tr><td>预计时间</td><td>2026 年 10 月下旬至 11 月初；Amazon 尚未正式公告，需以投资者关系网站为准。</td></tr>
+      <tr><td>优先核对</td><td>AWS 增速能否维持 30% 左右、AWS 利润率、$220B Capex 执行、折旧增速、经营现金流与债务。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>最终判断</h2>
+    <div class="wrap"><table><tbody>
+      <tr><td>财报质量</td><td>优秀。AWS 加速与利润率扩张是最重要的正面证据。</td></tr>
+      <tr><td>上涨原因</td><td>AWS 增长、利润和 AI 需求共同超越市场对巨额 Capex 的担忧；不是 Anthropic 账面收益带来的 EPS 幻觉。</td></tr>
+      <tr><td>合理价值</td><td>SOTP Base 约 $261；Forward PE Base 约 $276；综合合理区 $250-$285。</td></tr>
+      <tr><td>当前动作</td><td>约 $266.8 已处合理区中部，适合持有和观察，不适合因单日大涨追重仓。</td></tr>
+      <tr><td>最关键变量</td><td>$220B Capex 能否在未来 6-8 个季度持续转化为 AWS 收入、营业利润和每股自由现金流。</td></tr>
+    </tbody></table></div>
+    <p class="note">事实数据主要来自 Amazon 官方财报与电话会材料；股价反应来自公开市场报道。估值倍数、正常化 EPS、SOTP 和操作区间均为本报告估算与情景假设，不构成投资建议。</p>
+  </section>
+
+  <section>
+    <h2>参考来源</h2>
+    <div class="wrap"><table><tbody>
+      <tr><td>Amazon FY2026 Q2 财报</td><td><a href="https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Second-Quarter-Results/default.aspx">Amazon Investor Relations</a></td></tr>
+      <tr><td>完整财务报表与现金流</td><td><a href="https://s2.q4cdn.com/299287126/files/doc_earnings/2026/q2/earnings-result/AMZN-Q2-2026-Earnings-Release.pdf">官方 Earnings Release PDF</a></td></tr>
+      <tr><td>电话会与演示材料</td><td><a href="https://ir.aboutamazon.com/events/event-details/default.aspx">Amazon Q2 2026 Earnings Call</a></td></tr>
+      <tr><td>Capex、需求与市场预期</td><td><a href="https://apnews.com/article/amazon-second-quarter-earnings-cloud-b4ce02b4666a35b8975823c5c22072ee">Associated Press，2026-07-30</a></td></tr>
+      <tr><td>财报后股价上涨 15.3%</td><td><a href="https://apnews.com/article/stock-markets-rates-korea-ai-oil-e31b3a442bcb957a53f1823ef21e73e8">Associated Press，2026-07-31</a></td></tr>
+    </tbody></table></div>
+  </section>
+</main>
+</body>
+</html>
