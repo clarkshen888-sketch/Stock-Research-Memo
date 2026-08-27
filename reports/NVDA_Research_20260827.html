@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NVDA Research 20260827</title>
+  <style>
+    :root { --bg:#f6f7f9; --panel:#fff; --ink:#1d252d; --muted:#5c6670; --line:#d9dee5; --blue:#2563eb; --green:#0f8a5f; --amber:#b7791f; --red:#c24135; --soft-blue:#e9f1ff; --soft-green:#e9f7f1; --soft-amber:#fff4df; --soft-red:#fff0ed; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font-family:Arial,"Microsoft YaHei",sans-serif; line-height:1.58; }
+    main { max-width:1180px; margin:0 auto; padding:28px 20px 56px; }
+    header { display:grid; grid-template-columns:1.35fr .65fr; gap:18px; margin-bottom:18px; }
+    section,.hero,.metric { background:var(--panel); border:1px solid var(--line); border-radius:8px; }
+    .hero,.metric,section { padding:22px; }
+    .hero h1 { margin:0 0 10px; font-size:32px; line-height:1.2; }
+    h2 { margin:0 0 14px; font-size:21px; }
+    h3 { margin:0 0 8px; font-size:16px; }
+    p { margin:8px 0 0; color:var(--muted); }
+    section { margin-top:14px; }
+    .big { font-size:38px; line-height:1.08; font-weight:700; }
+    .label,.note { color:var(--muted); font-size:13px; }
+    .badge { display:inline-flex; width:fit-content; padding:6px 10px; border-radius:6px; font-weight:700; font-size:14px; }
+    .green { color:var(--green); background:var(--soft-green); } .amber { color:var(--amber); background:var(--soft-amber); } .red { color:var(--red); background:var(--soft-red); } .blue { color:var(--blue); background:var(--soft-blue); }
+    .grid4 { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin:14px 0; }
+    .grid2 { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+    .metric strong { display:block; margin-top:6px; font-size:24px; }
+    .card { border:1px solid var(--line); border-radius:8px; padding:15px; background:#fff; }
+    .card p { font-size:14px; }
+    .alert { border:2px solid #e3a62f; background:var(--soft-amber); }
+    .alert p { color:#6f4c12; }
+    table { width:100%; border-collapse:collapse; font-size:14px; }
+    th,td { padding:12px 10px; border-bottom:1px solid var(--line); text-align:right; vertical-align:top; }
+    th:first-child,td:first-child { text-align:left; }
+    th { color:var(--muted); background:#fafbfc; font-size:13px; }
+    tr:last-child td { border-bottom:0; }
+    .total td { font-weight:700; background:#fafbfc; }
+    .bands { display:grid; grid-template-columns:repeat(5,1fr); gap:10px; }
+    .band { border:1px solid var(--line); border-radius:8px; padding:14px 12px; background:#fff; min-height:112px; }
+    .band strong { display:block; margin-bottom:6px; font-size:18px; }
+    .band span { color:var(--muted); font-size:13px; }
+    a { color:var(--blue); text-decoration:none; font-weight:700; }
+    .topline { display:flex; justify-content:space-between; gap:12px; align-items:center; margin-bottom:14px; padding:12px 14px; background:#fff; border:1px solid var(--line); border-radius:8px; }
+    .topline span { color:var(--muted); font-size:13px; }
+    ul { margin:8px 0 0; padding-left:20px; color:var(--muted); }
+    li { margin:6px 0; }
+    @media(max-width:900px){ header,.grid4,.grid2{grid-template-columns:1fr}.bands{grid-template-columns:repeat(2,1fr)}.wrap{overflow-x:auto}.topline{align-items:flex-start;flex-direction:column} }
+    @media(max-width:560px){ main{padding:18px 12px 36px}.hero h1{font-size:25px}.big{font-size:32px}.bands{grid-template-columns:1fr} }
+  </style>
+</head>
+<body>
+<main>
+  <div class="topline"><a href="../index.html">返回首页</a><span>研报适用日期：2026-08-27 ｜ 公司：NVIDIA / NVDA ｜ 数据口径：FY2027 Q2，季度截至 2026-07-26</span></div>
+  <header>
+    <div class="hero">
+      <h1>NVIDIA FY2027 Q2 财报与电话会研究</h1>
+      <p>核心不是又一次“超预期”，而是公司首次给出 FY2028 约 70% 的初步增长展望，同时把供应短缺、内存涨价和大规模生态融资承诺摆到了台面上。</p>
+      <p>股价参考：$219.53，取 2026-08-26 美股盘后 7:59 ET；常规收盘价 $209.66。财务数字除特别说明外均为美元。</p>
+    </div>
+    <div class="metric">
+      <div class="label">Base 概率加权合理区间</div>
+      <div class="big">$280–310</div>
+      <div class="badge amber">增长能见度上升，风险结构也变重</div>
+    </div>
+  </header>
+
+  <div class="grid4">
+    <div class="metric"><div class="label">盘后参考市值</div><strong>$5.33T</strong></div>
+    <div class="metric"><div class="label">Q2 营收</div><strong>$96.2B</strong></div>
+    <div class="metric"><div class="label">Q3 收入指引</div><strong>$108B</strong></div>
+    <div class="metric"><div class="label">FY28 初步增长展望</div><strong>约 +70%</strong></div>
+  </div>
+
+  <section>
+    <h2>一句话结论</h2>
+    <div class="grid2">
+      <div class="card"><h3>基本面判断</h3><p>需求与产品周期均强于此前预期。Vera Rubin 已开始生产出货，Q3 预计贡献约 20% 的 Data Center 收入；更重要的是，管理层称 FY2028 约 70% 的增长仍是“供应受限”口径。</p></div>
+      <div class="card"><h3>估值判断</h3><p>$219.53 对应约 31.7x TTM 核心 PE、约 24x 本报告 FY2027 Base EPS。若 FY2028 指引兑现，价格不贵；若把长期指引和生态融资全部打折，当前并非厚安全边际。</p></div>
+      <div class="card"><h3>最重要的正变量</h3><p>Hyperscale 与 ACIE 双引擎已接近平衡；ACIE 增速更快，使增长不再只依赖四五家美国云厂商。每 GW 的 NVIDIA 收入机会从 Hopper 约 $18B 提升至 Vera Rubin 约 $40B。</p></div>
+      <div class="card"><h3>最重要的负变量</h3><p>NVIDIA 正从轻资产芯片平台，部分转向“用投资、采购承诺、信用增级帮助客户建算力”的生态资本提供者。收入上限提高了，但信用风险、现金流波动和循环融资争议也同步上升。</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>本次财报：超预期在哪里</h2>
+    <div class="wrap"><table><thead><tr><th>项目</th><th>FY27 Q2 / 指引</th><th>市场预期</th><th>差异与解读</th></tr></thead><tbody>
+      <tr><td>营收</td><td>$96.22B</td><td>约 $92.27B</td><td>高约 $3.95B；同比 +106%，环比 +18%。</td></tr>
+      <tr><td>Non-GAAP EPS</td><td>$2.22</td><td>约 $2.09</td><td>高约 6%；该口径已包含股权激励。</td></tr>
+      <tr><td>Q3 营收指引</td><td>$108B ±2%</td><td>约 $104.86B</td><td>中点高约 $3.1B；若兑现，同比约 +89%，且未计入中国 Data Center compute 收入。</td></tr>
+      <tr><td>盘后反应</td><td>$219.53，约 +4.7%</td><td>-</td><td>股价最初犹豫，电话会给出 FY28 约 70% 增长后转强。</td></tr>
+    </tbody></table></div>
+    <p class="note">市场预期与股价采用 FactSet/AP 和 StockAnalysis 的当日公开数据，仅用于刻画预期差，不是公司披露。</p>
+  </section>
+
+  <section>
+    <h2>最新财务与业务数据</h2>
+    <div class="wrap"><table><thead><tr><th>项目</th><th>FY27 Q2</th><th>同比 / 环比</th><th>判断</th></tr></thead><tbody>
+      <tr><td>总营收</td><td>$96.221B</td><td>YoY +106% / QoQ +18%</td><td>连续第四季增长加速。</td></tr>
+      <tr><td>Data Center</td><td>$89.023B</td><td>YoY +117% / QoQ +18%</td><td>占总收入 92.5%，价值高度集中。</td></tr>
+      <tr><td>Edge Computing</td><td>$7.198B</td><td>YoY +27% / QoQ +13%</td><td>规模较小，但提供 PC、汽车、机器人等长期可选性。</td></tr>
+      <tr><td>GAAP / Non-GAAP 毛利率</td><td>均为 75.0%</td><td>同比 +2.6 / +2.5 pct</td><td>Blackwell Ultra 组合改善，但后续内存涨价将压低毛利率。</td></tr>
+      <tr><td>GAAP 营业利润</td><td>$63.734B</td><td>YoY +124%</td><td>营业利润率约 66.2%，经营杠杆仍极强。</td></tr>
+      <tr><td>Non-GAAP 净利润 / EPS</td><td>$53.954B / $2.22</td><td>YoY +118% / +120%</td><td>更适合观察主营盈利。</td></tr>
+      <tr><td>稀释加权股数</td><td>24.285B</td><td>YoY 约 -1.3%</td><td>回购已超过股权激励稀释。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>新业务口径：Hyperscale、ACIE 与 Edge</h2>
+    <div class="wrap"><table><thead><tr><th>板块</th><th>Q2 收入</th><th>同比</th><th>环比</th><th>做什么 / 重要性</th></tr></thead><tbody>
+      <tr><td>Hyperscale</td><td>$48.710B</td><td>约 +102%</td><td>+13%</td><td>公共云与最大型互联网公司；当前最大单一引擎，采购规模大但客户集中。</td></tr>
+      <tr><td>ACIE</td><td>$40.313B</td><td>+138%</td><td>+25%</td><td>AI Clouds、工业、企业和主权 AI；当前增长最快，可扩展至没有能力自研芯片的客户。</td></tr>
+      <tr><td>Edge Computing</td><td>$7.198B</td><td>+27%</td><td>+13%</td><td>AI PC、游戏机、工作站、AI-RAN、汽车与机器人；短期不是估值主轴。</td></tr>
+      <tr class="total"><td>合计</td><td>$96.221B</td><td>+106%</td><td>+18%</td><td>Data Center 中 Hyperscale / ACIE 已约为 55% / 45%。</td></tr>
+    </tbody></table></div>
+    <p class="note">ACIE = AI Clouds, Industrial &amp; Enterprise。公司在 Q2 将一家公司因商业模式变化从 ACIE 重分类至 Hyperscale，并重述可比期。</p>
+  </section>
+
+  <section>
+    <h2>电话会指引：真正改变估值的五个信息</h2>
+    <div class="grid2">
+      <div class="card"><h3>1. FY2028 约 +70%</h3><p>这是管理层罕见给出的一年以上前瞻。客户预测指向“接近翻倍”，但公司按可获得供应给出约 70%。它是初步展望，不应按无风险订单处理。</p></div>
+      <div class="card"><h3>2. 供应只覆盖约 70%</h3><p>瓶颈并非单一晶圆或 HBM，而是晶圆、先进封装、内存、网络、机柜、电力与数据中心建设的全链条。增长下限更清晰，但供应执行成为核心风险。</p></div>
+      <div class="card"><h3>3. Vera Rubin 已开始出货</h3><p>8 月开始生产出货，Q3 预计占 Data Center 收入约 20%；Hyperscale 增长预计 Q4 再加速。每 GW 收入机会从 Blackwell 的约 $25B 增至约 $40B。</p></div>
+      <div class="card"><h3>4. 毛利率先降后稳</h3><p>Q3 指引 74% ±50bp；因内存极端涨价，Q4 预计触底 71%–72%，FY2028 稳定在 72%–73%。价格上调预计 FY28 Q1 起缓冲成本。</p></div>
+      <div class="card"><h3>5. ACIE 先驱动 Q3</h3><p>Q3 环比增长主要由 ACIE 推动，Hyperscale 预计 Q4 与 FY2028 随 Rubin 供应扩大重新加速。增长来源更分散，但 Neocloud 信用质量低于成熟云厂商。</p></div>
+      <div class="card"><h3>6. CPU 成为新增量</h3><p>Grace CPU TTM 收入超过 $5B；管理层预计 FY2028 CPU 收入超过翻倍，长期目标约 $20B，扩大 NVIDIA 在整机系统中的价值捕获。</p></div>
+    </div>
+  </section>
+
+  <section class="alert">
+    <h2>额外注意：风险结构发生了实质变化</h2>
+    <p><strong>这部分比单季 EPS 更值得长期投资者关注。</strong>NVIDIA 正在用供应承诺、股权投资、云服务采购、租赁与信用担保扩张 AI 生态。它能突破客户资产负债表约束，也把部分客户融资风险转回 NVIDIA。</p>
+    <div class="wrap"><table><thead><tr><th>项目</th><th>规模</th><th>正确理解</th><th>风险</th></tr></thead><tbody>
+      <tr><td>未来合同承诺</td><td>$366B</td><td>含供应与产能 $279B、云服务 $29B、未开始租赁 $25B、股权投资 $25B、Capex $8B。</td><td>不是当期债务，不能机械从市值扣除；但若需求转弱，部分承诺难以快速缩减。</td></tr>
+      <tr><td>额外 AI 云与第三方租赁承诺</td><td>$56B</td><td>其中 AI cloud agreements $36B；客户可以把更优价格的容量卖给第三方，NVIDIA 的承诺随第三方消化而下降。</td><td>若容量卖不出去，NVIDIA 可能需要购买或使用相关算力。</td></tr>
+      <tr><td>最大信用担保敞口</td><td>$108.5B</td><td>含既有 AI 云担保 $3.5B，以及代表 OpenAI 为 SB Energy Ohio 项目提供、上限 $105B 的分阶段担保。</td><td>不是现时负债；主要在租赁开始且租户违约时触发，但期限可达 20 年。</td></tr>
+      <tr><td>生态股权投资</td><td>账面约 $99B，另承诺 $25B</td><td>投资 AI 模型公司、基础设施融资商及其他私营公司。</td><td>估值波动会显著影响 GAAP 净利润，且存在客户与被投公司利益交织。</td></tr>
+      <tr><td>下一年度需借助资产负债表的 AI labs</td><td>约占公司业务 1/4</td><td>电话会称，这部分算力最终由投资级客户或有投资级支持的主体消费。</td><td>收入集中度与信用支持强度上升，需监控“卖芯片—投资客户—客户再买芯片”的闭环质量。</td></tr>
+    </tbody></table></div>
+    <p class="note">判断原则：只有在终端算力利用率、客户收入与还款能力持续改善时，这套模式才是高回报生态投资；若主要依靠新增融资维持采购，则会从增长飞轮退化为循环融资。</p>
+  </section>
+
+  <section>
+    <h2>盈利与会计质量</h2>
+    <div class="wrap"><table><thead><tr><th>事项</th><th>Q2 数据</th><th>对分析的影响</th></tr></thead><tbody>
+      <tr><td>GAAP 净利润</td><td>$59.688B / EPS $2.46</td><td>包含大量投资收益，不能直接按普通经营 PE 外推。</td></tr>
+      <tr><td>股权证券净收益</td><td>$7.771B；H1 $23.707B</td><td>提升 GAAP 利润但不是主营收入，未来可能反向波动。</td></tr>
+      <tr><td>Non-GAAP 净利润</td><td>$53.954B / EPS $2.22</td><td>剔除股权证券损益等项目，更接近核心盈利。</td></tr>
+      <tr><td>Non-GAAP 口径变化</td><td>FY27 Q1 起不再剔除 SBC</td><td>当前口径更保守；历史 Non-GAAP 数据已重述，跨期比较应使用重述值。</td></tr>
+      <tr><td>应收账款与账期</td><td>A/R $63.059B；DSO 60 天</td><td>部分投资级大客户获 90 天至 1 年账期，收入确认与现金回收时间差扩大。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>现金流与资产负债表</h2>
+    <div class="wrap"><table><thead><tr><th>指标</th><th>最新数据</th><th>判断</th></tr></thead><tbody>
+      <tr><td>现金 + 可交易债券</td><td>$56.586B</td><td>高流动性资产仍强。</td></tr>
+      <tr><td>债务</td><td>$33.366B</td><td>6 月新发 $25B 债券，保守净现金约 $23.2B；债务增加与生态资本需求相关。</td></tr>
+      <tr><td>可交易股权证券</td><td>$42.783B</td><td>具备价值，但波动大，不按现金 1:1 计入核心估值。</td></tr>
+      <tr><td>Q2 经营现金流</td><td>$24.077B</td><td>明显低于利润，主要受 A/R 与库存建设拖累。</td></tr>
+      <tr><td>Q2 估算 FCF</td><td>约 $21.4B</td><td>经营现金流减 PP&amp;E/无形资产采购 $2.677B；仍强但现金转化率下降。</td></tr>
+      <tr><td>库存</td><td>$31.575B</td><td>环比增加约 $5.8B；主要为 Rubin 备货，也增加产品切换与减值风险。</td></tr>
+      <tr><td>Q2 股东回报</td><td>约 $26B</td><td>回购约 $19.7B、分红约 $6.0B；剩余回购授权约 $99.3B。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>TTM SOTP：用已实现利润给估值下限</h2>
+    <div class="wrap"><table><thead><tr><th>板块</th><th>估算 TTM 营收</th><th>估算核心净利润</th><th>Bear PE / 价值</th><th>Base PE / 价值</th><th>Bull PE / 价值</th></tr></thead><tbody>
+      <tr><td>Data Center</td><td>约 $277.8B</td><td>约 $163.5B</td><td>25x / $4.09T</td><td>30x / $4.91T</td><td>35x / $5.72T</td></tr>
+      <tr><td>Edge Computing</td><td>约 $25.2B</td><td>约 $4.5B</td><td>18x / $0.08T</td><td>22x / $0.10T</td><td>26x / $0.12T</td></tr>
+      <tr class="total"><td>合计</td><td>约 $303.0B</td><td>约 $168.0B</td><td>$4.17T / $172</td><td>$5.00T / $206</td><td>$5.84T / $240</td></tr>
+    </tbody></table></div>
+    <p class="note">公式：分部股权价值 = 估算分部 Non-GAAP 净利润 × PE；每股价值 = 合计股权价值 ÷ 24.285B 股。公司不披露平台利润，分部利润按收入结构与合理净利率分配，属于估算。因为这里直接使用净利润 PE 得到股权价值，不再额外加净现金，避免重复计算。</p>
+  </section>
+
+  <section>
+    <h2>Forward 估值：FY2028 指引兑现到什么程度</h2>
+    <div class="wrap"><table><thead><tr><th>情景</th><th>FY28 营收 / 毛利率</th><th>OpEx / 税率</th><th>估算净利润 / EPS</th><th>期末 PE / 目标价</th><th>折现至今</th></tr></thead><tbody>
+      <tr><td><span class="badge amber">Bear</span></td><td>$550B / 68.0%</td><td>$55B / 19%</td><td>$258B / $10.72</td><td>20x / $214</td><td>约 $187</td></tr>
+      <tr><td><span class="badge green">Base</span></td><td>$687B / 72.5%</td><td>$47B / 18%</td><td>$370B / $15.40</td><td>23x / $354</td><td>约 $309</td></tr>
+      <tr><td><span class="badge blue">Bull</span></td><td>$750B / 74.0%</td><td>$50B / 17%</td><td>$419B / $17.54</td><td>26x / $456</td><td>约 $398</td></tr>
+    </tbody></table></div>
+    <p class="note">Base 计算：本报告 FY27 收入约 $404B × 1.70 = FY28 约 $687B；净利润 =（营收 × 毛利率 − OpEx）×（1 − 税率）；EPS = 净利润 ÷ 24.0B 股；折现期约 17 个月、年折现率 10%。Bear 假设管理层长指引明显落空；Bull 假设供应改善且定价覆盖成本。</p>
+  </section>
+
+  <section>
+    <h2>估值框架汇总</h2>
+    <div class="wrap"><table><thead><tr><th>框架</th><th>Bear</th><th>Base</th><th>Bull</th><th>如何使用</th></tr></thead><tbody>
+      <tr><td>TTM SOTP</td><td>$172</td><td>$206</td><td>$240</td><td>只看已实现利润，适合作为回撤参考，不捕捉 FY28 指引的大部分价值。</td></tr>
+      <tr><td>FY28 折现估值</td><td>$187</td><td>$309</td><td>$398</td><td>高度依赖供应、毛利率和生态客户信用，不能视为确定目标价。</td></tr>
+      <tr><td>综合合理区间</td><td>$175–190</td><td>$280–310</td><td>$360–400</td><td>Base 对长指引、融资承诺和执行风险做折价，不直接照搬 $309。</td></tr>
+    </tbody></table></div>
+    <p class="note">本报告采用约 35% Bear、45% Base、20% Bull 的主观权重，概率加权约 $284。合理区间不是未来股价保证。</p>
+  </section>
+
+  <section>
+    <h2>风险、跟踪指标与危险信号</h2>
+    <div class="wrap"><table><thead><tr><th>风险</th><th>每季跟踪</th><th>危险信号</th></tr></thead><tbody>
+      <tr><td>生态融资 / 信用增级</td><td>保证敞口、AI cloud 承诺、客户回款、融资平台落地</td><td>保证被触发、承诺快速上升但终端利用率下降。</td></tr>
+      <tr><td>现金转化</td><td>DSO、A/R、CFO / 核心净利润</td><td>DSO 持续超过 60 天，经营现金流连续显著低于核心利润。</td></tr>
+      <tr><td>毛利率</td><td>Q3 74%、Q4 71%–72%、FY28 72%–73%</td><td>内存与系统成本超过提价能力，FY28 仍低于 70%。</td></tr>
+      <tr><td>供应执行</td><td>Rubin 占比、HBM、先进封装、网络、电力与 LPS</td><td>管理层 70% 增长不再受供应而是受需求限制。</td></tr>
+      <tr><td>客户集中</td><td>单一直接客户收入、A/R 前五客户、AI labs 贡献</td><td>单一客户砍单或需要更多非市场化账期与担保。</td></tr>
+      <tr><td>自研 ASIC / 竞争</td><td>TPU、Trainium、Maia、MTIA、AMD 与客户芯片份额</td><td>推理工作负载大规模转移且 CUDA/网络优势无法抵消。</td></tr>
+      <tr><td>中国与出口管制</td><td>获批产品、许可证、收入与库存减值</td><td>限制扩大；中国相关库存再次出现大额减值。</td></tr>
+      <tr><td>投资资产波动</td><td>股权证券收益、账面价值与现金退出</td><td>投资损失侵蚀净资产，或被投客户融资失败。</td></tr>
+    </tbody></table></div>
+    <p class="note">Q2 单一直接客户占收入 16%；五个直接客户占应收账款 22%、14%、13%、11%、10%，合计 70%。这并不等同于五个终端客户占收入 70%，但说明回款集中度高。</p>
+  </section>
+
+  <section>
+    <h2>催化剂</h2>
+    <div class="grid2">
+      <div class="card"><h3>正向催化剂</h3><p>Rubin Q3 占比达到或超过 20%、Q4 Hyperscale 重新加速、FY28 毛利率守住 72%–73%、供应改善使 70% 指引上修、AWS 追加 200 万块 GPU 顺利部署、CPU/Groq 形成新增量。</p></div>
+      <div class="card"><h3>负向催化剂</h3><p>内存成本导致 Q4 毛利率低于 71%、AI labs 融资或回款问题、$105B 担保争议升级、Neocloud 利用率下降、承诺规模继续快于现金流增长、出口管制扩大。</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>仓位管理区间</h2>
+    <div class="bands">
+      <div class="band"><strong>$175 以下</strong><span>接近 TTM Bear；若基本面未破坏，安全边际较厚。</span></div>
+      <div class="band"><strong>$175–220</strong><span>合理偏低，可分批建立或增加仓位。</span></div>
+      <div class="band"><strong>$220–280</strong><span>合理持有区，等待 FY28 指引逐季验证。</span></div>
+      <div class="band"><strong>$280–330</strong><span>进入 Base 兑现区，需 Rubin、毛利率和现金流同步验证。</span></div>
+      <div class="band"><strong>$350 以上</strong><span>接近 FY28 Base 期末价值，可考虑停止加仓或分批降风险。</span></div>
+    </div>
+    <p class="note">抄底前提：需求仍高于供应、毛利率路径未恶化、AI 云客户利用率与回款正常、担保未触发。若这些条件破坏，低价不等于低风险。</p>
+  </section>
+
+  <section>
+    <h2>下一次财报</h2>
+    <div class="wrap"><table><tbody>
+      <tr><td>下一次财报</td><td>FY2027 Q3</td></tr>
+      <tr><td>官方电话会日期</td><td>2026-11-17（公司在 Q2 电话会结尾确认）</td></tr>
+      <tr><td>重点关注</td><td>收入是否达到 $108B 中点、Rubin 约 20% 占比、ACIE 增速、74% 毛利率、Q4 71%–72% 指引、应收账款与供应/信用承诺。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>来源与口径</h2>
+    <ul>
+      <li><a href="https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027">NVIDIA FY2027 Q2 官方财报新闻稿</a></li>
+      <li><a href="https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm">NVIDIA FY2027 Q2 Form 10-Q（SEC）</a></li>
+      <li><a href="https://investor.nvidia.com/events-and-presentations/events-and-presentations/event-details/2026/NVIDIA-2nd-Quarter-FY27-Financial-Results/default.aspx">NVIDIA FY2027 Q2 官方电话会与回放页面</a></li>
+      <li><a href="https://stockanalysis.com/stocks/nvda/transcripts/676136-q2-2027/">FY2027 Q2 电话会文字记录（Quartr / StockAnalysis，二手转录）</a></li>
+      <li><a href="https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2027">NVIDIA FY2027 Q1 新闻稿（新分部与 Non-GAAP 口径变化）</a></li>
+      <li><a href="https://apnews.com/article/nvidia-artificial-intelligence-earnings-dc8d556e709b50915cca9217a60b1991">AP：市场一致预期与盘后反应</a></li>
+    </ul>
+    <p class="note">事实优先采用公司 IR 与 SEC；电话会文字记录用于补充管理层口头指引，若与公司正式文件冲突，以正式文件为准。估值、概率权重和分部利润均为本报告估算，不构成投资建议。</p>
+  </section>
+</main>
+</body>
+</html>
