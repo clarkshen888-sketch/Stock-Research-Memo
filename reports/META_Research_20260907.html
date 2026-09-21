@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>META Research 20260907</title>
+  <style>
+    :root { --bg:#f6f7f9; --panel:#fff; --ink:#1d252d; --muted:#5c6670; --line:#d9dee5; --blue:#2563eb; --green:#0f8a5f; --amber:#b7791f; --red:#c24135; --soft-blue:#e9f1ff; --soft-green:#e9f7f1; --soft-amber:#fff4df; --soft-red:#fff0ed; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font-family:Arial,"Microsoft YaHei",sans-serif; line-height:1.58; }
+    main { max-width:1180px; margin:0 auto; padding:28px 20px 56px; }
+    header { display:grid; grid-template-columns:1.35fr .65fr; gap:18px; margin-bottom:18px; }
+    section,.hero,.metric { background:var(--panel); border:1px solid var(--line); border-radius:8px; }
+    .hero,.metric,section { padding:22px; }
+    .hero h1 { margin:0 0 10px; font-size:32px; line-height:1.2; }
+    h2 { margin:0 0 14px; font-size:21px; }
+    h3 { margin:0 0 8px; font-size:16px; }
+    p { margin:8px 0 0; color:var(--muted); }
+    section { margin-top:14px; }
+    .big { font-size:38px; line-height:1.08; font-weight:700; }
+    .label,.note { color:var(--muted); font-size:13px; }
+    .badge { display:inline-flex; width:fit-content; padding:6px 10px; border-radius:6px; font-weight:700; font-size:14px; }
+    .green { color:var(--green); background:var(--soft-green); } .amber { color:var(--amber); background:var(--soft-amber); } .red { color:var(--red); background:var(--soft-red); } .blue { color:var(--blue); background:var(--soft-blue); }
+    .grid4 { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin:14px 0; }
+    .grid2 { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+    .metric strong { display:block; margin-top:6px; font-size:24px; }
+    .card { border:1px solid var(--line); border-radius:8px; padding:15px; background:#fff; }
+    .card p { font-size:14px; }
+    .alert { border:2px solid #e3a62f; background:var(--soft-amber); }
+    .alert p { color:#6f4c12; }
+    table { width:100%; border-collapse:collapse; font-size:14px; }
+    th,td { padding:12px 10px; border-bottom:1px solid var(--line); text-align:right; vertical-align:top; }
+    th:first-child,td:first-child { text-align:left; }
+    th { color:var(--muted); background:#fafbfc; font-size:13px; }
+    tr:last-child td { border-bottom:0; }
+    .total td { font-weight:700; background:#fafbfc; }
+    .bands { display:grid; grid-template-columns:repeat(6,1fr); gap:10px; }
+    .band { border:1px solid var(--line); border-radius:8px; padding:14px 12px; background:#fff; min-height:116px; }
+    .band strong { display:block; margin-bottom:6px; font-size:18px; }
+    .band span { color:var(--muted); font-size:13px; }
+    a { color:var(--blue); text-decoration:none; font-weight:700; }
+    .topline { display:flex; justify-content:space-between; gap:12px; align-items:center; margin-bottom:14px; padding:12px 14px; background:#fff; border:1px solid var(--line); border-radius:8px; }
+    .topline span { color:var(--muted); font-size:13px; }
+    ul { margin:8px 0 0; padding-left:20px; color:var(--muted); }
+    li { margin:6px 0; }
+    @media(max-width:900px){ header,.grid4,.grid2{grid-template-columns:1fr}.bands{grid-template-columns:repeat(2,1fr)}.wrap{overflow-x:auto}.topline{align-items:flex-start;flex-direction:column} }
+    @media(max-width:560px){ main{padding:18px 12px 36px}.hero h1{font-size:25px}.big{font-size:32px}.bands{grid-template-columns:1fr} }
+  </style>
+</head>
+<body>
+<main>
+  <div class="topline"><a href="../index.html">返回首页</a><span>研报适用日期：2026-09-07 ｜ 公司：Meta Platforms / META ｜ 数据口径：FY2026 Q2，季度截至 2026-06-30</span></div>
+  <header>
+    <div class="hero">
+      <h1>Meta Platforms FY2026 Q2 财报与重大更新研究</h1>
+      <p>公司类型：大型复合科技。采用 TTM SOTP、Forward PE 与自由现金流交叉验证；重点区分广告现金牛的已兑现回报，与 AI、算力和 Reality Labs 尚待验证的长期投入。</p>
+      <p>股价参考：META 2026-09-04 常规交易收盘价 $616.77；2026-09-07 为美国劳动节休市。按 2026-07-24 实际流通股约 2.548B 股估算，市值约 $1.57T。</p>
+    </div>
+    <div class="metric">
+      <div class="label">综合 Base 合理区间</div>
+      <div class="big">$630–720</div>
+      <div class="badge amber">小幅低估，但不是厚安全边际</div>
+    </div>
+  </header>
+
+  <div class="grid4">
+    <div class="metric"><div class="label">Q2 营收</div><strong>$60.80B</strong><span class="note">YoY +28%</span></div>
+    <div class="metric"><div class="label">广告收入</div><strong>$59.36B</strong><span class="note">YoY +27%</span></div>
+    <div class="metric"><div class="label">Q2 Capex</div><strong>$31.08B</strong><span class="note">FCF 仅 $0.78B</span></div>
+    <div class="metric"><div class="label">Q3 预计法律费用</div><strong>约 $10B</strong><span class="note">财报后青年保护协议</span></div>
+  </div>
+
+  <section>
+    <h2>一句话结论</h2>
+    <div class="grid2">
+      <div class="card"><h3>基本面判断</h3><p>Meta 的护城河没有被生成式 AI 削弱，反而正在被推荐系统和广告模型增强：Q2 广告展示量增长 14%、单价增长 12%，同时推动广告收入增长 27%。这说明 AI 已在核心业务产生可量化回报。</p></div>
+      <div class="card"><h3>投资判断</h3><p>$616.77 略低于本报告 $630–720 的 Base 合理区，但折价不厚。合理策略是持有或小仓分批，而不是因为 23 倍 TTM PE 看似不贵就重仓；未来两年的真正约束是资本效率、自由现金流和监管成本。</p></div>
+      <div class="card"><h3>最大正变量</h3><p>Meta 拥有 3.60B 日活用户、成熟广告竞价系统和数百万商家关系，能够把推荐改进、AI 创意工具、WhatsApp 商业消息和 Business Agents 接到同一条结果付费链路上。</p></div>
+      <div class="card"><h3>最大负变量</h3><p>公司正把广告现金流大规模转换为算力，同时监管现金成本仍在累积：FY2026 Capex 指引 $130–145B，另有巨额长期租赁、采购承诺和财报后 $18B 名义和解付款。</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>先拆掉最容易误读的数字</h2>
+    <div class="wrap"><table><thead><tr><th>项目</th><th>报告值</th><th>调整 / 口径</th><th>投资含义</th></tr></thead><tbody>
+      <tr><td>Q2 GAAP 营业利润</td><td>$18.78B，YoY -8%</td><td>含诉讼费用 $2.40B、裁员费用 $1.18B</td><td>剔除两项后约 $22.36B、同比约 +9%，说明主业未衰退；但法律费用会重复出现，不能在经济价值上永久忽略。</td></tr>
+      <tr><td>H1 GAAP 净利润</td><td>$42.62B</td><td>含 Q1 一次性税收利益 $8.03B</td><td>直接年化会高估持续盈利；粗略正常化后约 $34.59B。</td></tr>
+      <tr><td>TTM PE</td><td>约 23.2x</td><td>$616.77 ÷ 估算 TTM EPS $26.54</td><td>表面不贵，但尚未完整反映未来折旧、利息和现金流压力。</td></tr>
+      <tr><td>TTM FCF 收益率</td><td>约 2.4%</td><td>TTM FCF $37.87B ÷ 市值约 $1.57T</td><td>从现金回报看并不便宜，且 H2 Capex 仍将显著加速。</td></tr>
+    </tbody></table></div>
+    <p class="note">“剔除后营业利润”是管理层在电话会提供的同比判断；正常化净利润和 TTM 指标为本报告计算，不是公司正式 Non-GAAP 指标。</p>
+  </section>
+
+  <section class="alert">
+    <h2>财报后重大更新：$18B 青年保护协议</h2>
+    <p><strong>这项信息晚于 Q2 财报，必须纳入当前估值。</strong>Meta 8 月与美国 52 位州、地区及哥伦比亚特区的总检察长达成协议，并于 8 月 27 日获得法官批准。协议不仅有现金成本，也会改变青少年用户的产品机制。</p>
+    <div class="wrap"><table><thead><tr><th>项目</th><th>最新信息</th><th>投资含义</th></tr></thead><tbody>
+      <tr><td>名义付款</td><td>约 $18B，分 10 年支付</td><td>不是一次性现金流出；长期分期会降低现值，但形成持续现金义务。</td></tr>
+      <tr><td>确定 / 条件部分</td><td>约 $12.7B 分配给参与地区；余下约 $5.3B 需 TikTok 和 YouTube 采取指定措施并匹配付款后才释放</td><td>名义上限与预计会计费用不同，不应直接把 $18B 全部当作当期损失。</td></tr>
+      <tr><td>Q3 会计影响</td><td>预计确认约 $10B 法律费用</td><td>按 16% 税率粗算，税后影响约 $8.4B、约 $3.27/股；主要是确认时点影响，不等于当季支付 $10B 现金。</td></tr>
+      <tr><td>费用指引</td><td>这笔 $10B 未包含在 Q2 电话会的 FY2026 $165–169B 区间</td><td>机械相加约为 $175–179B，但这不是公司正式新指引；此前“全年营业利润高于 2025”的目标需要更强收入或其他费用节省才能守住。</td></tr>
+      <tr><td>产品约束</td><td>青少年默认每日两小时上限、夜间限制、上学时间静默通知，并可选非算法信息流；多数条款持续 10 年</td><td>直接收入影响尚未披露，可能降低部分青少年时长，但也降低更大监管尾部风险。</td></tr>
+    </tbody></table></div>
+    <p class="note">本报告在 SOTP 中保守扣除约 $10B 作为和解经济成本近似。实际现值取决于支付时间、条件款触发和税务处理，不能把 $18B 名义额、$10B 会计费用和当期现金流混成一个数字。</p>
+  </section>
+
+  <section>
+    <h2>最新财务与业务数据</h2>
+    <div class="wrap"><table><thead><tr><th>项目</th><th>FY26 Q2</th><th>同比 / 趋势</th><th>判断</th></tr></thead><tbody>
+      <tr><td>总营收</td><td>$60.801B</td><td>+28%</td><td>增长重新加速，汇率贡献约 1pct。</td></tr>
+      <tr><td>Family of Apps 营收</td><td>$60.370B</td><td>+28%</td><td>占总收入 99.3%，Meta 仍几乎完全依赖核心应用生态。</td></tr>
+      <tr><td>广告收入</td><td>$59.363B</td><td>+27%</td><td>占总收入 97.6%；展示量与单价共同驱动，质量高于单一价格上涨。</td></tr>
+      <tr><td>FoA 其他收入</td><td>$1.007B</td><td>+73%</td><td>首次单季超过 $1B，主要来自 WhatsApp 付费消息和订阅。</td></tr>
+      <tr><td>Reality Labs 营收</td><td>$0.431B</td><td>+16%</td><td>AI 眼镜增长被 Quest 头显下滑部分抵消，规模仍小。</td></tr>
+      <tr><td>Family of Apps 营业利润</td><td>$23.394B</td><td>-6%</td><td>包含一次性费用与高 AI 人才、折旧和云服务成本。</td></tr>
+      <tr><td>Reality Labs 营业亏损</td><td>-$4.619B</td><td>亏损扩大 2%</td><td>收入仅覆盖约 9% 的板块成本，仍是长期高额现金消耗项。</td></tr>
+      <tr><td>净利润 / 稀释 EPS</td><td>$15.848B / $6.18</td><td>-14% / -13%</td><td>受一次性费用和税率上升影响，不代表广告业务失速。</td></tr>
+      <tr><td>Family DAP</td><td>3.60B</td><td>+3%</td><td>用户增长趋缓，未来增长更依赖使用时长、广告负载和转化效率。</td></tr>
+      <tr><td>员工人数</td><td>75,472</td><td>-1%</td><td>仍包含约 8,000 名受 5 月裁员影响员工，多数将在 Q3 退出统计。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>业务结构：一个现金牛，三组期权</h2>
+    <div class="wrap"><table><thead><tr><th>层级</th><th>现在做什么</th><th>已验证规模</th><th>重要性与判断</th></tr></thead><tbody>
+      <tr><td>广告现金牛</td><td>Facebook、Instagram 的信息流、Reels 与效果广告</td><td>Q2 广告 $59.36B；Advantage+ 年化收入运行率超过 $75B</td><td>几乎承担全部利润和投资资金来源；护城河来自用户关系图、内容、商家数据和竞价系统。</td></tr>
+      <tr><td>消息商业化</td><td>WhatsApp 付费消息、订阅、商家客服与交易代理</td><td>FoA 其他收入 Q2 $1.01B；超过 1M 商家每周使用 Business Agents</td><td>最自然的新增长曲线，因为可以复用现有商家关系和结果付费机制。</td></tr>
+      <tr><td>消费者 AI / 模型 API</td><td>Meta AI、个人代理、Muse Spark API、编码与生产力工具</td><td>尚未单独披露收入</td><td>分发优势强，但产品价值、定价和企业销售能力仍未验证；估值中不应提前计入大量收入。</td></tr>
+      <tr><td>Reality Labs</td><td>AI 眼镜、Quest、AR/VR 系统与内容</td><td>Q2 收入 $0.43B、亏损 $4.62B</td><td>眼镜有真实产品势能，但整体板块仍是远期期权；不能把眼镜成功等同于 RL 已建立盈利模式。</td></tr>
+      <tr><td>算力外部变现</td><td>出售模型智能、API，必要时出租富余算力</td><td>管理层称收到显著高于成本的算力报价，未披露合同或收入</td><td>可降低闲置风险，但 Meta 没有成熟云销售体系；当前只能作为下行保护，不宜当作 AWS 式业务估值。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>AI 投资已经产生什么回报</h2>
+    <div class="grid2">
+      <div class="card"><h3>用户时长</h3><p>Instagram 使用时长同比双位数增长，Facebook 视频时长全球增长 9%、美国和加拿大超过 10%。这说明推荐模型仍能扩大可变现注意力。</p></div>
+      <div class="card"><h3>广告效果</h3><p>新的用户理解与 GEM 广告排序模型推动 Facebook 广告点击提升 8.3%、转化提升 15.7%；Instagram 的早期生成式推荐试验推动 App 事件转化提升 1%。</p></div>
+      <div class="card"><h3>商家工具</h3><p>超过 9M 小企业使用至少一种生成式 AI 广告创意工具；Advantage+ 已超过 $75B 年化收入运行率。这里的 AI 回报已进入财务系统，而非纯叙事。</p></div>
+      <div class="card"><h3>尚未验证</h3><p>个人超级智能、企业 API、开发者工具和直接出售算力仍处于产品与商业模式早期。管理层自己也承认企业销售是需要新建的能力。</p></div>
+    </div>
+  </section>
+
+  <section class="alert">
+    <h2>额外注意：Meta 已进入资本密集型阶段</h2>
+    <p><strong>这是本报告最需要额外注意的部分。</strong>Meta 不再是依靠少量固定资产就能增长的纯互联网平台。广告利润仍轻，但为了维持 AI 领先，公司正在锁定大量服务器、云容量、数据中心、电力和长期融资。</p>
+    <div class="wrap"><table><thead><tr><th>项目</th><th>最新数据</th><th>正确理解</th><th>风险</th></tr></thead><tbody>
+      <tr><td>FY2026 Capex 指引</td><td>$130–145B</td><td>包含 PP&amp;E 采购和融资租赁本金；较 2025 年 $72.22B 增长约 80%–101%。</td><td>若收入与经营利润不能同步增长，FCF 可能接近零甚至转负。</td></tr>
+      <tr><td>H2 尚需 Capex</td><td>约 $79–94B</td><td>全年指引减 H1 已投入 $50.92B，意味着 H2 投资是 H1 的约 1.55–1.85 倍。</td><td>Q2 的低 FCF 不是终点，现金流压力可能继续加大。</td></tr>
+      <tr><td>未开始租赁</td><td>$278.99B</td><td>数据中心、托管与网络租赁将在 2026–2036 年陆续开始。</td><td>当前尚未全部进入资产负债表，未来会转化为租赁资产、负债和费用。</td></tr>
+      <tr><td>7 月新增数据中心租赁</td><td>约 $68B</td><td>预计 2027–2028 年开始，期限 18–20 年。</td><td>进一步降低缩减投资的灵活性。</td></tr>
+      <tr><td>不可取消合同承诺</td><td>$349.31B</td><td>主要为第三方云、服务器、网络、数据中心和 RL 硬件；2026/2027 到期约 $53.52B/$81.65B。</td><td>不是当期债务，但一旦需求低于计划，合同仍可能持续消耗现金。</td></tr>
+      <tr><td>受限现金</td><td>$13.55B</td><td>其中 $10.80B 为基建采购协议托管资金，不能自由使用，预计 2028–2030 年满足条件后释放。</td><td>不能把它与普通现金等同看待。</td></tr>
+    </tbody></table></div>
+    <p class="note">这些租赁与合同口径可能相互重叠，不能机械相加，也不能全部当成今天的净债务从估值中扣除。正确做法是把它们视为未来现金支出、折旧、租赁费用和战略灵活性下降的证据，并要求未来收入与 ROIC 对应验证。</p>
+  </section>
+
+  <section>
+    <h2>TTM 经营质量</h2>
+    <div class="wrap"><table><thead><tr><th>指标</th><th>TTM 估算</th><th>计算</th><th>判断</th></tr></thead><tbody>
+      <tr><td>营收</td><td>$228.25B</td><td>FY2025 $200.97B + H1'26 $117.11B - H1'25 $89.83B</td><td>同比增长仍快，广告平台没有成熟期停滞迹象。</td></tr>
+      <tr><td>营业利润</td><td>$86.93B</td><td>$83.28B + $41.65B - $38.00B</td><td>营业利润率约 38.1%，但已被 AI 人才、云服务、折旧和一次性费用压低。</td></tr>
+      <tr><td>净利润 / EPS</td><td>$68.10B / 约 $26.54</td><td>$60.46B + $42.62B - $34.98B；除以 2.566B 股</td><td>包含 2025 税务冲击与 2026 税收利益，跨期可比性一般。</td></tr>
+      <tr><td>经营现金流</td><td>$130.30B</td><td>$115.80B + $64.09B - $49.59B</td><td>现金创造力极强，仍能支持大部分投资。</td></tr>
+      <tr><td>Capex</td><td>$92.43B</td><td>$72.22B + $50.92B - $30.70B</td><td>相当于 TTM 收入约 40.5%，已不是传统轻资产水平。</td></tr>
+      <tr><td>自由现金流</td><td>$37.87B</td><td>$43.59B + $13.17B - $18.88B</td><td>TTM FCF 仍为正，但 Q2 已只剩 $0.78B；趋势比绝对值更重要。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>资本结构、回购与稀释</h2>
+    <div class="wrap"><table><thead><tr><th>项目</th><th>最新数据</th><th>判断</th></tr></thead><tbody>
+      <tr><td>现金 + 可交易证券</td><td>$90.26B</td><td>高流动性资产仍强，但较债务的净缓冲已经很薄。</td></tr>
+      <tr><td>债务</td><td>面值 $84.00B；账面长期债务 $83.66B</td><td>2026 年 5 月新增 $25B 长债，管理层明确表示将提高债务占比以匹配长期基建。</td></tr>
+      <tr><td>保守净现金</td><td>约 $6.26B</td><td>只用可自由动用现金证券减债务，不把非上市股权和受限现金按 1:1 计入。</td></tr>
+      <tr><td>H1 回购 / 分红</td><td>$0 / $2.70B</td><td>2025 年回购 $26.26B，但 Q4'25 与 H1'26 均未回购；资本优先级已转向 AI 基建。</td></tr>
+      <tr><td>H1 股权激励</td><td>$13.69B，YoY +52%</td><td>AI 人才竞争加剧。若没有回购对冲，长期每股价值会受压。</td></tr>
+      <tr><td>稀释股本</td><td>Q2 加权 2.566B 股</td><td>实际流通约 2.548B 股；估值统一使用更保守的稀释股本。</td></tr>
+      <tr><td>未确认 RSU 费用</td><td>$79.79B / 约 3 年</td><td>不等于未来新增稀释的精确值，但显示已承诺薪酬规模很大。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>TTM SOTP：用已实现利润给估值锚</h2>
+    <div class="wrap"><table><thead><tr><th>板块</th><th>TTM 营收 / 营业利润</th><th>Bear</th><th>Base</th><th>Bull</th></tr></thead><tbody>
+      <tr><td>Family of Apps</td><td>$225.99B / $106.03B</td><td>18x 税后经营利润<br>$1.60T</td><td>21x 税后经营利润<br>$1.87T</td><td>24x 税后经营利润<br>$2.14T</td></tr>
+      <tr><td>Reality Labs</td><td>$2.26B / -$19.10B</td><td>-$80B</td><td>-$35B</td><td>+$35B</td></tr>
+      <tr><td>可动用净现金</td><td>$90.26B - $84.00B</td><td>+$6B</td><td>+$6B</td><td>+$6B</td></tr>
+      <tr><td>财报后法律和解</td><td>预计 Q3 会计费用近似</td><td>-$10B</td><td>-$10B</td><td>-$10B</td></tr>
+      <tr class="total"><td>合计股权价值 / 每股</td><td>稀释股本 2.566B</td><td>$1.52T / 约 $592</td><td>$1.83T / 约 $714</td><td>$2.17T / 约 $845</td></tr>
+    </tbody></table></div>
+    <p class="note">公式：FoA 税后经营利润 = $106.03B × (1-16%) = $89.06B；FoA 价值 = 税后经营利润 × 情景倍数；每股价值 =（FoA 价值 + RL 期权价值 + 净现金 - 和解成本近似）÷ 2.566B。FoA 倍数是 EV/税后经营利润近似，不是公司披露 PE。Reality Labs 价值是本报告对未来亏损与眼镜期权的主观估算，误差很大。</p>
+  </section>
+
+  <section>
+    <h2>2027 Forward PE：检验未来折旧能否被增长吸收</h2>
+    <div class="wrap"><table><thead><tr><th>情景</th><th>2027 营收 / 营业利润率</th><th>估算净利润 / EPS</th><th>期末 PE / 期末价值</th><th>折现至今</th><th>成立条件</th></tr></thead><tbody>
+      <tr><td><span class="badge red">Bear</span></td><td>$280B / 30.0%</td><td>$70.6B / $27.5</td><td>18x / $495</td><td>约 $436</td><td>广告增长降至低双位数，折旧与人才成本抵消收入增长，新 AI 产品没有收入。</td></tr>
+      <tr><td><span class="badge amber">Base</span></td><td>$302B / 34.5%</td><td>$87.5B / $34.1</td><td>21x / $716</td><td>约 $631</td><td>收入约增 20%，推荐与广告 AI 持续兑现，但高折旧使利润率低于 2025。</td></tr>
+      <tr><td><span class="badge blue">Bull</span></td><td>$326B / 38.0%</td><td>$104.1B / $40.6</td><td>24x / $974</td><td>约 $857</td><td>广告、消息商业化和企业 AI 同时增长，算力利用率高，利润率恢复。</td></tr>
+    </tbody></table></div>
+    <p class="note">估算净利润 = 营收 × 营业利润率 × (1-16%)；EPS = 净利润 ÷ 2.566B 股；折现期约 16 个月、年折现率 10%。为避免虚假精确，没有加入净利息和投资收益。按 25% Bear、55% Base、20% Bull 的主观概率，折现加权价值约 $628。</p>
+  </section>
+
+  <section>
+    <h2>估值汇总与当前赔率</h2>
+    <div class="wrap"><table><thead><tr><th>方法</th><th>Bear</th><th>Base</th><th>Bull</th><th>如何使用</th></tr></thead><tbody>
+      <tr><td>TTM SOTP</td><td>$592</td><td>$714</td><td>$845</td><td>以已实现 FoA 利润为锚，并扣除 $10B 和解成本近似；倍数仍需反映资本强度上升。</td></tr>
+      <tr><td>2027 折现 Forward PE</td><td>$436</td><td>$631</td><td>$857</td><td>对折旧、增长和利润率非常敏感，适合检验未来一年多的兑现路径。</td></tr>
+      <tr><td>综合合理区</td><td>$500–600</td><td>$630–720</td><td>$820–860</td><td>Base 下沿接近概率加权结果，上沿接近 TTM SOTP。</td></tr>
+    </tbody></table></div>
+    <p class="note">以 $616.77 计算，当前价较 Base 区间低约 2%–17%，只能称小幅低估。低于 $600 才开始进入更有吸引力的赔率区，$500 以下才接近厚安全边际，但必须同时复核广告增长与 Capex 回报。</p>
+  </section>
+
+  <section>
+    <h2>风险、跟踪指标与危险信号</h2>
+    <div class="wrap"><table><thead><tr><th>风险</th><th>每季跟踪</th><th>危险信号</th></tr></thead><tbody>
+      <tr><td>AI Capex 回报不足</td><td>Capex、折旧、第三方云费用、FoA 利润率、FCF</td><td>广告增速跌破 15%，Capex 仍上修，FoA 利润率连续低于 35%。</td></tr>
+      <tr><td>合同锁定与资产利用率</td><td>新租赁、合同承诺、在建工程、算力外售</td><td>承诺继续快速增加，但新 AI 产品收入仍不披露或算力开始折价出租。</td></tr>
+      <tr><td>广告依赖</td><td>广告收入占比、展示量、单价、转化提升</td><td>广告单价或转化率连续转负，WhatsApp 等非广告收入无法补位。</td></tr>
+      <tr><td>Reality Labs 亏损</td><td>眼镜销量、RL 收入、季度亏损</td><td>AI 眼镜增长放缓，RL 年亏损继续超过约 $20B 且无明确商业化路径。</td></tr>
+      <tr><td>人才成本与稀释</td><td>SBC、实际股数、回购、未确认薪酬</td><td>无回购情况下股本持续上升，SBC 增速长期高于收入增速。</td></tr>
+      <tr><td>监管与诉讼</td><td>$18B 协议执行、青年时长变化、欧盟广告规则、隐私与反垄断</td><td>青少年时长明显下降、大额和解继续重复或广告定向能力被结构性限制。</td></tr>
+      <tr><td>创始人控制与资本配置</td><td>债务、外部合作融资、RL/AI 投入回报</td><td>在单位回报证据不足时继续锁定更长期、更大规模投入。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>催化剂</h2>
+    <div class="grid2">
+      <div class="card"><h3>正向催化剂</h3><p>Q3 收入达到或超过 $64B；广告量价继续双位数增长；WhatsApp 其他收入保持 50%+；Business Agents 出现可披露收入；Meta Connect 的新眼镜产品超预期；2027 Capex 低于市场担忧且 FoA 利润率企稳。</p></div>
+      <div class="card"><h3>负向催化剂</h3><p>Q3 收入靠汇率而非广告效率；2027 Capex 再显著上调；新增折旧导致营业利润停滞；诉讼损失继续增加；AI 模型与产品发布延迟；停止回购同时股本持续增加。</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>仓位管理区间</h2>
+    <div class="bands">
+      <div class="band"><strong>$500 以下</strong><span>接近 Forward Bear 与 SOTP 折价区；基本面未破坏时，安全边际较厚。</span></div>
+      <div class="band"><strong>$500–560</strong><span>明显低估，可提高分批买入强度，但先核验 Capex 与广告效率。</span></div>
+      <div class="band"><strong>$560–620</strong><span>小幅低估，可分批建立或增加仓位。</span></div>
+      <div class="band"><strong>$620–720</strong><span>大致合理，以持有和等待资本回报验证为主。</span></div>
+      <div class="band"><strong>$720–820</strong><span>偏贵，停止主动加仓，需新业务兑现支撑。</span></div>
+      <div class="band"><strong>$850 以上</strong><span>接近 Bull 估值，可考虑分批再平衡或降低仓位。</span></div>
+    </div>
+    <p class="note">所有买入与抄底区间仅在广告量价、用户时长、FoA 利润率、诉讼和资本开支回报没有发生实质恶化时成立。若 Capex 与合同承诺继续上修而 FCF 长期为负，全部区间应下移。</p>
+  </section>
+
+  <section>
+    <h2>下一次财报与近期观察点</h2>
+    <div class="wrap"><table><tbody>
+      <tr><td>下一次财报</td><td>FY2026 Q3；市场预计 2026-10-28 美股盘后，截至 2026-09-07 公司 IR 尚未正式确认。</td></tr>
+      <tr><td>Q3 公司指引</td><td>收入 $61–64B；按当前汇率假设，同比汇率逆风约 1pct。8 月协议预计新增约 $10B Q3 法律费用，未包含在原 FY2026 费用区间。</td></tr>
+      <tr><td>近期产品事件</td><td>Meta Connect 预计 2026-09-23，重点关注 AI 眼镜、个人代理和可量化商业化信息。</td></tr>
+      <tr><td>财报重点</td><td>广告展示量与单价、FoA 其他收入、FoA 利润率、H2 Capex、2027 Capex 初步框架、SBC 与股本、合同承诺变化。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>最终判断</h2>
+    <div class="wrap"><table><tbody>
+      <tr><td>公司质量</td><td>高。全球分发、广告竞价、商家关系和推荐数据仍构成强护城河，AI 目前是在强化核心业务，而非摧毁它。</td></tr>
+      <tr><td>财务质量</td><td>经营利润质量仍高，但 FCF 与资产负债表质量正在下降；资本开支、债务、长期合同与监管现金义务已成为第一层估值变量。</td></tr>
+      <tr><td>合理价值</td><td>扣除和解成本后的 TTM SOTP Base 约 $714；2027 折现 Forward PE Base 约 $631；综合 Base 合理区 $630–720。</td></tr>
+      <tr><td>当前动作</td><td>$616.77 可持有或小仓分批，不适合因“23 倍 PE”单点判断而重仓。</td></tr>
+      <tr><td>更优买点</td><td>$560–600 更有吸引力；$500 以下仅在广告与资本回报逻辑未破坏时构成厚安全边际。</td></tr>
+      <tr><td>最关键变量</td><td>不是模型排行榜，也不是 Capex 绝对额，而是每一美元新增算力能否持续转换为广告增量利润、消息/代理新收入和每股自由现金流。</td></tr>
+    </tbody></table></div>
+    <p class="note">事实数据优先采用 Meta IR 与 SEC 文件；估值倍数、情景概率、正常化利润和仓位区间均为本报告估算，不构成投资建议。</p>
+  </section>
+
+  <section>
+    <h2>来源与口径</h2>
+    <ul>
+      <li><a href="https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Second-Quarter-2026-Results/default.aspx">Meta FY2026 Q2 官方财报新闻稿</a></li>
+      <li><a href="https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm">Meta FY2026 Q2 Form 10-Q（SEC）</a></li>
+      <li><a href="https://investor.atmeta.com/investor-events/event-details/2026/Q2-2026-Earnings-Call/default.aspx">Meta FY2026 Q2 官方电话会页面</a></li>
+      <li><a href="https://s21.q4cdn.com/399680738/files/doc_financials/2026/q2/META-Q2-2026-Earnings-Call-Transcript.pdf">Meta FY2026 Q2 官方电话会文字稿</a></li>
+      <li><a href="https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Fourth-Quarter-and-Full-Year-2025-Results/">Meta FY2025 全年官方财报</a></li>
+      <li><a href="https://about.fb.com/news/2026/08/agreement-with-state-attorneys-general-supporting-teens/">Meta 与美国州总检察长青年保护协议及财务影响</a></li>
+      <li><a href="https://stockanalysis.com/stocks/meta/history/">META 历史股价（2026-09-04 收盘）</a></li>
+      <li><a href="https://www.wallstreethorizon.com/meta-earnings-calendar">下一次财报日期估计（明确标注未确认）</a></li>
+    </ul>
+    <p class="note">TTM 由 FY2025 加 H1'26、减 H1'25 计算。由于公司不披露维护性与增长性 Capex，本报告采用“经营现金流减全部 Capex”的保守 FCF 口径，同时不假设所有增长性 Capex 都必然产生高回报。</p>
+  </section>
+</main>
+</body>
+</html>

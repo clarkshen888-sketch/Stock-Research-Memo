@@ -195,7 +195,7 @@
     <header>
       <h1>投资研报概念速查</h1>
       <p>用于阅读股票研报、财报和估值模型时快速查阅。后续可以继续添加新的指标、估值方法和行业专用概念。</p>
-      <p>更新日期：2026-08-27</p>
+      <p>更新日期：2026-09-09</p>
     </header>
 
     <section>
@@ -206,6 +206,7 @@
         <a href="#valuation">估值口径</a>
         <a href="#pe">PE 的几种算法</a>
         <a href="#contracts">合同与周期</a>
+        <a href="#memory-cycle">存储半导体</a>
       </div>
     </section>
 
@@ -404,6 +405,43 @@
       </div>
     </section>
 
+    <section id="memory-cycle">
+      <h2>存储半导体</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>HBM（高带宽内存）</h3>
+          <p>把多层 DRAM 通过 TSV 与先进封装垂直堆叠，放在 GPU 或 AI 加速器附近，以更高带宽、更低功耗搬运模型数据。它不是独立于 DRAM 的另一种基础存储介质，而是高价值的 DRAM 产品与封装系统。</p>
+          <div class="example">HBM 通常需要更多晶圆与先进封装资源，因此 HBM 需求增长也可能压缩普通 DRAM 的可用供给。</div>
+        </div>
+        <div class="card">
+          <h3>DRAM 与 NAND</h3>
+          <p>DRAM 是断电后丢失数据的工作内存，服务 CPU/GPU 实时计算；NAND 是断电后仍保留数据的存储介质，常用于手机存储和 SSD。前者决定计算过程中的速度与容量，后者负责长期保存数据。</p>
+        </div>
+        <div class="card">
+          <h3>ASP 与 Bit Growth</h3>
+          <p>ASP 是平均售价，Bit Growth 是按存储位元计算的出货增长。存储厂商收入大致由位元出货量、单位位元价格和产品组合共同决定。</p>
+          <div class="formula">收入变化 ≈ 位元出货变化 × 单位位元 ASP 变化 × 产品组合变化</div>
+        </div>
+        <div class="card">
+          <h3>周期股的 P/B 与 EV/EBITDA</h3>
+          <p>P/B 用股价相对每股净资产衡量市场给予的周期与 ROE 溢价；EV/EBITDA 用企业价值相对折旧前经营利润估值。两者都应使用中周期假设，不能只看峰值利润时的低 PE。</p>
+          <div class="example">当营业利润率、ASP 和利用率都处于高位时，低 PE 可能恰恰意味着市场预期利润会回落。</div>
+        </div>
+        <div class="card">
+          <h3>ADR / ADS 折溢价</h3>
+          <p>ADR 是美国市场交易的存托凭证，ADS 是其代表的证券单位。它与原上市地普通股有固定换算比例，但受交易时区、汇率、转换限制、费用和流动性影响，短期可能出现折价或溢价。</p>
+          <div class="formula">理论 ADS 平价 = 原股股价 × 每 ADS 代表股数 ÷ 汇率</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>现值、会计费用与股权激励</h2>
+      <div class="grid">
+        <div class="card"><h3>分期付款的现值</h3><p>未来支付的一美元与今天的一美元价值不同。将未来每期现金付款除以对应期限的折现因子，再求和，得到今天的经济负担；它未必等于财报当期确认的费用。</p><div class="formula">现值 = Σ［第 t 年付款 ÷ (1 + 折现率)^t］</div></div>
+        <div class="card"><h3>SBC 与每股价值</h3><p>股权激励（SBC）是员工薪酬成本，通常在经营现金流中作为非现金项目加回，但可能增加股数。分析时既要保留合理薪酬成本，也要跟踪稀释及回购；不能把现金流中的加回理解为股东没有付出代价。</p></div>
+      </div>
+    </section>
     <section>
       <h2>后续可扩展分类</h2>
       <table>
@@ -424,7 +462,7 @@
           </tr>
           <tr>
             <td>估值方法</td>
-            <td>PS、PB、EV/EBITDA、DCF、PEG</td>
+            <td>PS、DCF、PEG、FCFE、经济利润</td>
           </tr>
           <tr>
             <td>行业指标</td>

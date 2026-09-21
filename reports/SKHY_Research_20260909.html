@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SKHY Research 20260909 USD ADS</title>
+  <style>
+    :root { --bg:#f6f7f9; --panel:#fff; --ink:#1d252d; --muted:#5c6670; --line:#d9dee5; --blue:#2563eb; --green:#0f8a5f; --amber:#b7791f; --red:#c24135; --soft-blue:#e9f1ff; --soft-green:#e9f7f1; --soft-amber:#fff4df; --soft-red:#fff0ed; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font-family:Arial,"Microsoft YaHei",sans-serif; line-height:1.58; }
+    main { max-width:1180px; margin:0 auto; padding:28px 20px 56px; }
+    header { display:grid; grid-template-columns:1.35fr .65fr; gap:18px; margin-bottom:18px; }
+    section,.hero,.metric { background:var(--panel); border:1px solid var(--line); border-radius:8px; }
+    .hero,.metric,section { padding:22px; }
+    .hero h1 { margin:0 0 10px; font-size:32px; line-height:1.2; }
+    h2 { margin:0 0 14px; font-size:21px; }
+    h3 { margin:0 0 8px; font-size:16px; }
+    p { margin:8px 0 0; color:var(--muted); }
+    section { margin-top:14px; }
+    .big { font-size:38px; line-height:1.08; font-weight:700; }
+    .label,.note { color:var(--muted); font-size:13px; }
+    .badge { display:inline-flex; width:fit-content; padding:6px 10px; border-radius:6px; font-weight:700; font-size:14px; }
+    .green { color:var(--green); background:var(--soft-green); } .amber { color:var(--amber); background:var(--soft-amber); } .red { color:var(--red); background:var(--soft-red); } .blue { color:var(--blue); background:var(--soft-blue); }
+    .grid4 { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin:14px 0; }
+    .grid2 { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+    .metric strong { display:block; margin-top:6px; font-size:24px; }
+    .card { border:1px solid var(--line); border-radius:8px; padding:15px; background:#fff; }
+    .card p { font-size:14px; }
+    .alert { border:2px solid #e3a62f; background:var(--soft-amber); }
+    .alert p { color:#6f4c12; }
+    table { width:100%; border-collapse:collapse; font-size:14px; }
+    th,td { padding:12px 10px; border-bottom:1px solid var(--line); text-align:right; vertical-align:top; }
+    th:first-child,td:first-child { text-align:left; }
+    th { color:var(--muted); background:#fafbfc; font-size:13px; }
+    tr:last-child td { border-bottom:0; }
+    .total td { font-weight:700; background:#fafbfc; }
+    .bands { display:grid; grid-template-columns:repeat(5,1fr); gap:10px; }
+    .band { border:1px solid var(--line); border-radius:8px; padding:14px 12px; background:#fff; min-height:120px; }
+    .band strong { display:block; margin-bottom:6px; font-size:18px; }
+    .band span { color:var(--muted); font-size:13px; }
+    a { color:var(--blue); text-decoration:none; font-weight:700; }
+    .topline { display:flex; justify-content:space-between; gap:12px; align-items:center; margin-bottom:14px; padding:12px 14px; background:#fff; border:1px solid var(--line); border-radius:8px; }
+    .topline span { color:var(--muted); font-size:13px; }
+    ul { margin:8px 0 0; padding-left:20px; color:var(--muted); }
+    li { margin:6px 0; }
+    @media(max-width:900px){ header,.grid4,.grid2{grid-template-columns:1fr}.bands{grid-template-columns:repeat(2,1fr)}.wrap{overflow-x:auto}.topline{align-items:flex-start;flex-direction:column} }
+    @media(max-width:560px){ main{padding:18px 12px 36px}.hero h1{font-size:25px}.big{font-size:32px}.bands{grid-template-columns:1fr} }
+  </style>
+</head>
+<body>
+<main>
+  <div class="topline"><a href="../index.html">返回首页</a><span>研报适用日期：2026-09-09 ｜ 公司：SK hynix / NASDAQ: SKHY ｜ 数据口径：FY2026 Q2；财务数据按 1,336.10 KRW/USD 折算</span></div>
+  <header>
+    <div class="hero">
+      <h1>SK 海力士 FY2026 Q2 财报与近期强势原因研究（美元 / SKHY ADS 口径）</h1>
+      <p>公司类型：强周期存储半导体。采用正常化营业利润、P/B、EV/EBITDA 与中周期 EPS 交叉估值；不把峰值利润和金融资产浮盈直接外推。</p>
+      <p>估值对象：NASDAQ 上市的 SKHY American Depositary Share（ADS），每份 ADS 代表 0.1 股韩国普通股。价格参考：2026-09-08 常规交易收盘 $185.55。</p>
+    </div>
+    <div class="metric">
+      <div class="label">SKHY 12 个月 Base 中枢</div>
+      <div class="big">约 $117</div>
+      <div class="badge red">$185.55 已高于 Bull 平价</div>
+    </div>
+  </header>
+
+  <div class="grid4">
+    <div class="metric"><div class="label">Q2 营收</div><strong>约 $59.37B</strong><span class="note">YoY +257% / QoQ +51%</span></div>
+    <div class="metric"><div class="label">Q2 营业利润</div><strong>约 $45.31B</strong><span class="note">营业利润率 76%</span></div>
+    <div class="metric"><div class="label">H1 调整后 FCF</div><strong>约 $43.98B</strong><span class="note">剔除大额股息收入后</span></div>
+    <div class="metric"><div class="label">Q2 末净现金</div><strong>约 $51.94B</strong><span class="note">回购前公司口径</span></div>
+  </div>
+
+  <section>
+    <h2>一句话结论</h2>
+    <div class="grid2">
+      <div class="card"><h3>公司判断</h3><p>SK 海力士已经从普通 DRAM 厂商升级为 AI 内存核心供应商：HBM4 开始量产、与 NVIDIA 进入多年联合开发、AI 服务器 DRAM 和企业级 SSD 同时涨价，盈利质量发生结构性改善。</p></div>
+      <div class="card"><h3>股价判断</h3><p>近期上涨不是纯题材：SKHY 从 9 月 1 日 $160.78 升至 9 月 8 日 $185.55，约 +15.4%，主要由盈利上修、约 $29.94B 回购注销和 AI 芯片板块资金共振推动。但当前 ADS 已高于 Base 估值约 58%，也高于 Bull 内在价值约 12%。</p></div>
+      <div class="card"><h3>最强正变量</h3><p>10 家以上关键客户的长期协议、NVIDIA 多年合作和 HBM4 放量共同提高未来两年的订单可见度；高端 HBM 又会占用更多晶圆，间接收紧普通 DRAM 供给。</p></div>
+      <div class="card"><h3>最大风险</h3><p>这仍是资本密集、价格敏感的周期行业。Q2 76% 的营业利润率和 Q2 ASP 跳升都处于极端高位；三星在 DRAM/HBM4 的追赶、2028–2029 新产能投放和客户资本开支变化都可能令估值与利润同时均值回归。</p></div>
+    </div>
+  </section>
+
+  <section class="alert">
+    <h2>额外注意：Q2 净利润不能直接拿来算 PE</h2>
+    <p><strong>这是本报告最需要避免的估值陷阱。</strong>Q2 净利润约 $70.30B，显著高于营业利润约 $45.31B，主要因为金融收益约 $49.29B，其中金融工具估值收益约 $39.85B、股息收入约 $7.51B。半年报同时显示长期投资资产从约 $10.89B 升至 $63.85B，并将 Kioxia Holdings 投资的公允价值评估列为审阅关注事项；因此不能把该类账面收益视为主营利润。</p>
+    <div class="wrap"><table><thead><tr><th>口径</th><th>数字</th><th>机械估值</th><th>正确理解</th></tr></thead><tbody>
+      <tr><td>H1 GAAP 稀释 EPS</td><td>约 $14.09 / ADS</td><td>年化 PE 约 6.6x</td><td>包含大额金融资产估值收益和股息，不可持续，不能证明 ADS 只有 7 倍左右 PE。</td></tr>
+      <tr><td>Q2 核心税后营业利润</td><td>约 $34.44B</td><td>Q2 年化核心 PE 约 9.5x</td><td>按营业利润 ×（1-24%）估算，更接近主业盈利，但仍处于周期高点。</td></tr>
+      <tr><td>本报告 12 个月正常化 EPS</td><td>Bear / Base / Bull：$8.45 / $11.68 / $14.90</td><td>当前约 22.0x / 15.9x / 12.5x</td><td>这是直接用 $185.55 ADS 价格计算，已包含当前 ADS 溢价。</td></tr>
+    </tbody></table></div>
+    <p class="note">核心税后营业利润和正常化 EPS 均为本报告估算，不是公司正式 Non-GAAP 指标；税率统一按 24% 假设。</p>
+  </section>
+
+  <section>
+    <h2>最新财务与经营数据</h2>
+    <div class="wrap"><table><thead><tr><th>项目</th><th>FY26 Q2 / H1</th><th>同比 / 环比</th><th>投资解读</th></tr></thead><tbody>
+      <tr><td>Q2 营收</td><td>约 $59.37B</td><td>YoY +257%，QoQ +51%</td><td>价格而非单纯出货量是核心驱动，反映供给紧张和产品组合升级。</td></tr>
+      <tr><td>Q2 营业利润</td><td>约 $45.31B</td><td>YoY +557%，QoQ +61%</td><td>营业利润率从去年同期 41% 升至 76%，周期弹性已接近极端水平。</td></tr>
+      <tr><td>DRAM 量 / 价</td><td>出货量小幅增长；ASP 环比中 30% 区间上涨</td><td>价格贡献远高于数量</td><td>HBM3E、AI 服务器 DRAM 与普通 DRAM 涨价共同驱动。</td></tr>
+      <tr><td>NAND 量 / 价</td><td>出货量环比中 10% 区间增长；ASP 环比中 50% 区间上涨</td><td>量价齐升</td><td>企业级 SSD 承接 AI 推理与数据中心存储需求，Solidigm 协同开始兑现。</td></tr>
+      <tr><td>H1 EBITDA</td><td>约 $79.27B</td><td>营业利润 $73.46B + 折旧摊销 $5.81B</td><td>说明当前现金盈利极强，但不应简单翻倍作为永久运行率。</td></tr>
+      <tr><td>H1 经营现金流</td><td>约 $68.66B</td><td>去年同期约 $13.61B</td><td>其中含约 $10.47B 股息收入，主要经营现金创造仍强。</td></tr>
+      <tr><td>H1 Capex / FCF</td><td>PP&amp;E + 无形资产投入约 $14.22B；FCF $54.45B</td><td>调整后 FCF 约 $43.98B</td><td>调整值剔除大额股息收入，避免把投资回报误作经常性经营现金流。</td></tr>
+      <tr><td>库存</td><td>约 $13.46B</td><td>较 2025 年末 +26%</td><td>增幅远低于半年收入增长，但后续仍要观察位元库存与客户端库存。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>业务结构：同一制造平台上的三层价值</h2>
+    <div class="wrap"><table><thead><tr><th>业务</th><th>做什么</th><th>规模 / 地位</th><th>重要程度</th></tr></thead><tbody>
+      <tr><td>HBM 与 AI DRAM</td><td>把多层 DRAM 通过 TSV 和先进封装堆叠，为 GPU/AI 加速器提供高带宽、低功耗内存；同时销售服务器 DDR5、SOCAMM 等。</td><td>Counterpoint：HBM 收入份额 Q1 约 58%、Q2 约 50%；Q2 已开始 HBM4 量产出货</td><td>最高。决定技术溢价、客户粘性和利润率，也是公司从商品周期向协同开发转型的核心；份额回落说明三星追赶不能忽略。</td></tr>
+      <tr><td>传统 DRAM</td><td>面向服务器、PC、手机、汽车等提供工作内存。</td><td>公司披露 Q1 份额 29.1%；TrendForce 估计 Q2 为 24.9%；公司未单独披露收入</td><td>极高。仍是规模与现金流底座，且 HBM 占用更多晶圆会收紧传统 DRAM 供给。</td></tr>
+      <tr><td>NAND / Solidigm</td><td>提供手机存储、客户端 SSD 和企业级 SSD；Solidigm 强于高容量数据中心 SSD。</td><td>公司披露 Q1 份额 18.5%；Q2 eSSD 带动量价齐升</td><td>中高。过去拖累周期利润，现在受 AI 推理数据和 KV Cache 扩张带动，成为第二增长曲线。</td></tr>
+      <tr><td>其他 / 研发平台</td><td>先进封装、AIN/HBF、控制器与固件、少量晶圆代工等。</td><td>公司按单一半导体分部披露，无法可靠拆分利润</td><td>期权价值。重要但尚不能独立估值，避免虚构分部利润。</td></tr>
+    </tbody></table></div>
+    <p class="note">SK 海力士不披露 DRAM、HBM、NAND 各自收入与利润，本报告只引用公司市场份额和行业数据，不做伪精确的分部 SOTP。</p>
+  </section>
+
+  <section>
+    <h2>近期为什么这么强：六层驱动拆解</h2>
+    <div class="wrap"><table><thead><tr><th>驱动</th><th>证据</th><th>持续性判断</th></tr></thead><tbody>
+      <tr><td>1. 盈利上修</td><td>Q2 营收环比 +51%、营业利润环比 +61%，DRAM/NAND ASP 分别大涨中 30% / 中 50% 区间。</td><td>高，但价格涨幅不可永久外推。真正可持续的是供需纪律和高端产品组合。</td></tr>
+      <tr><td>2. HBM4 与 NVIDIA 绑定</td><td>HBM4 Q2 开始量产，H2 放量；6 月与 NVIDIA 签多年技术合作，覆盖 Vera Rubin、Vera CPU、个人 AI 与机器人平台。</td><td>高。联合开发提高切换成本，但也增加客户集中和认证节奏风险。</td></tr>
+      <tr><td>3. 长协提高可见度</td><td>约 10 家关键客户已完成长期协议讨论，更多客户仍在推进。</td><td>中高。长协降低数量波动，但合同期限、定价上下限和取消条款未完整披露，不能视为永久消除周期。</td></tr>
+      <tr><td>4. 约 $29.94B 回购注销</td><td>8 月 19 日宣布约 24.07M 普通股回购并全部注销，相当于发行股数 3.3%；2025–2027 股东回报提高至累计 FCF 的 50% 以上。</td><td>短中期强。回购直接创造买盘并提高每 ADS 价值，但高价回购会消耗近 $30B 净现金，不能当作免费收益。</td></tr>
+      <tr><td>5. AI 芯片板块与韩国市场共振</td><td>9 月 7 日 SK 海力士上涨 8.1%，同期三星 +5.7%、KOSPI +4.6%；9 月 9 日再涨 3.51%。</td><td>中低。板块资金和情绪放大基本面变化，反向时也会放大回撤。</td></tr>
+      <tr><td>6. 美股 ADR 带来估值发现</td><td>7 月完成 NASDAQ ADS 发行，引入更多全球资金；截至本报告日 ADS 对韩股换算价存在显著溢价。</td><td>不确定。扩大投资者覆盖是长期利好，但价差本身是交易结构风险，不等于公司内在价值上升。</td></tr>
+    </tbody></table></div>
+    <p class="note">SKHY 价格表现：9 月 1 日 $160.78，9 月 4 日单日 +8.14%，9 月 8 日再涨 4.83% 至 $185.55；9 月以来约 +15.4%。本报告判断，前四项属于基本面或资本配置上修，后两项主要放大短期斜率。</p>
+  </section>
+
+  <section class="alert">
+    <h2>额外注意：$185.55 中包含约 34% ADS 溢价</h2>
+    <div class="wrap"><table><thead><tr><th>项目</th><th>计算</th><th>结果</th></tr></thead><tbody>
+      <tr><td>韩国普通股对应美元价值</td><td>2026-09-09 收盘价 ÷ 1,336.10</td><td>约 $1,388.81 / 普通股</td></tr>
+      <tr><td>理论 ADS 平价</td><td>$1,388.81 × 0.1 股</td><td>约 $138.88</td></tr>
+      <tr><td>NASDAQ SKHY</td><td>2026-09-08 收盘</td><td>$185.55</td></tr>
+      <tr class="total"><td>观察到的 ADS 溢价</td><td>$185.55 ÷ $138.88 - 1</td><td>约 33.6%</td></tr>
+      <tr><td>韩国普通股对应总市值</td><td>按韩股收盘价及汇率折算</td><td>约 $1.015T</td></tr>
+      <tr><td>SKHY 隐含总股权价值</td><td>$185.55 × 约 7.305B ADS 等价股</td><td>约 $1.355T</td></tr>
+    </tbody></table></div>
+    <p><strong>结论：</strong>按 SEC 文件，每份 ADS 代表 0.1 股韩国普通股。由于两地收盘时间不同、汇率和跨境转换摩擦，上述是近似快照；但溢价大到不能忽略。买入 SKHY 前应实时重算，若溢价仍显著高于 5%–10%，即便看多公司，也不代表 ADS 具备同样安全边际。</p>
+  </section>
+
+  <section>
+    <h2>资产负债表、回购与扩产</h2>
+    <div class="wrap"><table><thead><tr><th>项目</th><th>最新数据</th><th>判断</th></tr></thead><tbody>
+      <tr><td>Q2 报告净现金</td><td>约 $51.94B</td><td>对应现金类资产约 $65.86B、借款约 $13.92B；周期抗压能力显著增强。</td></tr>
+      <tr><td>ADR 发行</td><td>新发 177.9M ADS，募资约 $26.51B</td><td>每 ADS 定价 $149，对应新增 17.79M 普通股；资金用于设施投资。该交易发生在 Q2 资产负债表日之后。</td></tr>
+      <tr><td>发行后、回购前</td><td>权益约 $223.12B、约 7.305B ADS 等价股、BPS 约 $30.54</td><td>忽略发行费用的粗略口径；以 $185.55 计算约 6.08x P/B。</td></tr>
+      <tr><td>完成回购后</td><td>权益约 $193.18B、约 7.064B ADS 等价股、BPS 约 $27.35</td><td>再扣除约 $29.94B 回购现金并注销 24.07M 普通股；静态 P/B 约 6.79x，净现金约 $48.51B。</td></tr>
+      <tr><td>已批准新厂投资</td><td>Yongin Y2 约 $26.35B；Cheongju M17 约 $14.30B</td><td>Y2 / M17 首个洁净室预计 2029 年 6 月 / 2028 年 12 月开放，短期不会立即形成供给冲击。</td></tr>
+      <tr><td>未确认 PP&amp;E 资本承诺</td><td>Q2 末约 $46.02B；2025 年末约 $4.99B</td><td>显示扩产承诺已大幅上升；当前现金流强，但未来自由现金流的安全垫会被厂房和设备投入持续消耗。</td></tr>
+      <tr><td>资本纪律</td><td>洁净室与设备按客户需求分阶段投入</td><td>积极，但“AI 结构增长”仍可能诱发全行业扩产；必须跟踪设备采购而不只看厂房规划。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>周期位置：现在处于哪里</h2>
+    <div class="grid2">
+      <div class="card"><h3>需求</h3><p>AI 训练、推理、Agent 与物理 AI 同时扩大 HBM、服务器 DRAM 和 eSSD 需求；普通 PC/手机也受单机内存容量提升支撑。需求广度好于过去单一 PC/手机周期。</p></div>
+      <div class="card"><h3>供给</h3><p>HBM 消耗更多晶圆与先进封装资源，短期供给受约束；新大厂洁净室主要在 2028–2029 后到位，因此未来 12–18 个月仍偏紧。</p></div>
+      <div class="card"><h3>价格</h3><p>Q2 DRAM 与 NAND ASP 环比大涨，说明已处上行周期后半段而不是刚启动。高价格会刺激客户降配、库存重建和竞争者扩产。</p></div>
+      <div class="card"><h3>估值</h3><p>计入 ADR 募资并假设回购完成后，SKHY 约 6.79x 静态 P/B，明显反映“周期被结构化”以及 ADS 稀缺溢价。真正风险不是下一季利润差，而是盈利预期或 ADS 溢价任一项回落。</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>三情景核心盈利假设</h2>
+    <div class="wrap"><table><thead><tr><th>情景</th><th>12 个月营业利润</th><th>EBITDA</th><th>正常化净利润 / EPS</th><th>成立条件</th></tr></thead><tbody>
+      <tr><td><span class="badge red">Bear</span></td><td>约 $78.59B</td><td>约 $104.78B</td><td>$59.73B / $8.45</td><td>HBM4 份额下滑、普通 DRAM/NAND ASP 回落，客户消化库存，行业重新竞争性扩产。</td></tr>
+      <tr><td><span class="badge amber">Base</span></td><td>约 $108.52B</td><td>约 $142.20B</td><td>$82.48B / $11.68</td><td>AI 内存需求强、价格高位缓慢正常化，HBM4 顺利放量，长协降低数量波动。</td></tr>
+      <tr><td><span class="badge blue">Bull</span></td><td>约 $138.46B</td><td>约 $179.63B</td><td>$105.23B / $14.90</td><td>HBM4/4E 维持领先，AI Capex 再上修，普通内存持续短缺，76% 附近利润率虽回落但仍显著高于历史。</td></tr>
+    </tbody></table></div>
+    <p class="note">正常化净利润 = 营业利润 ×（1-24%）；每 ADS EPS = 正常化净利润 ÷ 回购注销后约 7.064B ADS 等价股。为避免重复计价，不计 Kioxia 公允价值变动、股息和其他金融收益。</p>
+  </section>
+
+  <section>
+    <h2>估值一：每 ADS Forward P/B</h2>
+    <div class="wrap"><table><thead><tr><th>情景</th><th>起始 BPS</th><th>12 个月 EPS - 股息</th><th>Forward BPS</th><th>P/B</th><th>价值</th></tr></thead><tbody>
+      <tr><td>Bear</td><td>$27.35</td><td>$8.45 - $0.45</td><td>$35.35</td><td>2.2x</td><td>约 $78</td></tr>
+      <tr><td>Base</td><td>$27.35</td><td>$11.68 - $0.45</td><td>$38.58</td><td>3.2x</td><td>约 $123</td></tr>
+      <tr><td>Bull</td><td>$27.35</td><td>$14.90 - $0.45</td><td>$41.80</td><td>4.0x</td><td>约 $167</td></tr>
+    </tbody></table></div>
+    <p class="note">起始 BPS =（Q2 总权益约 $196.61B + ADR 募资约 $26.51B - 回购现金约 $29.94B）÷ 回购后约 7.064B ADS 等价股。忽略发行费用；股息 $0.45/ADS 为占位假设。倍数反映不同周期阶段与 AI 结构性溢价，但不额外资本化当前 34% ADS 价差。</p>
+  </section>
+
+  <section>
+    <h2>估值二：EV/EBITDA 与正常化 PE</h2>
+    <div class="wrap"><table><thead><tr><th>情景</th><th>EV/EBITDA 计算</th><th>EV 法每股</th><th>正常化 PE</th><th>PE 法每股</th></tr></thead><tbody>
+      <tr><td>Bear</td><td>$104.78B × 4.5x + $48.51B 净现金</td><td>约 $74</td><td>$8.45 × 8.0x</td><td>约 $68</td></tr>
+      <tr><td>Base</td><td>$142.20B × 5.5x + $48.51B 净现金</td><td>约 $118</td><td>$11.68 × 9.5x</td><td>约 $111</td></tr>
+      <tr><td>Bull</td><td>$179.63B × 6.5x + $48.51B 净现金</td><td>约 $172</td><td>$14.90 × 10.5x</td><td>约 $156</td></tr>
+    </tbody></table></div>
+    <p class="note">回购后净现金近似 = Q2 净现金约 $51.94B + ADR 募资约 $26.51B - 回购约 $29.94B = $48.51B。每 ADS 价值 =（EBITDA × 倍数 + 净现金）÷ 7.064B ADS 等价股；正常化 PE 法不重复计入金融资产浮盈。</p>
+  </section>
+
+  <section>
+    <h2>估值汇总与当前赔率</h2>
+    <div class="wrap"><table><thead><tr><th>方法</th><th>Bear</th><th>Base</th><th>Bull</th></tr></thead><tbody>
+      <tr><td>Forward P/B</td><td>$78</td><td>$123</td><td>$167</td></tr>
+      <tr><td>EV/EBITDA</td><td>$74</td><td>$118</td><td>$172</td></tr>
+      <tr><td>正常化 PE</td><td>$68</td><td>$111</td><td>$156</td></tr>
+      <tr class="total"><td>内在价值三法均值</td><td>约 $73</td><td>约 $117</td><td>约 $165</td></tr>
+      <tr><td>若额外保留 15% ADS 交易溢价</td><td>约 $84</td><td>约 $135</td><td>约 $190</td></tr>
+      <tr><td>相对当前 $185.55</td><td>-61%</td><td>-37%</td><td>-11%</td></tr>
+    </tbody></table></div>
+    <p class="note">$185.55 已高于 Bull 内在价值约 12%。若主观允许 15% 的长期 ADS 交易溢价，Bull 上沿约 $190，当前已经接近。按 25% Bear、50% Base、25% Bull 的主观概率，内在价值约 $118/ADS；当前价格仍需要持续的 Bull 盈利与显著 ADS 溢价同时成立。</p>
+  </section>
+
+  <section>
+    <h2>风险、跟踪指标与危险信号</h2>
+    <div class="wrap"><table><thead><tr><th>风险</th><th>每季跟踪</th><th>危险信号</th></tr></thead><tbody>
+      <tr><td>HBM 技术与份额</td><td>HBM4/4E 客户认证、良率、出货与 HBM 市占</td><td>HBM 市占连续跌破 50%，三星在关键客户取得大规模增量，或产品认证延迟。</td></tr>
+      <tr><td>价格周期反转</td><td>DRAM/NAND ASP、位元出货、库存天数、客户库存</td><td>ASP 环比转负且库存连续两个季度快于收入增长。</td></tr>
+      <tr><td>客户集中</td><td>NVIDIA 与其他 hyperscaler 订单、长协条款</td><td>单一客户平台延迟、削减 AI Capex 或长协允许大幅调整数量/价格。</td></tr>
+      <tr><td>扩产过度</td><td>三大厂 Capex、晶圆厂设备搬入、先进封装能力</td><td>行业 Capex 增速长期高于需求位元增速，2028–2029 产能集中投放。</td></tr>
+      <tr><td>NAND 竞争</td><td>Solidigm eSSD 份额、毛利率、YMTC 与三星报价</td><td>NAND 价格回落而单位成本下降不足，Solidigm 再次成为利润拖累。</td></tr>
+      <tr><td>地缘与汇率</td><td>中国工厂限制、美国出口政策、KRW/USD</td><td>设备升级受限、关键客户或市场受禁令影响，韩元快速升值压低海外收入。</td></tr>
+      <tr><td>ADS 结构风险</td><td>SKHY 相对 000660 折溢价、流动性、转换条款</td><td>溢价扩大后资金反转，导致 ADS 跌幅显著高于韩股。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>催化剂</h2>
+    <div class="grid2">
+      <div class="card"><h3>正向催化剂</h3><p>Q3 HBM4 收入加速；更多客户签署长协；DRAM/NAND ASP 高于预期；回购在三个月内完成并全部注销；Q3 宣布额外特别分红或回购；HBM4E 认证顺利。</p></div>
+      <div class="card"><h3>负向催化剂</h3><p>三星 HBM4 份额提升快于预期；AI 客户推迟部署；普通内存客户因价格过高降配；Q3 指引低于高预期；ADS 溢价收敛；行业 Capex 明显上修。</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>SKHY ADS 仓位管理区间</h2>
+    <div class="bands">
+      <div class="band"><strong>$80 以下</strong><span>接近 Bear 加有限 ADS 溢价；基本面未破坏时才有厚安全边际。</span></div>
+      <div class="band"><strong>$80–100</strong><span>赔率较好，可分批建立，但先核验 ASP 与 HBM 份额。</span></div>
+      <div class="band"><strong>$100–125</strong><span>Base 区间，适合持有或小幅增加。</span></div>
+      <div class="band"><strong>$125–160</strong><span>偏贵，适合持有观察，不宜主动追涨。</span></div>
+      <div class="band"><strong>$160 以上</strong><span>高于 Bull 平价；仓位过高时可考虑分批再平衡。</span></div>
+    </div>
+    <p class="note">以上直接针对 NASDAQ: SKHY。区间未假设当前约 34% 溢价永久存在，只在 $80 以下的下沿附近给予有限交易溢价。所有抄底区间只在 HBM 技术、ASP、客户订单和行业资本纪律未发生实质破坏时有效。</p>
+  </section>
+
+  <section>
+    <h2>下一次财报与近期观察点</h2>
+    <div class="wrap"><table><tbody>
+      <tr><td>下一次财报</td><td>FY2026 Q3；截至 2026-09-09 公司 IR 尚未公告日期，按历史节奏估计在 2026 年 10 月下旬。此为估计，不是公司确认日期。</td></tr>
+      <tr><td>最重要的四个数字</td><td>HBM4 出货与收入贡献、DRAM ASP、NAND ASP、Q3 营业利润率。</td></tr>
+      <tr><td>资本配置</td><td>约 $29.94B 回购执行进度、最终注销股数，以及 Q3 将披露的额外股东回报安排。</td></tr>
+      <tr><td>周期验证</td><td>客户库存、2027 长协覆盖、三星/美光 HBM4 份额、2027–2029 设备投入节奏。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>最终判断</h2>
+    <div class="wrap"><table><tbody>
+      <tr><td>公司质量</td><td>高，但不是低波动公司。HBM 技术与客户协同构成真实护城河，传统内存和 NAND 仍保留强周期属性。</td></tr>
+      <tr><td>周期位置</td><td>景气高位。量价、利润率和资本市场预期均很强，更接近上行后半段而非底部反转初期。</td></tr>
+      <tr><td>SKHY 内在价值</td><td>Bear / Base / Bull 约 $73 / $117 / $165；当前 $185.55 已高于 Bull 平价。</td></tr>
+      <tr><td>当前动作</td><td>不适合新资金追涨；已有仓位可持有核心仓，但若仓位过高，$160 以上更适合分批再平衡而非继续加仓。</td></tr>
+      <tr><td>ADS 价差</td><td>当前约 34% 的溢价不是公司现金流，存在独立收敛风险；即使韩股不跌，SKHY 也可能因价差收窄而下跌。</td></tr>
+      <tr><td>最关键变量</td><td>HBM4/4E 份额、长协定价和全行业 Capex 能否让中周期营业利润维持在约 $108.5B，同时 ADS 溢价是否回归。</td></tr>
+    </tbody></table></div>
+    <p class="note">事实优先采用 SK 海力士官方新闻稿与 SEC 半年报；市场份额和价格数据注明来源。情景利润、估值倍数、目标价和仓位区间均为本报告估算，不构成投资建议。</p>
+  </section>
+
+  <section>
+    <h2>来源与口径</h2>
+    <ul>
+      <li><a href="https://news.skhynix.com/en/q2-2026-business-results/">SK hynix FY2026 Q2 官方财报新闻稿</a></li>
+      <li><a href="https://www.sec.gov/Archives/edgar/data/2120882/000119312526354777/d147827d6k.htm">SK hynix FY2026 半年度业务报告与财务报表（SEC 6-K）</a></li>
+      <li><a href="https://news.skhynix.com/en/skhynix-lists-adrs-on-nasdaq/">SK hynix NASDAQ ADR 上市公告</a></li>
+      <li><a href="https://news.skhynix.com/en/multi-year-tech-partnership-with-nvidia/">SK hynix 与 NVIDIA 多年技术合作公告</a></li>
+      <li><a href="https://news.skhynix.com/en/share-buyback-and-retirement/">约 $29.94B 回购注销与股东回报政策公告</a></li>
+      <li><a href="https://news.skhynix.com/en/fab-facility-investment-2026/">Yongin Y2 与 Cheongju M17 投资公告</a></li>
+      <li><a href="https://www.sec.gov/Archives/edgar/data/1472033/000119380526000898/e665622_f6-skhynix.htm">SKHY ADS 比例注册文件（SEC Form F-6）</a></li>
+      <li><a href="https://www.trendforce.com/presscenter/news/20260907-13219.html">TrendForce 2Q26 DRAM 收入与份额</a></li>
+      <li><a href="https://counterpointresearch.com/en/insights/global-dram-and-hbm-market-share">Counterpoint DRAM 与 HBM 市占跟踪</a></li>
+      <li><a href="https://alphasquare.co.kr/home/stock-summary?code=000660">000660 韩国普通股历史价格</a></li>
+      <li><a href="https://finance.yahoo.co.jp/quote/SKHY/history">SKHY ADS 历史价格</a></li>
+      <li><a href="https://www.yna.co.kr/view/AKR20260909137500002">2026-09-09 KRW/USD 参考汇率</a></li>
+      <li><a href="https://apnews.com/article/5fed4e21cb3f80eef06087217dbbd9f7">2026-09-07 亚洲芯片股与 KOSPI 行情</a></li>
+    </ul>
+    <p class="note">本报告统一使用美元：$B 为十亿美元，$T 为万亿美元。所有韩元财务数据按 2026-09-09 参考汇率 1,336.10 KRW/USD 折算，仅用于提高可读性，并非公司的报表列报币种。FCF = 经营现金流 - PP&amp;E 购置 - 无形资产购置；“调整后 FCF”进一步剔除 H1 大额股息收入。ADS 价差是不同交易时区的近似快照，实际下单前必须按实时股价、汇率、费用和可转换性重算。</p>
+  </section>
+</main>
+</body>
+</html>
